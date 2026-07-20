@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=3 uid="uid://bg33fxa2t0i78"]
+
+[ext_resource type="Script" uid="uid://c8eunhqxy1d34" path="res://Scripts/fountain.gd" id="1_iianm"]
+[ext_resource type="Texture2D" uid="uid://dunf1ncvsfqct" path="res://Assets/SciFi_Asset/Tileset-Sci-Asset_Sprite.png" id="1_j20fm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oi2tk"]
+atlas = ExtResource("1_j20fm")
+region = Rect2(32, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dashy"]
+atlas = ExtResource("1_j20fm")
+region = Rect2(96, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwyjv"]
+atlas = ExtResource("1_j20fm")
+region = Rect2(160, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqy4h"]
+atlas = ExtResource("1_j20fm")
+region = Rect2(224, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lpw3"]
+atlas = ExtResource("1_j20fm")
+region = Rect2(288, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcl8t"]
+atlas = ExtResource("1_j20fm")
+region = Rect2(352, 320, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bt0xm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oi2tk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dashy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwyjv")
+}],
+"loop": true,
+"name": &"Clean",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqy4h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lpw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcl8t")
+}],
+"loop": true,
+"name": &"Dirty",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j20fm"]
+radius = 32.75668
+
+[node name="fountain" type="AnimatableBody2D"]
+light_mask = 2
+visibility_layer = 2
+input_pickable = true
+script = ExtResource("1_iianm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bt0xm")
+animation = &"Dirty"
+autoplay = "Dirty"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_j20fm")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

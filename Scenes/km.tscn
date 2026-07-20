@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://b84mbv2rh1t6w"]
+
+[ext_resource type="Script" uid="uid://dxxqltv1jpw06" path="res://Scripts/km.gd" id="1_hefsa"]
+[ext_resource type="Texture2D" uid="uid://mnh6sh7l426s" path="res://Assets/SpaceB/Large 1024x1024/Blue Nebula/Blue_Nebula_04-1024x1024.png" id="2_od5lo"]
+[ext_resource type="FontFile" uid="uid://cbv0nlxxdti8a" path="res://Assets/MGS1_Fonts/MGS1 Ammo.ttf" id="3_8ll6u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r7mq7"]
+texture = ExtResource("2_od5lo")
+
+[node name="KM" type="Node2D" unique_id=1315600891]
+position = Vector2(542, 323)
+script = ExtResource("1_hefsa")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1283873114]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.5
+offset_top = -172.5
+offset_right = 187.5
+offset_bottom = 187.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel2" unique_id=1424220692]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -170.0
+offset_right = 170.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_r7mq7")
+
+[node name="GridContainer" type="GridContainer" parent="Panel2/Panel" unique_id=17213564]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = -102.0
+offset_right = 102.0
+offset_bottom = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="Button" type="Button" parent="Panel2/Panel/GridContainer" unique_id=1619850606]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button2" type="Button" parent="Panel2/Panel/GridContainer" unique_id=1834378060]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button4" type="Button" parent="Panel2/Panel/GridContainer" unique_id=1188163713]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button5" type="Button" parent="Panel2/Panel/GridContainer" unique_id=1110365451]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button3" type="Button" parent="Panel2/Panel/GridContainer" unique_id=942838631]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button6" type="Button" parent="Panel2/Panel/GridContainer" unique_id=1410365945]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button7" type="Button" parent="Panel2/Panel/GridContainer" unique_id=1897636592]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button8" type="Button" parent="Panel2/Panel/GridContainer" unique_id=1411456022]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button9" type="Button" parent="Panel2/Panel/GridContainer" unique_id=981113446]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button10" type="Button" parent="Panel2/Panel/GridContainer" unique_id=1470804428]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button11" type="Button" parent="Panel2/Panel/GridContainer" unique_id=218826851]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button12" type="Button" parent="Panel2/Panel/GridContainer" unique_id=206802823]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button13" type="Button" parent="Panel2/Panel/GridContainer" unique_id=2113571003]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button14" type="Button" parent="Panel2/Panel/GridContainer" unique_id=99396152]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button15" type="Button" parent="Panel2/Panel/GridContainer" unique_id=801680742]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button16" type="Button" parent="Panel2/Panel/GridContainer" unique_id=1706089410]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ll6u")
+theme_override_font_sizes/font_size = 50

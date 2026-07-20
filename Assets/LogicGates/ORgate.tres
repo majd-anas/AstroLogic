@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bqpj2sl3ryqj"]
+
+[ext_resource type="Script" uid="uid://0jgj5hossnyy" path="res://Assets/LogicGates/item_data.gd" id="1_0c8p6"]
+[ext_resource type="Texture2D" uid="uid://capw3y6yhs1vg" path="res://Assets/LogicGates/OR_gate.png" id="1_gseo1"]
+
+[resource]
+script = ExtResource("1_0c8p6")
+item_name = "ORgate"
+icon = ExtResource("1_gseo1")
+metadata/_custom_type_script = "uid://0jgj5hossnyy"

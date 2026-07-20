@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=3 uid="uid://deb6hqt51ifky"]
+
+[ext_resource type="Script" uid="uid://c0qvodaygw62c" path="res://Scripts/xo.gd" id="1_53xx4"]
+[ext_resource type="Texture2D" uid="uid://b48m7rfqyipaw" path="res://Assets/SpaceB/Large 1024x1024/Green Nebula/Green_Nebula_07-1024x1024.png" id="1_rnpfl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_53xx4"]
+texture = ExtResource("1_rnpfl")
+
+[node name="XO" type="Node2D"]
+position = Vector2(542, 323)
+script = ExtResource("1_53xx4")
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.5
+offset_top = -172.5
+offset_right = 172.5
+offset_bottom = 172.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.5
+offset_top = -155.0
+offset_right = 154.5
+offset_bottom = 155.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_53xx4")
+
+[node name="GridContainer" type="GridContainer" parent="Panel2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Button" type="Button" parent="Panel2/Panel/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="Button2" type="Button" parent="Panel2/Panel/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="Button3" type="Button" parent="Panel2/Panel/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="Button4" type="Button" parent="Panel2/Panel/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="Button5" type="Button" parent="Panel2/Panel/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="Button6" type="Button" parent="Panel2/Panel/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="Button7" type="Button" parent="Panel2/Panel/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="Button8" type="Button" parent="Panel2/Panel/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="Button9" type="Button" parent="Panel2/Panel/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50

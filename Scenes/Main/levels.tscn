@@ -1,0 +1,175 @@
+[gd_scene format=3 uid="uid://dsguw0ikafgyu"]
+
+[ext_resource type="Texture2D" uid="uid://daiwwuj38e4nt" path="res://Assets/Planets/Baren.png" id="1_jk88k"]
+[ext_resource type="Texture2D" uid="uid://dq8k7k85ilj54" path="res://Assets/SpaceB/Large 1024x1024/Blue Nebula/Blue_Nebula_01-1024x1024.png" id="1_uotyi"]
+[ext_resource type="Texture2D" uid="uid://blkygqotbahdu" path="res://Assets/Planets/Lava.png" id="2_uotyi"]
+[ext_resource type="Script" uid="uid://njlopnlbyeuu" path="res://Scripts/ice.gd" id="3_4big3"]
+[ext_resource type="Texture2D" uid="uid://bv3y1y1gfymjn" path="res://Assets/Planets/Terran.png" id="3_p1uqq"]
+[ext_resource type="Texture2D" uid="uid://b5irskjvuih7n" path="res://Assets/Planets/Ice.png" id="5_bku7o"]
+[ext_resource type="Script" uid="uid://cru5o1bt45e4a" path="res://Scripts/nyx.gd" id="5_x2875"]
+[ext_resource type="Script" uid="uid://puv72ebmroqo" path="res://Scripts/ares.gd" id="6_dlt5w"]
+[ext_resource type="Texture2D" uid="uid://1lkx34jeyfu" path="res://Assets/Space/Old Version/layers/parallax-space-big-planet.png" id="6_j0k6p"]
+[ext_resource type="Script" uid="uid://d1hy58hs2q4c4" path="res://Scripts/earth.gd" id="7_byaam"]
+[ext_resource type="Texture2D" uid="uid://cw8knrtm1xmum" path="res://Assets/Space/Blue Version/layered/prop-planet-big.png" id="7_j0k6p"]
+[ext_resource type="Script" uid="uid://dvmx1hyc34ol" path="res://Scripts/Baren.gd" id="7_p1uqq"]
+[ext_resource type="Script" uid="uid://krbb6du8fajd" path="res://Scripts/ares_2.gd" id="8_8glue"]
+[ext_resource type="Script" uid="uid://scn1ndw0u521" path="res://Scripts/planet_coder.gd" id="14_byaam"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p1uqq"]
+texture = ExtResource("1_uotyi")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_uotyi"]
+
+[sub_resource type="Theme" id="Theme_p1uqq"]
+
+[node name="Levels" type="Control" unique_id=1753331365]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1121627751]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_p1uqq")
+
+[node name="Ice" type="TextureButton" parent="." unique_id=966607315 groups=["Planets"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.68700004
+anchor_top = 0.588
+anchor_right = 0.81100005
+anchor_bottom = 0.81200004
+offset_left = -0.42407227
+offset_top = -0.023986816
+offset_right = 1.7279663
+offset_bottom = -0.17602539
+texture_normal = ExtResource("5_bku7o")
+stretch_mode = 0
+script = ExtResource("3_4big3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Nyx" type="TextureButton" parent="." unique_id=2121224484 groups=["Planets"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.69390273
+anchor_top = 0.13846917
+anchor_right = 0.82090276
+anchor_bottom = 0.36746922
+offset_left = -0.37597656
+offset_top = 0.27197266
+offset_right = 3.3200073
+offset_bottom = 1.8799438
+texture_normal = ExtResource("7_j0k6p")
+stretch_mode = 0
+script = ExtResource("5_x2875")
+metadata/_edit_use_anchors_ = true
+
+[node name="Earth" type="TextureButton" parent="." unique_id=557546250 groups=["Planets"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.097180575
+anchor_top = 0.5676173
+anchor_right = 0.24518055
+anchor_bottom = 0.83061725
+offset_left = 0.047973633
+offset_top = 0.18399811
+offset_right = -0.44799805
+offset_bottom = -0.24002075
+texture_normal = ExtResource("3_p1uqq")
+stretch_mode = 0
+script = ExtResource("7_byaam")
+metadata/_edit_use_anchors_ = true
+
+[node name="Ares" type="TextureButton" parent="." unique_id=2085429309 groups=["Planets"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38900003
+anchor_top = 0.574
+anchor_right = 0.521
+anchor_bottom = 0.81500006
+offset_left = -0.12802124
+offset_top = 0.04800415
+offset_right = 3.8079834
+offset_bottom = -0.12005615
+texture_normal = ExtResource("2_uotyi")
+stretch_mode = 0
+script = ExtResource("6_dlt5w")
+metadata/_edit_use_anchors_ = true
+
+[node name="Ares2" type="TextureButton" parent="." unique_id=1782639408 groups=["Planets"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42400002
+anchor_top = 0.133
+anchor_right = 0.555
+anchor_bottom = 0.36400002
+offset_left = 150.55197
+offset_top = -0.18399811
+offset_right = 149.64001
+offset_bottom = 0.12799072
+rotation = 1.5707964
+texture_normal = ExtResource("6_j0k6p")
+stretch_mode = 0
+script = ExtResource("8_8glue")
+
+[node name="Zuse" type="TextureButton" parent="." unique_id=1701786035 groups=["Planets"]]
+unique_name_in_owner = true
+material = SubResource("CanvasItemMaterial_uotyi")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.165
+anchor_top = 0.179
+anchor_right = 0.287
+anchor_bottom = 0.39000002
+offset_left = -3.0800018
+offset_top = -0.9920044
+offset_right = -3.623993
+offset_bottom = 2.2799835
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_p1uqq")
+texture_normal = ExtResource("1_jk88k")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("7_p1uqq")
+metadata/_edit_use_anchors_ = true
+
+[node name="PlanetCoder" type="TextureButton" parent="." unique_id=945223380]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("14_byaam")
+
+[connection signal="mouse_entered" from="Ice" to="Ice" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Ice" to="Ice" method="_on_mouse_exited"]
+[connection signal="pressed" from="Ice" to="Ice" method="_on_pressed"]
+[connection signal="mouse_entered" from="Nyx" to="Nyx" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Nyx" to="Nyx" method="_on_mouse_exited"]
+[connection signal="pressed" from="Nyx" to="Nyx" method="_on_pressed"]
+[connection signal="mouse_entered" from="Earth" to="Earth" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Earth" to="Earth" method="_on_mouse_exited"]
+[connection signal="pressed" from="Earth" to="Earth" method="_on_pressed"]
+[connection signal="mouse_entered" from="Ares" to="Ares" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Ares" to="Ares" method="_on_mouse_exited"]
+[connection signal="pressed" from="Ares" to="Ares" method="_on_pressed"]
+[connection signal="mouse_entered" from="Ares2" to="Ares2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Ares2" to="Ares2" method="_on_mouse_exited"]
+[connection signal="pressed" from="Ares2" to="Ares2" method="_on_pressed"]
+[connection signal="mouse_entered" from="Zuse" to="Zuse" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Zuse" to="Zuse" method="_on_mouse_exited"]
+[connection signal="pressed" from="Zuse" to="Zuse" method="_on_pressed"]
+[connection signal="visibility_changed" from="Zuse" to="Zuse" method="_on_visibility_changed"]
+[connection signal="mouse_entered" from="PlanetCoder" to="PlanetCoder" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PlanetCoder" to="PlanetCoder" method="_on_mouse_exited"]
+[connection signal="pressed" from="PlanetCoder" to="PlanetCoder" method="_on_pressed"]

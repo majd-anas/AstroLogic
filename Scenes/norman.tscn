@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://c4l5787jrwb4c"]
+
+[ext_resource type="Script" uid="uid://bcak75s4n28ds" path="res://Scripts/norman.gd" id="1_pafwc"]
+[ext_resource type="Texture2D" uid="uid://dg8m8jwhx3uvv" path="res://Assets/Tech Dungeon Roguelite - Asset Pack (DEMO)/Players/players blue x2.png" id="2_s6p6c"]
+[ext_resource type="Script" uid="uid://c061g2lcauj7k" path="res://Scenes/drop.gd" id="3_s6p6c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kx5ey"]
+atlas = ExtResource("2_s6p6c")
+region = Rect2(0, 207, 64, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7i3m0"]
+atlas = ExtResource("2_s6p6c")
+region = Rect2(64, 207, 64, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhupl"]
+atlas = ExtResource("2_s6p6c")
+region = Rect2(128, 207, 64, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0melx"]
+atlas = ExtResource("2_s6p6c")
+region = Rect2(192, 207, 64, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vicaq"]
+atlas = ExtResource("2_s6p6c")
+region = Rect2(6, 75, 63, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cc6f"]
+atlas = ExtResource("2_s6p6c")
+region = Rect2(69, 75, 63, 63)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fbi57"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kx5ey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7i3m0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhupl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0melx")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vicaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cc6f")
+}],
+"loop": true,
+"name": &"Talk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rrr76"]
+height = 22.0
+
+[node name="Norman" type="CharacterBody2D" unique_id=257562774]
+scale = Vector2(1.7, 1.7)
+motion_mode = 1
+script = ExtResource("1_pafwc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1145469378]
+position = Vector2(133, 100.5)
+sprite_frames = SubResource("SpriteFrames_fbi57")
+animation = &"Talk"
+autoplay = "Talk"
+frame_progress = 0.74052286
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1354305010]
+position = Vector2(127.64706, 108.23529)
+shape = SubResource("CapsuleShape2D_rrr76")
+
+[node name="GatesInvControl" type="Control" parent="." unique_id=1695065575]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 407.64706
+offset_bottom = 285.88235
+script = ExtResource("3_s6p6c")

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bu437ecrcuunu"]
+
+[ext_resource type="Texture2D" uid="uid://dunf1ncvsfqct" path="res://Assets/SciFi_Asset/Tileset-Sci-Asset_Sprite.png" id="1_lvd5j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtwac"]
+size = Vector2(69, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdgx6"]
+atlas = ExtResource("1_lvd5j")
+region = Rect2(192, 180, 32, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bseyl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdgx6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-0.5, 17.5)
+shape = SubResource("RectangleShape2D_mtwac")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_bseyl")

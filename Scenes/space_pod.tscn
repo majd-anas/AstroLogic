@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://ubsf4ujnnx0o"]
+
+[ext_resource type="Texture2D" uid="uid://dunf1ncvsfqct" path="res://Assets/SciFi_Asset/Tileset-Sci-Asset_Sprite.png" id="1_urev3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_42333"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu4v8"]
+atlas = ExtResource("1_urev3")
+region = Rect2(480, 186, 32, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhaho"]
+atlas = ExtResource("1_urev3")
+region = Rect2(480, 248, 32, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_at3ct"]
+atlas = ExtResource("1_urev3")
+region = Rect2(480, 310, 32, 62)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n66od"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu4v8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhaho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at3ct")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="SpacePod" type="AnimatableBody2D"]
+light_mask = 2
+visibility_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_42333")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_n66od")
+autoplay = "default"
+frame_progress = 0.79427075
