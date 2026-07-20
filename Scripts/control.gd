@@ -1,6 +1,6 @@
 extends Control
 
-@onready var display: Label = $VBoxContainer/HBoxContainer5/Label
+@onready var display: Label = $PanelContainer/VBoxContainer/HBoxContainer5/Panel/Label
 
 # The problem expression shown to the player, e.g. "AB'+C"
 var problem_expression: String = "AB'C+AB'C'+A'BC"
