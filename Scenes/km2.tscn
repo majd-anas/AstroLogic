@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://2uu22y34i802"]
+
+[ext_resource type="Script" uid="uid://b5dhxpqb41wf4" path="res://Scenes/km_2.gd" id="1_5jevc"]
+[ext_resource type="FontFile" uid="uid://cbv0nlxxdti8a" path="res://Assets/MGS1_Fonts/MGS1 Ammo.ttf" id="2_oj72o"]
+
+[node name="KM" type="Node2D"]
+position = Vector2(542, 323)
+script = ExtResource("1_5jevc")
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.25
+offset_top = -91.75
+offset_right = 89.25
+offset_bottom = 91.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.25
+offset_top = -78.25
+offset_right = 78.25
+offset_bottom = 78.25
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="Button" type="Button" parent="Panel2/GridContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_oj72o")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button2" type="Button" parent="Panel2/GridContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_oj72o")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button4" type="Button" parent="Panel2/GridContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_oj72o")
+theme_override_font_sizes/font_size = 50
+
+[node name="Button5" type="Button" parent="Panel2/GridContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_oj72o")
+theme_override_font_sizes/font_size = 50

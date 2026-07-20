@@ -1,10 +1,10 @@
 extends Node2D
 
 
-@onready var buttons = $Panel2/Panel/GridContainer.get_children()
+@onready var buttons = $Panel2/GridContainer.get_children()
 @onready var fountain: AnimatableBody2D = $"../../Fountain"
 @onready var timer: Timer = $"../../Timer"
-@onready var grid: GridContainer = $Panel2/Panel/GridContainer
+@onready var grid: GridContainer = $Panel2/GridContainer
 
 
 # K-map cell values
