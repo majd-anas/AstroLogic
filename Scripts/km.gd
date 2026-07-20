@@ -27,7 +27,7 @@ var target_minterms: Array[int] = []
 var target_dont_cares: Array[int] = []
 var player_board: Array = []
 func _ready() -> void:
-
+	print("testing collab")
 	grid.columns = 4
 
 	var button_index = 0
