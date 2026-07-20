@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://c4l5787jrwb4c"]
+[gd_scene load_steps=0 format=3 uid="uid://c4l5787jrwb4c"]
 
 [ext_resource type="Script" uid="uid://bcak75s4n28ds" path="res://Scripts/norman.gd" id="1_pafwc"]
 [ext_resource type="Texture2D" uid="uid://dg8m8jwhx3uvv" path="res://Assets/Tech Dungeon Roguelite - Asset Pack (DEMO)/Players/players blue x2.png" id="2_s6p6c"]
-[ext_resource type="Script" uid="uid://c061g2lcauj7k" path="res://Scenes/drop.gd" id="3_s6p6c"]
+[ext_resource type="Script" uid="uid://c061g2lcauj7k" path="res://Scripts/drop.gd" id="3_s6p6c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kx5ey"]
 atlas = ExtResource("2_s6p6c")

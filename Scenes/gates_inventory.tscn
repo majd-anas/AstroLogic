@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://b6406nfu1vy84"]
+[gd_scene load_steps=0 format=3 uid="uid://b6406nfu1vy84"]
 
-[ext_resource type="Script" uid="uid://dk8ijq8mxxksd" path="res://Scenes/inventory.gd" id="1_1t2sq"]
+[ext_resource type="Script" uid="uid://dk8ijq8mxxksd" path="res://Scripts/inventory.gd" id="1_1t2sq"]
 [ext_resource type="Texture2D" uid="uid://ugeyblyprf8i" path="res://Assets/LogicGates/AND_gate.png" id="1_dfrlm"]
-[ext_resource type="Script" uid="uid://ihncf4spa3na" path="res://Scenes/item_slot.gd" id="1_jyi5o"]
+[ext_resource type="Script" uid="uid://ihncf4spa3na" path="res://Scripts/item_slot.gd" id="1_jyi5o"]
 [ext_resource type="Resource" uid="uid://dg58ry44hg6pk" path="res://Assets/LogicGates/ANDgate.tres" id="3_1t2sq"]
 [ext_resource type="Resource" uid="uid://bqpj2sl3ryqj" path="res://Assets/LogicGates/ORgate.tres" id="5_ljdwd"]
 [ext_resource type="Resource" uid="uid://cd56ioo6a4b8i" path="res://Assets/LogicGates/XORgate.tres" id="6_vyojd"]
