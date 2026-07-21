@@ -11317,6 +11317,12 @@ position = Vector2(657, 413)
 [node name="Timer" type="Timer" parent="." unique_id=1436458547]
 wait_time = 0.8
 
+[node name="GatesInv" type="CanvasLayer" parent="." unique_id=1029977704]
+
+[node name="gates_inventory" parent="GatesInv" unique_id=171667292 instance=ExtResource("12_1kgm7")]
+position = Vector2(-2.000001, 1.9999981)
+scale = Vector2(1.0000001, 1.0000001)
+
 [node name="GatesInvControl" type="Control" parent="." unique_id=508868595]
 layout_mode = 3
 anchors_preset = 0
@@ -11324,12 +11330,7 @@ offset_left = 2.0
 offset_top = -2.0
 offset_right = 1235.0
 offset_bottom = 610.0
+mouse_filter = 1
 script = ExtResource("12_0qgp1")
-
-[node name="GatesInv" type="CanvasLayer" parent="." unique_id=1029977704]
-
-[node name="gates_inventory" parent="GatesInv" unique_id=171667292 instance=ExtResource("12_1kgm7")]
-position = Vector2(-2.000001, 1.9999981)
-scale = Vector2(1.0000001, 1.0000001)
 
 [connection signal="timeout" from="Timer" to="CanvasLayer/XO" method="_on_timer_timeout"]
