@@ -17,6 +17,7 @@ func update_ui() -> void:
 func _get_drag_data(at_position: Vector2) -> Variant:
 	if not item:
 		return
+		
 	var preview = duplicate()
 	var c = Control.new()
 	c.add_child(preview)
