@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bcak75s4n28ds" path="res://Scripts/norman.gd" id="1_pafwc"]
 [ext_resource type="Texture2D" uid="uid://dg8m8jwhx3uvv" path="res://Assets/Tech Dungeon Roguelite - Asset Pack (DEMO)/Players/players blue x2.png" id="2_s6p6c"]
-[ext_resource type="Script" uid="uid://c061g2lcauj7k" path="res://Scripts/drop.gd" id="3_s6p6c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kx5ey"]
 atlas = ExtResource("2_s6p6c")
@@ -77,10 +76,3 @@ frame_progress = 0.74052286
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1354305010]
 position = Vector2(127.64706, 108.23529)
 shape = SubResource("CapsuleShape2D_rrr76")
-
-[node name="GatesInvControl" type="Control" parent="." unique_id=1695065575]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 407.64706
-offset_bottom = 285.88235
-script = ExtResource("3_s6p6c")
