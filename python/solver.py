@@ -24,7 +24,11 @@ def convert(expr):
     expr = expr.replace("+", "|")
 
     # NOT
-    expr = expr.replace("'", "~")
+    expr = re.sub(
+        r"([a-zA-Z])'",
+        r"~\1",
+        expr
+    )
 
     # implicit AND
     expr = re.sub(

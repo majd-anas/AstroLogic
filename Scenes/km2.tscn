@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://2uu22y34i802"]
+[gd_scene format=3 uid="uid://2uu22y34i802"]
 
 [ext_resource type="Script" uid="uid://b5dhxpqb41wf4" path="res://Scenes/km_2.gd" id="1_5jevc"]
 [ext_resource type="FontFile" uid="uid://cbv0nlxxdti8a" path="res://Assets/MGS1_Fonts/MGS1 Ammo.ttf" id="2_oj72o"]
 
-[node name="KM" type="Node2D"]
+[node name="KM" type="Node2D" unique_id=1377812136]
 position = Vector2(542, 323)
 script = ExtResource("1_5jevc")
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="Panel2" type="Panel" parent="." unique_id=614794007]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -20,7 +20,7 @@ offset_bottom = 91.75
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GridContainer" type="GridContainer" parent="Panel2"]
+[node name="GridContainer" type="GridContainer" parent="Panel2" unique_id=1822706601]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -35,25 +35,25 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 2
 
-[node name="Button" type="Button" parent="Panel2/GridContainer"]
+[node name="Button" type="Button" parent="Panel2/GridContainer" unique_id=1249598678]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_oj72o")
 theme_override_font_sizes/font_size = 50
 
-[node name="Button2" type="Button" parent="Panel2/GridContainer"]
+[node name="Button2" type="Button" parent="Panel2/GridContainer" unique_id=1859799214]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_oj72o")
 theme_override_font_sizes/font_size = 50
 
-[node name="Button4" type="Button" parent="Panel2/GridContainer"]
+[node name="Button4" type="Button" parent="Panel2/GridContainer" unique_id=1011633097]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_oj72o")
 theme_override_font_sizes/font_size = 50
 
-[node name="Button5" type="Button" parent="Panel2/GridContainer"]
+[node name="Button5" type="Button" parent="Panel2/GridContainer" unique_id=1848786420]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_oj72o")

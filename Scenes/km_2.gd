@@ -55,7 +55,8 @@ func _ready() -> void:
 
 
 func request_minterms(expression:String):
-
+	print("Starting Python")
+	print(ProjectSettings.globalize_path("res://python/solverKm2.py"))
 
 	# Remove previous response
 	if FileAccess.file_exists("user://response.json"):
@@ -102,7 +103,7 @@ func request_minterms(expression:String):
 	OS.create_process(
 		ProjectSettings.globalize_path("res://python/python.exe"),
 		[
-			ProjectSettings.globalize_path("res://python/solver.py"),
+			ProjectSettings.globalize_path("res://python/solverKm2.py"),
 			request_path,
 			response_path
 		]

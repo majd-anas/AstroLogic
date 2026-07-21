@@ -102,7 +102,7 @@ func request_minterms(expression:String):
 	OS.create_process(
 		ProjectSettings.globalize_path("res://python/python.exe"),
 		[
-			ProjectSettings.globalize_path("res://python/solver.py"),
+			ProjectSettings.globalize_path("res://python/solverKm3.py"),
 			request_path,
 			response_path
 		]
@@ -242,8 +242,7 @@ func reset_game() -> void:
 func _on_button_click(idx:int, button:Button) -> void:
 
 
-	var row = int(idx / 2)
-
+	var row = idx / 4
 	var col = idx % 4
 
 
