@@ -32,12 +32,14 @@ texture = ExtResource("3_7ol72")
 
 [node name="booleanCalculator" type="Control" unique_id=722775581]
 layout_mode = 3
-anchor_right = 0.34500003
-anchor_bottom = 0.92300004
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 0.5599365
-offset_bottom = -0.104003906
+anchor_left = -0.039
+anchor_top = 0.012
+anchor_right = 0.305
+anchor_bottom = 0.93200004
+offset_left = 373.928
+offset_top = 0.22399998
+offset_right = 373.63998
+offset_bottom = 0.063964844
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cewbp")
@@ -49,10 +51,10 @@ anchor_left = 0.275
 anchor_top = 0.027
 anchor_right = 0.62200004
 anchor_bottom = 0.95300007
-offset_left = 293.1
-offset_top = 2.907999
-offset_right = 555.688
-offset_bottom = 2.8599854
+offset_left = -108.899994
+offset_top = -16.092001
+offset_right = 153.688
+offset_bottom = -16.140015
 theme_override_styles/panel = SubResource("StyleBoxTexture_dqysy")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="panelContainer" unique_id=1509787704]
@@ -61,7 +63,7 @@ layout_mode = 2
 [node name="HBoxContainer5" type="HBoxContainer" parent="panelContainer/VBoxContainer" unique_id=630296769]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 1.53
+size_flags_stretch_ratio = 1.84
 
 [node name="Panel" type="Panel" parent="panelContainer/VBoxContainer/HBoxContainer5" unique_id=1738829659]
 layout_mode = 2
