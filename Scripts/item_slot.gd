@@ -1,21 +1,9 @@
 extends Panel
 
-@onready var icon: TextureRect = $Icon
-@export var item: ItemData
-
-func _ready() -> void:
-	update_ui()
-
-func update_ui() -> void:
-	if not item:
-		icon.texture = null
-		return
-	
-	icon.texture = item.icon
-	tooltip_text = item.item_name
+@export var gate: String
 
 func _get_drag_data(at_position: Vector2) -> Variant:
-	if not item:
+	if not gate:
 		return
 		
 	var preview = duplicate()
@@ -26,4 +14,4 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	c.modulate = Color(c.modulate, 0.5)	
 	set_drag_preview(c)
 	
-	return self
+	return gate

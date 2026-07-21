@@ -1,27 +1,27 @@
-[gd_scene format=3 uid="uid://fxehdt1tyjvu"]
+[gd_scene format=3 uid="uid://b0gxpp0liif2"]
 
-[ext_resource type="Script" uid="uid://bm8v27tgr5mb0" path="res://Scripts/AND_gate_collision_shape.gd" id="1_blc2l"]
-[ext_resource type="Texture2D" uid="uid://ugeyblyprf8i" path="res://Assets/LogicGates/AND_gate.png" id="1_usfj0"]
-[ext_resource type="Script" uid="uid://de1yl7cp8fahv" path="res://Scripts/gate_input.gd" id="3_7pbb7"]
-[ext_resource type="Script" uid="uid://cjfn8l4p10odo" path="res://Scripts/AND_output.gd" id="4_heyxu"]
+[ext_resource type="Texture2D" uid="uid://capw3y6yhs1vg" path="res://Assets/LogicGates/OR_gate.png" id="1_747hn"]
+[ext_resource type="Script" uid="uid://bm8v27tgr5mb0" path="res://Scripts/AND_gate_collision_shape.gd" id="2_kti57"]
+[ext_resource type="Script" uid="uid://de1yl7cp8fahv" path="res://Scripts/gate_input.gd" id="3_khbu6"]
+[ext_resource type="Script" uid="uid://dofhhyfwg2pso" path="res://Scripts/OR_output.gd" id="4_747hn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blc2l"]
-size = Vector2(21.5, 28)
+size = Vector2(23, 28)
 
 [node name="Node2D" type="Node2D" unique_id=1065677274]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1891101431]
 position = Vector2(1, 1)
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("1_usfj0")
+texture = ExtResource("1_747hn")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=649997609]
 position = Vector2(0, 0.07999611)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1446317359]
-position = Vector2(0.75, -0.07999611)
+position = Vector2(0.5, -0.07999611)
 shape = SubResource("RectangleShape2D_blc2l")
-script = ExtResource("1_blc2l")
+script = ExtResource("2_kti57")
 
 [node name="Input1" type="Button" parent="." unique_id=166666468]
 offset_left = -32.0
@@ -29,7 +29,7 @@ offset_top = -20.0
 offset_right = -24.0
 offset_bottom = -12.0
 theme_override_font_sizes/font_size = 8
-script = ExtResource("3_7pbb7")
+script = ExtResource("3_khbu6")
 metadata/_edit_use_anchors_ = true
 
 [node name="Input2" type="Button" parent="." unique_id=83359266]
@@ -37,7 +37,7 @@ offset_left = -32.0
 offset_right = -24.0
 offset_bottom = 8.0
 theme_override_font_sizes/font_size = 8
-script = ExtResource("3_7pbb7")
+script = ExtResource("3_khbu6")
 metadata/_edit_use_anchors_ = true
 
 [node name="output" type="Label" parent="." unique_id=591476687]
@@ -46,7 +46,7 @@ offset_top = -7.0
 offset_right = 33.0
 offset_bottom = 7.0
 theme_override_font_sizes/font_size = 10
-script = ExtResource("4_heyxu")
+script = ExtResource("4_747hn")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="input_event" from="Area2D" to="Area2D/CollisionShape2D" method="_on_area_2d_input_event"]
