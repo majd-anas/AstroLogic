@@ -8,6 +8,8 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	
 func _drop_data(at_position: Vector2, data: Variant) -> void:
 	var node
+	if not data:
+		return
 	if data == "AND":
 		node = AND_GATE_SCENE.instantiate()
 		

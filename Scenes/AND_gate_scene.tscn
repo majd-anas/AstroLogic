@@ -10,13 +10,13 @@ size = Vector2(21.5, 28)
 
 [node name="Node2D" type="Node2D" unique_id=1065677274]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1891101431]
-position = Vector2(1, 1)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("1_usfj0")
-
 [node name="Area2D" type="Area2D" parent="." unique_id=649997609]
 position = Vector2(0, 0.07999611)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1891101431]
+position = Vector2(1, 0.9200039)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_usfj0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1446317359]
 position = Vector2(0.75, -0.07999611)
