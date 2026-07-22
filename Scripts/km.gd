@@ -239,13 +239,13 @@ func reset_game() -> void:
 
 	for button in buttons:
 
-		button.text = VAL_0
+		button.get_child(0).text = VAL_0
 
 		button.disabled = false
 
 
 
-func _on_button_click(idx:int, button:Button) -> void:
+func _on_button_click(idx:int, button:TextureButton) -> void:
 
 
 	var row = int(idx / 4)
@@ -278,7 +278,7 @@ func _on_button_click(idx:int, button:Button) -> void:
 
 	player_board[row][col] = next_val
 
-	button.text = next_val
+	button.get_child(0).text = next_val
 
 
 
