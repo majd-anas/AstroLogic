@@ -1,8 +1,8 @@
 extends Control
-const AND_GATE = preload("res://Scenes/AND_gate.tscn")
-const OR_GATE = preload("res://Scenes/OR_gate.tscn")
-const XOR_GATE = preload("res://Scenes/XOR_gate.tscn")
-const INVERTER = preload("res://Scenes/Inverter.tscn")
+const AND_GATE = preload("res://Scenes/LogicGates/AND_gate.tscn")
+const OR_GATE = preload("res://Scenes/LogicGates/OR_gate.tscn")
+const XOR_GATE = preload("res://Scenes/LogicGates/XOR_gate.tscn")
+const INVERTER = preload("res://Scenes/LogicGates/Inverter.tscn")
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	return true
