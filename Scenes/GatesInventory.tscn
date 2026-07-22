@@ -2,30 +2,28 @@
 
 [ext_resource type="Script" uid="uid://dk8ijq8mxxksd" path="res://Scripts/inventory.gd" id="1_1t2sq"]
 [ext_resource type="Texture2D" uid="uid://ugeyblyprf8i" path="res://Assets/LogicGates/AND_gate.png" id="1_dfrlm"]
-[ext_resource type="Script" uid="uid://ihncf4spa3na" path="res://Scripts/item_slot.gd" id="1_jyi5o"]
+[ext_resource type="Script" uid="uid://ihncf4spa3na" path="res://Scripts/inventory_slot.gd" id="1_jyi5o"]
 [ext_resource type="Texture2D" uid="uid://capw3y6yhs1vg" path="res://Assets/LogicGates/OR_gate.png" id="4_1t2sq"]
 
 [node name="gates_inventory" type="Node2D" unique_id=171667292]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=805518547]
-
-[node name="Inventory" type="Panel" parent="CanvasLayer" unique_id=1324792355]
+[node name="Inventory" type="Panel" parent="." unique_id=1324792355]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -163.5
-offset_top = -110.75
-offset_right = 163.5
-offset_bottom = 110.75
+offset_left = 412.5
+offset_top = 213.25
+offset_right = 739.5
+offset_bottom = 434.75
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_1t2sq")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Inventory" unique_id=372337597]
+[node name="MarginContainer" type="MarginContainer" parent="Inventory" unique_id=372337597]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -43,7 +41,7 @@ theme_override_constants/margin_top = 6
 theme_override_constants/margin_right = 6
 theme_override_constants/margin_bottom = 6
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Inventory/MarginContainer" unique_id=1547784828]
+[node name="GridContainer" type="GridContainer" parent="Inventory/MarginContainer" unique_id=1547784828]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -51,13 +49,14 @@ theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 5
 columns = 3
 
-[node name="AND_gate_slot" type="Panel" parent="CanvasLayer/Inventory/MarginContainer/GridContainer" unique_id=1662959064]
+[node name="AND_gate_slot" type="Panel" parent="Inventory/MarginContainer/GridContainer" unique_id=1662959064]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+tooltip_text = "AND gate"
 script = ExtResource("1_jyi5o")
 gate = "AND"
 
-[node name="AND_icon" type="TextureRect" parent="CanvasLayer/Inventory/MarginContainer/GridContainer/AND_gate_slot" unique_id=1257059491]
+[node name="AND_icon" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/AND_gate_slot" unique_id=1257059491]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -70,13 +69,14 @@ texture = ExtResource("1_dfrlm")
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="OR_gate_slot" type="Panel" parent="CanvasLayer/Inventory/MarginContainer/GridContainer" unique_id=945760836]
+[node name="OR_gate_slot" type="Panel" parent="Inventory/MarginContainer/GridContainer" unique_id=945760836]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+tooltip_text = "OR gate"
 script = ExtResource("1_jyi5o")
 gate = "OR"
 
-[node name="OR_icon" type="TextureRect" parent="CanvasLayer/Inventory/MarginContainer/GridContainer/OR_gate_slot" unique_id=887749876]
+[node name="OR_icon" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/OR_gate_slot" unique_id=887749876]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -89,12 +89,12 @@ texture = ExtResource("4_1t2sq")
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="ItemSlot3" type="Panel" parent="CanvasLayer/Inventory/MarginContainer/GridContainer" unique_id=1946686827]
+[node name="ItemSlot3" type="Panel" parent="Inventory/MarginContainer/GridContainer" unique_id=1946686827]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 script = ExtResource("1_jyi5o")
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/Inventory/MarginContainer/GridContainer/ItemSlot3" unique_id=1024380246]
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot3" unique_id=1024380246]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -106,12 +106,12 @@ grow_vertical = 2
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="ItemSlot4" type="Panel" parent="CanvasLayer/Inventory/MarginContainer/GridContainer" unique_id=1826075076]
+[node name="ItemSlot4" type="Panel" parent="Inventory/MarginContainer/GridContainer" unique_id=1826075076]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 script = ExtResource("1_jyi5o")
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/Inventory/MarginContainer/GridContainer/ItemSlot4" unique_id=655775603]
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot4" unique_id=655775603]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -123,12 +123,12 @@ grow_vertical = 2
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="ItemSlot5" type="Panel" parent="CanvasLayer/Inventory/MarginContainer/GridContainer" unique_id=1561225579]
+[node name="ItemSlot5" type="Panel" parent="Inventory/MarginContainer/GridContainer" unique_id=1561225579]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 script = ExtResource("1_jyi5o")
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/Inventory/MarginContainer/GridContainer/ItemSlot5" unique_id=346510900]
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot5" unique_id=346510900]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -140,12 +140,12 @@ grow_vertical = 2
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="ItemSlot6" type="Panel" parent="CanvasLayer/Inventory/MarginContainer/GridContainer" unique_id=742416948]
+[node name="ItemSlot6" type="Panel" parent="Inventory/MarginContainer/GridContainer" unique_id=742416948]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 script = ExtResource("1_jyi5o")
 
-[node name="Icon" type="TextureRect" parent="CanvasLayer/Inventory/MarginContainer/GridContainer/ItemSlot6" unique_id=155201710]
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot6" unique_id=155201710]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1

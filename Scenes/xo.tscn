@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://deb6hqt51ifky"]
+[gd_scene format=3 uid="uid://deb6hqt51ifky"]
 
 [ext_resource type="Script" uid="uid://c0qvodaygw62c" path="res://Scripts/xo.gd" id="1_53xx4"]
 [ext_resource type="Texture2D" uid="uid://b48m7rfqyipaw" path="res://Assets/SpaceB/Large 1024x1024/Green Nebula/Green_Nebula_07-1024x1024.png" id="1_rnpfl"]
@@ -6,11 +6,11 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_53xx4"]
 texture = ExtResource("1_rnpfl")
 
-[node name="XO" type="Node2D"]
+[node name="XO" type="Node2D" unique_id=573746063]
 position = Vector2(542, 323)
 script = ExtResource("1_53xx4")
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="Panel2" type="Panel" parent="." unique_id=1009514333]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -23,7 +23,7 @@ offset_bottom = 172.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="Panel2"]
+[node name="Panel" type="Panel" parent="Panel2" unique_id=724348961]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -38,7 +38,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_53xx4")
 
-[node name="GridContainer" type="GridContainer" parent="Panel2/Panel"]
+[node name="GridContainer" type="GridContainer" parent="Panel2/Panel" unique_id=1549287570]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,47 +47,47 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 3
 
-[node name="Button" type="Button" parent="Panel2/Panel/GridContainer"]
+[node name="Button" type="Button" parent="Panel2/Panel/GridContainer" unique_id=804578620]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 
-[node name="Button2" type="Button" parent="Panel2/Panel/GridContainer"]
+[node name="Button2" type="Button" parent="Panel2/Panel/GridContainer" unique_id=977633005]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 
-[node name="Button3" type="Button" parent="Panel2/Panel/GridContainer"]
+[node name="Button3" type="Button" parent="Panel2/Panel/GridContainer" unique_id=1161223956]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 
-[node name="Button4" type="Button" parent="Panel2/Panel/GridContainer"]
+[node name="Button4" type="Button" parent="Panel2/Panel/GridContainer" unique_id=869882888]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 
-[node name="Button5" type="Button" parent="Panel2/Panel/GridContainer"]
+[node name="Button5" type="Button" parent="Panel2/Panel/GridContainer" unique_id=468758478]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 
-[node name="Button6" type="Button" parent="Panel2/Panel/GridContainer"]
+[node name="Button6" type="Button" parent="Panel2/Panel/GridContainer" unique_id=566863556]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 
-[node name="Button7" type="Button" parent="Panel2/Panel/GridContainer"]
+[node name="Button7" type="Button" parent="Panel2/Panel/GridContainer" unique_id=770796558]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 
-[node name="Button8" type="Button" parent="Panel2/Panel/GridContainer"]
+[node name="Button8" type="Button" parent="Panel2/Panel/GridContainer" unique_id=548222172]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 
-[node name="Button9" type="Button" parent="Panel2/Panel/GridContainer"]
+[node name="Button9" type="Button" parent="Panel2/Panel/GridContainer" unique_id=487272045]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50

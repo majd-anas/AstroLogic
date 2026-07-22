@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://b0gxpp0liif2"]
 
-[ext_resource type="Texture2D" uid="uid://capw3y6yhs1vg" path="res://Assets/LogicGates/OR_gate.png" id="1_747hn"]
-[ext_resource type="Script" uid="uid://bm8v27tgr5mb0" path="res://Scripts/AND_gate_collision_shape.gd" id="2_kti57"]
-[ext_resource type="Script" uid="uid://de1yl7cp8fahv" path="res://Scripts/gate_input.gd" id="3_khbu6"]
-[ext_resource type="Script" uid="uid://dofhhyfwg2pso" path="res://Scripts/OR_output.gd" id="4_747hn"]
+[ext_resource type="Texture2D" uid="uid://capw3y6yhs1vg" path="res://Assets/LogicGates/OR_gate.png" id="1_yd8d2"]
+[ext_resource type="Script" uid="uid://bm8v27tgr5mb0" path="res://Scripts/gate_drag.gd" id="2_qr8fs"]
+[ext_resource type="Script" uid="uid://de1yl7cp8fahv" path="res://Scripts/gate_input.gd" id="3_xq658"]
+[ext_resource type="Script" uid="uid://dofhhyfwg2pso" path="res://Scripts/OR_output.gd" id="4_o680v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blc2l"]
 size = Vector2(23, 28)
@@ -16,12 +16,12 @@ position = Vector2(0, 0.07999611)
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1891101431]
 position = Vector2(1, 0.9200039)
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("1_747hn")
+texture = ExtResource("1_yd8d2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1446317359]
 position = Vector2(0.5, -0.07999611)
 shape = SubResource("RectangleShape2D_blc2l")
-script = ExtResource("2_kti57")
+script = ExtResource("2_qr8fs")
 
 [node name="Input1" type="Button" parent="." unique_id=166666468]
 offset_left = -32.0
@@ -29,7 +29,7 @@ offset_top = -20.0
 offset_right = -24.0
 offset_bottom = -12.0
 theme_override_font_sizes/font_size = 8
-script = ExtResource("3_khbu6")
+script = ExtResource("3_xq658")
 metadata/_edit_use_anchors_ = true
 
 [node name="Input2" type="Button" parent="." unique_id=83359266]
@@ -37,7 +37,7 @@ offset_left = -32.0
 offset_right = -24.0
 offset_bottom = 8.0
 theme_override_font_sizes/font_size = 8
-script = ExtResource("3_khbu6")
+script = ExtResource("3_xq658")
 metadata/_edit_use_anchors_ = true
 
 [node name="output" type="Label" parent="." unique_id=591476687]
@@ -46,7 +46,7 @@ offset_top = -7.0
 offset_right = 33.0
 offset_bottom = 7.0
 theme_override_font_sizes/font_size = 10
-script = ExtResource("4_747hn")
+script = ExtResource("4_o680v")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="input_event" from="Area2D" to="Area2D/CollisionShape2D" method="_on_area_2d_input_event"]
