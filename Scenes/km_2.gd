@@ -78,7 +78,8 @@ func request_minterms(expression:String):
 	request_file.store_string(
 		JSON.stringify(
 			{
-				"expression": expression
+				"expression": expression,
+				"kmap":2
 			}
 		)
 	)
@@ -103,7 +104,7 @@ func request_minterms(expression:String):
 	OS.create_process(
 		ProjectSettings.globalize_path("res://python/python.exe"),
 		[
-			ProjectSettings.globalize_path("res://python/solverKm2.py"),
+			ProjectSettings.globalize_path("res://python/solver.py"),
 			request_path,
 			response_path
 		]

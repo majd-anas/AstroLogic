@@ -79,7 +79,8 @@ func request_minterms(expression:String):
 	request_file.store_string(
 		JSON.stringify(
 			{
-				"expression": expression
+				"expression": expression,
+				"kmap":4
 			}
 		)
 	)

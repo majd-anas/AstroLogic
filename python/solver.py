@@ -12,8 +12,21 @@ from sympy.logic.boolalg import simplify_logic
 request_path = sys.argv[1]
 response_path = sys.argv[2]
 
+# Read request from Godot
+with open(request_path, "r") as f:
 
-a, b, c, d = symbols("a b c d")
+    request = json.load(f)
+
+kmap=request["kmap"]
+
+if kmap==4:
+    a, b, c, d = symbols("a b c d")
+
+elif kmap==3:
+    a, b, c = symbols("a b c")
+
+else:
+    a,b=symbols("a b")
 
 
 def convert(expr):
@@ -32,8 +45,8 @@ def convert(expr):
 
     # implicit AND
     expr = re.sub(
-        r'([a-zA-Z0-9)])([a-zA-Z(])',
-        r'\1&\2',
+        r'(?<=[a-zA-Z0-9)])(?=[a-zA-Z(~])',
+        '&',
         expr
     )
 
@@ -41,10 +54,7 @@ def convert(expr):
 
 
 
-# Read request from Godot
-with open(request_path, "r") as f:
 
-    request = json.load(f)
 
 
 
@@ -67,28 +77,71 @@ minterms = []
 
 
 # Generate truth table
-for bits in itertools.product([0,1], repeat=4):
+if kmap==4:
+    for bits in itertools.product([0,1], repeat=4):
 
-    values = {
+        values = {
 
-        a: bits[0],
-        b: bits[1],
-        c: bits[2],
-        d: bits[3]
+            a: bits[0],
+            b: bits[1],
+            c: bits[2],
+            d: bits[3]
 
-    }
+        }
 
 
-    if bool(expr.subs(values)):
+        if bool(expr.subs(values)):
 
-        number = (
-            bits[0]*8 +
-            bits[1]*4 +
-            bits[2]*2 +
-            bits[3]
-        )
+            number = (
+                bits[0]*8 +
+                bits[1]*4 +
+                bits[2]*2 +
+                bits[3]
+            )
 
-        minterms.append(number)
+            minterms.append(number)
+
+elif kmap==3:
+    for bits in itertools.product([0,1], repeat=3):
+
+        values = {
+
+            a: bits[0],
+            b: bits[1],
+            c: bits[2]
+
+        }
+
+
+        if bool(expr.subs(values)):
+
+            number = (
+
+                bits[0]*4 +
+                bits[1]*2 +
+                bits[2]
+            )
+
+            minterms.append(number)
+else:
+    for bits in itertools.product([0,1], repeat=2):
+
+        values = {
+
+            a: bits[0],
+            b: bits[1],
+        }
+
+
+        if bool(expr.subs(values)):
+
+            number = (
+                bits[0]*2 +
+                bits[1]*1
+        
+            )
+
+            minterms.append(number)
 
 
 
