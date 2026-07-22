@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ubsf4ujnnx0o" path="res://Scenes/space_pod.tscn" id="9_rn1d7"]
 [ext_resource type="PackedScene" uid="uid://bu437ecrcuunu" path="res://Scenes/Portal.tscn" id="10_k2si6"]
 [ext_resource type="PackedScene" uid="uid://deb6hqt51ifky" path="res://Scenes/xo.tscn" id="11_qwraf"]
-[ext_resource type="Script" uid="uid://c061g2lcauj7k" path="res://Scripts/gate_drop.gd" id="12_0qgp1"]
+[ext_resource type="Script" uid="uid://c061g2lcauj7k" path="res://Scripts/GatesScripts/gate_drop.gd" id="12_0qgp1"]
 [ext_resource type="PackedScene" uid="uid://b6406nfu1vy84" path="res://Scenes/GatesInventory.tscn" id="12_1kgm7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hh5uf"]

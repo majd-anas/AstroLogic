@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://djcc8uvx3i268"]
 
 [ext_resource type="Texture2D" uid="uid://dvmmmjvicq54s" path="res://Assets/LogicGates/Inverter.png" id="1_dwqg7"]
-[ext_resource type="Script" uid="uid://bm8v27tgr5mb0" path="res://Scripts/gate_drag.gd" id="2_bjk4p"]
-[ext_resource type="Script" uid="uid://de1yl7cp8fahv" path="res://Scripts/gate_input.gd" id="3_i31xi"]
-[ext_resource type="Script" uid="uid://b2mkkmlmtsp1w" path="res://Scripts/inverter_output.gd" id="4_dwqg7"]
+[ext_resource type="Script" uid="uid://bm8v27tgr5mb0" path="res://Scripts/GatesScripts/gate_drag.gd" id="2_bjk4p"]
+[ext_resource type="Script" uid="uid://de1yl7cp8fahv" path="res://Scripts/GatesScripts/gate_input.gd" id="3_i31xi"]
+[ext_resource type="Script" uid="uid://b2mkkmlmtsp1w" path="res://Scripts/GatesScripts/inverter_output.gd" id="4_dwqg7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blc2l"]
 size = Vector2(24.5, 23)

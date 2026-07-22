@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://fxehdt1tyjvu"]
 
 [ext_resource type="Texture2D" uid="uid://ugeyblyprf8i" path="res://Assets/LogicGates/AND_gate.png" id="1_pdasa"]
-[ext_resource type="Script" uid="uid://bm8v27tgr5mb0" path="res://Scripts/gate_drag.gd" id="2_lojdo"]
-[ext_resource type="Script" uid="uid://de1yl7cp8fahv" path="res://Scripts/gate_input.gd" id="3_carca"]
-[ext_resource type="Script" uid="uid://cjfn8l4p10odo" path="res://Scripts/AND_output.gd" id="4_u0c2f"]
+[ext_resource type="Script" uid="uid://bm8v27tgr5mb0" path="res://Scripts/GatesScripts/gate_drag.gd" id="2_lojdo"]
+[ext_resource type="Script" uid="uid://de1yl7cp8fahv" path="res://Scripts/GatesScripts/gate_input.gd" id="3_carca"]
+[ext_resource type="Script" uid="uid://cjfn8l4p10odo" path="res://Scripts/GatesScripts/AND_output.gd" id="4_u0c2f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blc2l"]
 size = Vector2(21.5, 28)
