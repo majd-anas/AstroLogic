@@ -11274,7 +11274,7 @@ sources/5 = SubResource("TileSetAtlasSource_e3dbb")
 sources/6 = SubResource("TileSetAtlasSource_3d8tf")
 
 [node name="Earth" type="Node2D" unique_id=1099323724]
-position = Vector2(-2, 2)
+position = Vector2(9.536743e-07, 1.9073486e-06)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=251679415]
 position = Vector2(-783, -494)
@@ -11317,17 +11317,17 @@ offset_right = 1235.0
 offset_bottom = 610.0
 mouse_filter = 1
 script = ExtResource("12_0qgp1")
+metadata/_edit_use_anchors_ = true
 
 [node name="GatesInv" type="CanvasLayer" parent="." unique_id=1029977704]
 
 [node name="gates_inventory" parent="GatesInv" unique_id=171667292 instance=ExtResource("12_1kgm7")]
-position = Vector2(-2.000001, 1.9999981)
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=567475904]
 
 [node name="XO" parent="CanvasLayer" unique_id=1877481604 instance=ExtResource("11_qwraf")]
-position = Vector2(657, 413)
+position = Vector2(659, 411)
 
 [node name="Timer" type="Timer" parent="." unique_id=1436458547]
 wait_time = 0.8
