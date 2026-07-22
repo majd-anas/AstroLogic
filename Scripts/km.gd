@@ -1,10 +1,10 @@
 extends Node2D
 
 
-@onready var buttons = $Panel2/Panel/GridContainer.get_children()
+@onready var buttons = $Panel2/GridContainer.get_children()
 @onready var fountain: AnimatableBody2D = $"../../Fountain"
 @onready var timer: Timer = $"../../Timer"
-@onready var grid: GridContainer = $Panel2/Panel/GridContainer
+@onready var grid: GridContainer = $Panel2/GridContainer
 
 
 # K-map cell values
@@ -79,7 +79,8 @@ func request_minterms(expression:String):
 	request_file.store_string(
 		JSON.stringify(
 			{
-				"expression": expression
+				"expression": expression,
+				"kmap":4
 			}
 		)
 	)
@@ -239,13 +240,13 @@ func reset_game() -> void:
 
 	for button in buttons:
 
-		button.text = VAL_0
+		button.get_child(0).text = VAL_0
 
 		button.disabled = false
 
 
 
-func _on_button_click(idx:int, button:Button) -> void:
+func _on_button_click(idx:int, button:TextureButton) -> void:
 
 
 	var row = int(idx / 4)
@@ -278,7 +279,7 @@ func _on_button_click(idx:int, button:Button) -> void:
 
 	player_board[row][col] = next_val
 
-	button.text = next_val
+	button.get_child(0).text = next_val
 
 
 

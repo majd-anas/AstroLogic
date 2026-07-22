@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://2uu22y34i802"]
+
+[ext_resource type="Script" uid="uid://b5dhxpqb41wf4" path="res://Scenes/km_2.gd" id="1_5jevc"]
+[ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="2_5jevc"]
+[ext_resource type="Texture2D" uid="uid://b48r5r3v8thp3" path="res://Assets/HackerInventoryPack/hacker_inventory_panel.png" id="2_oj72o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_of3h0"]
+texture = ExtResource("2_oj72o")
+
+[node name="KM" type="Node2D" unique_id=1377812136]
+position = Vector2(542, 323)
+script = ExtResource("1_5jevc")
+
+[node name="Panel2" type="Panel" parent="." unique_id=614794007]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.25
+offset_top = -91.75
+offset_right = 89.25
+offset_bottom = 91.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_of3h0")
+
+[node name="GridContainer" type="GridContainer" parent="Panel2" unique_id=1822706601]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.25
+offset_top = -78.25
+offset_right = 78.25
+offset_bottom = 78.25
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="Button" type="TextureButton" parent="Panel2/GridContainer" unique_id=303456697]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture_normal = ExtResource("2_5jevc")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button" unique_id=1616785445]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -24.5
+offset_right = 5.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="TextureButton" parent="Panel2/GridContainer" unique_id=843192568]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture_normal = ExtResource("2_5jevc")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button2" unique_id=1960375054]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -24.5
+offset_right = 5.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="TextureButton" parent="Panel2/GridContainer" unique_id=1598979049]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture_normal = ExtResource("2_5jevc")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button4" unique_id=1357988394]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -24.5
+offset_right = 5.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button5" type="TextureButton" parent="Panel2/GridContainer" unique_id=239222608]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture_normal = ExtResource("2_5jevc")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button5" unique_id=495059140]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -24.5
+offset_right = 5.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
