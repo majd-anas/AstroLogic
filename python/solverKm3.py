@@ -32,8 +32,8 @@ def convert(expr):
 
     # implicit AND
     expr = re.sub(
-        r'([a-zA-Z0-9)])([a-zA-Z(])',
-        r'\1&\2',
+        r'(?<=[a-zA-Z0-9)])(?=[a-zA-Z(~])',
+        '&',
         expr
     )
 

@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://cryvdqwpw5br4"]
 
 [ext_resource type="Script" uid="uid://dilmu1kugxmem" path="res://km3.gd" id="1_ya64l"]
-[ext_resource type="FontFile" uid="uid://cbv0nlxxdti8a" path="res://Assets/MGS1_Fonts/MGS1 Ammo.ttf" id="2_kyhch"]
+[ext_resource type="Texture2D" uid="uid://b48r5r3v8thp3" path="res://Assets/HackerInventoryPack/hacker_inventory_panel.png" id="2_kyhch"]
+[ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="3_hplca"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ua443"]
+texture = ExtResource("2_kyhch")
 
 [node name="KM" type="Node2D" unique_id=936213575]
 position = Vector2(542, 323)
@@ -19,6 +23,7 @@ offset_right = 169.0
 offset_bottom = 87.75
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ua443")
 
 [node name="GridContainer" type="GridContainer" parent="Panel2" unique_id=979220628]
 layout_mode = 1
@@ -35,50 +40,202 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 4
 
-[node name="Button" type="Button" parent="Panel2/GridContainer" unique_id=1910177564]
+[node name="Button5" type="TextureButton" parent="Panel2/GridContainer" unique_id=1160268280]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_kyhch")
-theme_override_font_sizes/font_size = 50
+texture_normal = ExtResource("3_hplca")
+ignore_texture_size = true
+stretch_mode = 3
 
-[node name="Button2" type="Button" parent="Panel2/GridContainer" unique_id=673035525]
-custom_minimum_size = Vector2(75, 75)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_kyhch")
-theme_override_font_sizes/font_size = 50
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button5" unique_id=713047194]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -24.5
+offset_right = 5.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button4" type="Button" parent="Panel2/GridContainer" unique_id=938262038]
+[node name="Button6" type="TextureButton" parent="Panel2/GridContainer" unique_id=666562763]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_kyhch")
-theme_override_font_sizes/font_size = 50
+texture_normal = ExtResource("3_hplca")
+ignore_texture_size = true
+stretch_mode = 3
 
-[node name="Button5" type="Button" parent="Panel2/GridContainer" unique_id=103137896]
-custom_minimum_size = Vector2(75, 75)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_kyhch")
-theme_override_font_sizes/font_size = 50
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button6" unique_id=785253350]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -24.5
+offset_right = 5.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button3" type="Button" parent="Panel2/GridContainer" unique_id=967093920]
+[node name="Button7" type="TextureButton" parent="Panel2/GridContainer" unique_id=418102929]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_kyhch")
-theme_override_font_sizes/font_size = 50
+texture_normal = ExtResource("3_hplca")
+ignore_texture_size = true
+stretch_mode = 3
 
-[node name="Button6" type="Button" parent="Panel2/GridContainer" unique_id=1830490888]
-custom_minimum_size = Vector2(75, 75)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_kyhch")
-theme_override_font_sizes/font_size = 50
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button7" unique_id=1535945862]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -24.5
+offset_right = 5.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button7" type="Button" parent="Panel2/GridContainer" unique_id=939830517]
+[node name="Button8" type="TextureButton" parent="Panel2/GridContainer" unique_id=1441054363]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_kyhch")
-theme_override_font_sizes/font_size = 50
+texture_normal = ExtResource("3_hplca")
+ignore_texture_size = true
+stretch_mode = 3
 
-[node name="Button8" type="Button" parent="Panel2/GridContainer" unique_id=1321924039]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button8" unique_id=845220040]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -24.5
+offset_right = 5.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button9" type="TextureButton" parent="Panel2/GridContainer" unique_id=1870129367]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_kyhch")
-theme_override_font_sizes/font_size = 50
+texture_normal = ExtResource("3_hplca")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button9" unique_id=1553890047]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -24.5
+offset_right = 5.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button10" type="TextureButton" parent="Panel2/GridContainer" unique_id=2128750756]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture_normal = ExtResource("3_hplca")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button10" unique_id=465041289]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -24.5
+offset_right = 5.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button11" type="TextureButton" parent="Panel2/GridContainer" unique_id=731975182]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture_normal = ExtResource("3_hplca")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button11" unique_id=396236050]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -24.5
+offset_right = 5.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button12" type="TextureButton" parent="Panel2/GridContainer" unique_id=538626108]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture_normal = ExtResource("3_hplca")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button12" unique_id=1624573062]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -24.5
+offset_right = 5.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
