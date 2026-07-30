@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=3 uid="uid://dett2yds8d685"]
+
+[ext_resource type="Texture2D" uid="uid://b48r5r3v8thp3" path="res://Assets/HackerInventoryPack/hacker_inventory_panel.png" id="2_bqrpq"]
+[ext_resource type="Script" uid="uid://32ie1rbeyqih" path="res://Scenes/container.gd" id="3_nlouh"]
+[ext_resource type="Script" uid="uid://4pg4gsg7vo0y" path="res://Scenes/button.gd" id="6_ntqrg"]
+[ext_resource type="PackedScene" uid="uid://b84mbv2rh1t6w" path="res://Scenes/km.tscn" id="6_xjwqd"]
+[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="7_myv2h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r37kj"]
+texture = ExtResource("2_bqrpq")
+modulate_color = Color(0.40069774, 0.40069774, 0.40069768, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pff0d"]
+bg_color = Color(0.023529412, 0.07450981, 0.03529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2v5a1"]
+bg_color = Color(0.047058824, 0.15686275, 0.078431375, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.05490196, 0.1882353, 0.08627451, 1)
+
+[node name="Window" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_r37kj")
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("3_nlouh")
+
+[node name="KM4" parent="Container" instance=ExtResource("6_xjwqd")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.035
+anchor_right = 0.035
+anchor_bottom = 0.19900002
+offset_left = 88.0
+offset_top = 50.32
+offset_right = 241.5
+offset_bottom = 73.31999
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("7_myv2h")
+theme_override_font_sizes/font_size = 51
+theme_override_styles/normal = SubResource("StyleBoxFlat_pff0d")
+text = "expression"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.88900006
+anchor_top = 0.18100001
+anchor_right = 0.88900006
+anchor_bottom = 0.18100001
+offset_left = -26.128052
+offset_top = -26.28801
+offset_right = 26.871948
+offset_bottom = 26.71199
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_myv2h")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_2v5a1")
+text = "	X"
+autowrap_mode = 2
+autowrap_trim_flags = 0
+clip_text = true
+script = ExtResource("6_ntqrg")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

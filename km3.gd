@@ -1,10 +1,12 @@
-extends Node2D
+extends Control
 
 
 @onready var buttons = $Panel2/GridContainer.get_children()
 @onready var fountain: AnimatableBody2D = $"../../Fountain"
 @onready var timer: Timer = $"../../Timer"
 @onready var grid: GridContainer = $Panel2/GridContainer
+@onready var label: Label = $Panel/Label
+@onready var panel_2: Panel = $Panel2
 
 
 # K-map cell values
@@ -204,6 +206,7 @@ func generate_new_problem():
 
 
 
+
 	await request_minterms(expression)
 
 
@@ -212,6 +215,7 @@ func generate_new_problem():
 		"Fill K-map for Σm",
 		target_minterms
 	)
+	label.text = str(target_minterms)
 
 
 
@@ -277,7 +281,7 @@ func _on_button_click(idx:int, button:TextureButton) -> void:
 
 
 	if check_win():
-		hide()
+		panel_2.hide()
 		print(
 			"Correct! K-map solved."
 		)

@@ -1,17 +1,71 @@
-[gd_scene format=3 uid="uid://2uu22y34i802"]
+[gd_scene load_steps=14 format=3 uid="uid://2uu22y34i802"]
 
-[ext_resource type="Script" uid="uid://b5dhxpqb41wf4" path="res://Scenes/km_2.gd" id="1_5jevc"]
+[ext_resource type="Script" uid="uid://b5dhxpqb41wf4" path="res://Scripts/km_2.gd" id="1_5jevc"]
 [ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="2_5jevc"]
 [ext_resource type="Texture2D" uid="uid://b48r5r3v8thp3" path="res://Assets/HackerInventoryPack/hacker_inventory_panel.png" id="2_oj72o"]
+[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="3_n0yiu"]
+[ext_resource type="Texture2D" uid="uid://bvxnjppf3yv0q" path="res://Assets/HackerInventoryPack/hacker_slot_selected.png" id="5_tqyta"]
+[ext_resource type="Texture2D" uid="uid://chwkaytuw4x4d" path="res://Assets/HackerInventoryPack/hacker_slot_legendary.png" id="6_rqawh"]
+[ext_resource type="Script" uid="uid://4pg4gsg7vo0y" path="res://Scenes/button.gd" id="7_x8t8v"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e062x"]
+texture = ExtResource("2_oj72o")
+modulate_color = Color(0.40069774, 0.40069774, 0.40069768, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6u755"]
+bg_color = Color(0.023529412, 0.07450981, 0.03529412, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_of3h0"]
 texture = ExtResource("2_oj72o")
 
-[node name="KM" type="Node2D" unique_id=1377812136]
-position = Vector2(542, 323)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2t18n"]
+texture = ExtResource("5_tqyta")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2crlp"]
+texture = ExtResource("6_rqawh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vxtgy"]
+texture = ExtResource("6_rqawh")
+
+[node name="KM" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_5jevc")
 
-[node name="Panel2" type="Panel" parent="." unique_id=614794007]
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_e062x")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.035
+anchor_right = 0.035
+anchor_bottom = 0.19900002
+offset_left = 67.0
+offset_top = 38.155
+offset_right = 220.5
+offset_bottom = 61.155
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("3_n0yiu")
+theme_override_font_sizes/font_size = 51
+theme_override_styles/normal = SubResource("StyleBoxFlat_6u755")
+text = "expression"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -25,7 +79,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_of3h0")
 
-[node name="GridContainer" type="GridContainer" parent="Panel2" unique_id=1822706601]
+[node name="GridContainer" type="GridContainer" parent="Panel2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -40,14 +94,14 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 2
 
-[node name="Button" type="TextureButton" parent="Panel2/GridContainer" unique_id=303456697]
+[node name="Button" type="TextureButton" parent="Panel2/GridContainer"]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("2_5jevc")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button" unique_id=1616785445]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -65,14 +119,14 @@ text = "1
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button2" type="TextureButton" parent="Panel2/GridContainer" unique_id=843192568]
+[node name="Button2" type="TextureButton" parent="Panel2/GridContainer"]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("2_5jevc")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button2" unique_id=1960375054]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -90,14 +144,14 @@ text = "1
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button4" type="TextureButton" parent="Panel2/GridContainer" unique_id=1598979049]
+[node name="Button4" type="TextureButton" parent="Panel2/GridContainer"]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("2_5jevc")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button4" unique_id=1357988394]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button4"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -115,14 +169,14 @@ text = "1
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button5" type="TextureButton" parent="Panel2/GridContainer" unique_id=239222608]
+[node name="Button5" type="TextureButton" parent="Panel2/GridContainer"]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("2_5jevc")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button5" unique_id=495059140]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button5"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -139,3 +193,26 @@ text = "1
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8350694
+anchor_top = 0.11265432
+anchor_right = 0.93654865
+anchor_bottom = 0.2977037
+offset_right = 0.09600067
+offset_bottom = 0.08799744
+theme_override_fonts/font = ExtResource("3_n0yiu")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_2t18n")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2crlp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vxtgy")
+text = "x"
+autowrap_mode = 2
+autowrap_trim_flags = 0
+clip_text = true
+text_direction = 3
+script = ExtResource("7_x8t8v")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
