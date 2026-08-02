@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://7f2gmph5b6u2"]
+
+[ext_resource type="Texture2D" uid="uid://b48r5r3v8thp3" path="res://Assets/HackerInventoryPack/hacker_inventory_panel.png" id="1_wdn4f"]
+[ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="2_k5gp2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yxepq"]
+texture = ExtResource("2_k5gp2")
+region_rect = Rect2(27.684227, 27.251322, 73.585556, 73.504875)
+
+[node name="Inventory" type="Node2D" unique_id=1282777030]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1721672881]
+offset_right = 800.0
+offset_bottom = 500.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_wdn4f")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=516039560]
+offset_left = 81.0
+offset_top = 99.0
+offset_right = 688.0
+offset_bottom = 444.0
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 20
+columns = 5
+
+[node name="Slot" type="Panel" parent="GridContainer" unique_id=1804923686]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Slot2" type="Panel" parent="GridContainer" unique_id=1334752393]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Slot3" type="Panel" parent="GridContainer" unique_id=1800073571]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Slot4" type="Panel" parent="GridContainer" unique_id=9270389]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Slot5" type="Panel" parent="GridContainer" unique_id=1600950275]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Slot6" type="Panel" parent="GridContainer" unique_id=877159040]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Slot7" type="Panel" parent="GridContainer" unique_id=779356938]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Slot8" type="Panel" parent="GridContainer" unique_id=626446271]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Slot9" type="Panel" parent="GridContainer" unique_id=2131219406]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Slot10" type="Panel" parent="GridContainer" unique_id=1017857536]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Slot11" type="Panel" parent="GridContainer" unique_id=378387550]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Slot12" type="Panel" parent="GridContainer" unique_id=783267419]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Slot13" type="Panel" parent="GridContainer" unique_id=869106097]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Slot14" type="Panel" parent="GridContainer" unique_id=745892948]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Slot15" type="Panel" parent="GridContainer" unique_id=139408962]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
