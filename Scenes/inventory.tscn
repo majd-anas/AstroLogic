@@ -2,10 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://b48r5r3v8thp3" path="res://Assets/HackerInventoryPack/hacker_inventory_panel.png" id="1_wdn4f"]
 [ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="2_k5gp2"]
+[ext_resource type="Texture2D" uid="uid://w1bp1ld1vl3" path="res://Assets/HackerInventoryPack/hacker_slot_hover.png" id="3_yxepq"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yxepq"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0n8tc"]
 texture = ExtResource("2_k5gp2")
-region_rect = Rect2(27.684227, 27.251322, 73.585556, 73.504875)
+region_rect = Rect2(28, 28, 73, 73)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k1vlg"]
+texture = ExtResource("3_yxepq")
+region_rect = Rect2(24, 24, 82, 82)
 
 [node name="Inventory" type="Node2D" unique_id=1282777030]
 
@@ -17,85 +22,101 @@ size_flags_vertical = 4
 texture = ExtResource("1_wdn4f")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=516039560]
-offset_left = 81.0
-offset_top = 99.0
-offset_right = 688.0
+offset_left = 85.0
+offset_top = 104.0
+offset_right = 713.0
 offset_bottom = 444.0
 theme_override_constants/h_separation = 32
 theme_override_constants/v_separation = 20
 columns = 5
 
-[node name="Slot" type="Panel" parent="GridContainer" unique_id=1804923686]
+[node name="Button" type="Button" parent="GridContainer" unique_id=312762983]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+text = "Gates"
 
-[node name="Slot2" type="Panel" parent="GridContainer" unique_id=1334752393]
+[node name="Button2" type="Button" parent="GridContainer" unique_id=112394361]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Slot3" type="Panel" parent="GridContainer" unique_id=1800073571]
+[node name="Button3" type="Button" parent="GridContainer" unique_id=54158340]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Slot4" type="Panel" parent="GridContainer" unique_id=9270389]
+[node name="Button4" type="Button" parent="GridContainer" unique_id=147863429]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Slot5" type="Panel" parent="GridContainer" unique_id=1600950275]
+[node name="Button5" type="Button" parent="GridContainer" unique_id=2053404621]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Slot6" type="Panel" parent="GridContainer" unique_id=877159040]
+[node name="Button6" type="Button" parent="GridContainer" unique_id=2083816968]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Slot7" type="Panel" parent="GridContainer" unique_id=779356938]
+[node name="Button7" type="Button" parent="GridContainer" unique_id=2128945947]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Slot8" type="Panel" parent="GridContainer" unique_id=626446271]
+[node name="Button8" type="Button" parent="GridContainer" unique_id=2070247849]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Slot9" type="Panel" parent="GridContainer" unique_id=2131219406]
+[node name="Button9" type="Button" parent="GridContainer" unique_id=1943605616]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Slot10" type="Panel" parent="GridContainer" unique_id=1017857536]
+[node name="Button10" type="Button" parent="GridContainer" unique_id=271487326]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Slot11" type="Panel" parent="GridContainer" unique_id=378387550]
+[node name="Button11" type="Button" parent="GridContainer" unique_id=877249986]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Slot12" type="Panel" parent="GridContainer" unique_id=783267419]
+[node name="Button12" type="Button" parent="GridContainer" unique_id=1308291476]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Slot13" type="Panel" parent="GridContainer" unique_id=869106097]
+[node name="Button13" type="Button" parent="GridContainer" unique_id=626077513]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Slot14" type="Panel" parent="GridContainer" unique_id=745892948]
+[node name="Button14" type="Button" parent="GridContainer" unique_id=1445529867]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Slot15" type="Panel" parent="GridContainer" unique_id=139408962]
+[node name="Button15" type="Button" parent="GridContainer" unique_id=76786345]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
