@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ubsf4ujnnx0o"]
+[gd_scene format=3 uid="uid://ubsf4ujnnx0o"]
 
 [ext_resource type="Texture2D" uid="uid://dunf1ncvsfqct" path="res://Assets/SciFi_Asset/Tileset-Sci-Asset_Sprite.png" id="1_urev3"]
 
@@ -33,14 +33,14 @@ animations = [{
 "speed": 2.0
 }]
 
-[node name="SpacePod" type="AnimatableBody2D"]
+[node name="SpacePod" type="AnimatableBody2D" unique_id=295029519]
 light_mask = 2
 visibility_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=326627022]
 shape = SubResource("CapsuleShape2D_42333")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=994824200]
 sprite_frames = SubResource("SpriteFrames_n66od")
 autoplay = "default"
 frame_progress = 0.79427075

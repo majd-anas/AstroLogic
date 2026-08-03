@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueDataChar" format=3 uid="uid://cggpx552ro00h"]
+
+[ext_resource type="Script" uid="uid://dkh34p78b3sbj" path="res://Scripts/Dialouge/DialougeDataChar.gd" id="1_86uy7"]
+
+[resource]
+script = ExtResource("1_86uy7")
+npc_name = "Norella"
+dialogue = Array[String](["OH! you are finally here!", "We have been waiting for so long come on your mission is about to start", "We have to go over a few things first to make sure you're really ready", "as you know, our neighbors in space are losing power and we are unable to communitacte with them", "Unfortunately, there knowledge about circuits is......", "lets say its out dated. If we don't act soon they will lose all power and all communication will be lost! I dread what could happen to them in such a dark world....", "Anyways.. I don't want to bore you to begin training we need to ..."])
+metadata/_custom_type_script = "uid://dkh34p78b3sbj"
