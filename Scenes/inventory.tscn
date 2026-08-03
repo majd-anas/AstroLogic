@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://w1bp1ld1vl3" path="res://Assets/HackerInventoryPack/hacker_slot_hover.png" id="3_yxepq"]
 [ext_resource type="Texture2D" uid="uid://b121yk51l6bx2" path="res://Assets/HackerInventoryPack/hacker-side-panel.png" id="4_0n8tc"]
 [ext_resource type="Script" uid="uid://j5whjhnr3o3i" path="res://Scripts/inventory_button_1.gd" id="5_c5ffv"]
+[ext_resource type="Script" uid="uid://dct10y5xgl8km" path="res://Scripts/inventory_button_2.gd" id="6_trvqw"]
 [ext_resource type="Texture2D" uid="uid://ugeyblyprf8i" path="res://Assets/LogicGates/AND_gate.png" id="7_sd8fj"]
+[ext_resource type="Script" uid="uid://8gcpk4n4rqhd" path="res://Scripts/side_panel.gd" id="8_aqnmd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yxepq"]
 texture = ExtResource("1_0n8tc")
@@ -89,6 +91,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 text = "or
 gate"
+script = ExtResource("6_trvqw")
 
 [node name="Button3" type="Button" parent="InventoryPanel/GridContainer" unique_id=54158340]
 custom_minimum_size = Vector2(100, 100)
@@ -207,6 +210,7 @@ offset_top = -2.0
 offset_right = 192.0
 offset_bottom = 238.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_c5ffv")
+script = ExtResource("8_aqnmd")
 metadata/_edit_use_anchors_ = true
 
 [node name="ANDSidePanel" type="Panel" parent="SidePanel" unique_id=1227021613]
@@ -271,3 +275,4 @@ text = "f"
 label_settings = SubResource("LabelSettings_o4ksx")
 
 [connection signal="pressed" from="InventoryPanel/GridContainer/Button1" to="InventoryPanel/GridContainer/Button1" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button2" to="InventoryPanel/GridContainer/Button2" method="_on_pressed"]
