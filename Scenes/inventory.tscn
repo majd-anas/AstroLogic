@@ -17,11 +17,13 @@ region_rect = Rect2(24, 24, 82, 82)
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1721672881]
 offset_right = 800.0
 offset_bottom = 500.0
+scale = Vector2(0.4, 0.4)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("1_wdn4f")
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=516039560]
+[node name="GridContainer" type="GridContainer" parent="TextureRect" unique_id=516039560]
+layout_mode = 0
 offset_left = 85.0
 offset_top = 104.0
 offset_right = 713.0
@@ -30,92 +32,97 @@ theme_override_constants/h_separation = 32
 theme_override_constants/v_separation = 20
 columns = 5
 
-[node name="Button" type="Button" parent="GridContainer" unique_id=312762983]
+[node name="Button1" type="Button" parent="TextureRect/GridContainer" unique_id=312762983]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
-text = "Gates"
+text = "and gate"
 
-[node name="Button2" type="Button" parent="GridContainer" unique_id=112394361]
+[node name="Button2" type="Button" parent="TextureRect/GridContainer" unique_id=112394361]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+text = "or gate"
 
-[node name="Button3" type="Button" parent="GridContainer" unique_id=54158340]
+[node name="Button3" type="Button" parent="TextureRect/GridContainer" unique_id=54158340]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+text = "xor gate"
 
-[node name="Button4" type="Button" parent="GridContainer" unique_id=147863429]
+[node name="Button4" type="Button" parent="TextureRect/GridContainer" unique_id=147863429]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+text = "inverter"
 
-[node name="Button5" type="Button" parent="GridContainer" unique_id=2053404621]
+[node name="Button5" type="Button" parent="TextureRect/GridContainer" unique_id=2053404621]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+text = "minterms"
 
-[node name="Button6" type="Button" parent="GridContainer" unique_id=2083816968]
+[node name="Button6" type="Button" parent="TextureRect/GridContainer" unique_id=2083816968]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+text = "binary"
 
-[node name="Button7" type="Button" parent="GridContainer" unique_id=2128945947]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
-theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
-
-[node name="Button8" type="Button" parent="GridContainer" unique_id=2070247849]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
-theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
-
-[node name="Button9" type="Button" parent="GridContainer" unique_id=1943605616]
+[node name="Button7" type="Button" parent="TextureRect/GridContainer" unique_id=2128945947]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Button10" type="Button" parent="GridContainer" unique_id=271487326]
+[node name="Button8" type="Button" parent="TextureRect/GridContainer" unique_id=2070247849]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Button11" type="Button" parent="GridContainer" unique_id=877249986]
+[node name="Button9" type="Button" parent="TextureRect/GridContainer" unique_id=1943605616]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Button12" type="Button" parent="GridContainer" unique_id=1308291476]
+[node name="Button10" type="Button" parent="TextureRect/GridContainer" unique_id=271487326]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Button13" type="Button" parent="GridContainer" unique_id=626077513]
+[node name="Button11" type="Button" parent="TextureRect/GridContainer" unique_id=877249986]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Button14" type="Button" parent="GridContainer" unique_id=1445529867]
+[node name="Button12" type="Button" parent="TextureRect/GridContainer" unique_id=1308291476]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Button15" type="Button" parent="GridContainer" unique_id=76786345]
+[node name="Button13" type="Button" parent="TextureRect/GridContainer" unique_id=626077513]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+
+[node name="Button14" type="Button" parent="TextureRect/GridContainer" unique_id=1445529867]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+
+[node name="Button15" type="Button" parent="TextureRect/GridContainer" unique_id=76786345]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
