@@ -5,9 +5,15 @@
 [ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="2_k5gp2"]
 [ext_resource type="Texture2D" uid="uid://w1bp1ld1vl3" path="res://Assets/HackerInventoryPack/hacker_slot_hover.png" id="3_yxepq"]
 [ext_resource type="Texture2D" uid="uid://b121yk51l6bx2" path="res://Assets/HackerInventoryPack/hacker-side-panel.png" id="4_0n8tc"]
+[ext_resource type="Script" uid="uid://j5whjhnr3o3i" path="res://Scripts/inventory_button_1.gd" id="5_c5ffv"]
+[ext_resource type="Texture2D" uid="uid://ugeyblyprf8i" path="res://Assets/LogicGates/AND_gate.png" id="7_sd8fj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yxepq"]
 texture = ExtResource("1_0n8tc")
+
+[sub_resource type="LabelSettings" id="LabelSettings_c5ffv"]
+font = ExtResource("2_k1vlg")
+font_size = 40
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0n8tc"]
 texture = ExtResource("2_k5gp2")
@@ -17,23 +23,41 @@ region_rect = Rect2(28, 28, 73, 73)
 texture = ExtResource("3_yxepq")
 region_rect = Rect2(24, 24, 82, 82)
 
-[sub_resource type="LabelSettings" id="LabelSettings_c5ffv"]
-font = ExtResource("2_k1vlg")
-font_size = 40
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c5ffv"]
 texture = ExtResource("4_0n8tc")
+
+[sub_resource type="LabelSettings" id="LabelSettings_trvqw"]
+font = ExtResource("2_k1vlg")
+
+[sub_resource type="LabelSettings" id="LabelSettings_sd8fj"]
+font = ExtResource("2_k1vlg")
+
+[sub_resource type="LabelSettings" id="LabelSettings_aqnmd"]
+font = ExtResource("2_k1vlg")
+
+[sub_resource type="LabelSettings" id="LabelSettings_o4ksx"]
+font = ExtResource("2_k1vlg")
 
 [node name="Inventory" type="Node2D" unique_id=1282777030]
 
 [node name="InventoryPanel" type="Panel" parent="." unique_id=1262405203]
-offset_left = 2.9999995
-offset_right = 795.5
-offset_bottom = 599.99994
+offset_left = 179.00002
+offset_top = -2.0
+offset_right = 971.5
+offset_bottom = 597.99994
 scale = Vector2(0.4, 0.4)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Label" type="Label" parent="InventoryPanel" unique_id=694425620]
+layout_mode = 0
+offset_left = 97.49998
+offset_top = 82.49999
+offset_right = 287.49997
+offset_bottom = 117.49999
+text = "inventory"
+label_settings = SubResource("LabelSettings_c5ffv")
 
 [node name="GridContainer" type="GridContainer" parent="InventoryPanel" unique_id=516039560]
 layout_mode = 0
@@ -54,6 +78,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 text = "and
 gate"
+script = ExtResource("5_c5ffv")
 
 [node name="Button2" type="Button" parent="InventoryPanel/GridContainer" unique_id=112394361]
 custom_minimum_size = Vector2(100, 100)
@@ -176,17 +201,73 @@ theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Label" type="Label" parent="InventoryPanel" unique_id=694425620]
-layout_mode = 0
-offset_left = 97.49999
-offset_top = 82.5
-offset_right = 240.5
-offset_bottom = 117.5
-text = "inventory"
-label_settings = SubResource("LabelSettings_c5ffv")
-
 [node name="SidePanel" type="Panel" parent="." unique_id=1965831140]
-offset_left = -181.0
-offset_right = 9.0
-offset_bottom = 240.0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 192.0
+offset_bottom = 238.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_c5ffv")
+metadata/_edit_use_anchors_ = true
+
+[node name="ANDSidePanel" type="Panel" parent="SidePanel" unique_id=1227021613]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 172.0
+offset_bottom = 221.0
+
+[node name="Header" type="Label" parent="SidePanel/ANDSidePanel" unique_id=1222141468]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 15.0
+text = "AND GATE"
+label_settings = SubResource("LabelSettings_trvqw")
+
+[node name="TextureRect" type="TextureRect" parent="SidePanel/ANDSidePanel" unique_id=1344684889]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 26.0
+offset_right = 83.0
+offset_bottom = 86.0
+texture = ExtResource("7_sd8fj")
+
+[node name="TruthTable" type="Label" parent="SidePanel/ANDSidePanel" unique_id=21734333]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 84.0
+offset_right = 119.0
+offset_bottom = 165.0
+text = "Truth Table:
+		x  y | f
+		--------
+		0  0 | 0
+		0  1 | 0
+		1  0 | 0
+		1  1 | 1"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="xy" type="Label" parent="SidePanel/ANDSidePanel" unique_id=94136698]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 37.0
+offset_right = 20.0
+offset_bottom = 70.0
+text = "x
+
+y"
+label_settings = SubResource("LabelSettings_aqnmd")
+
+[node name="f" type="Label" parent="SidePanel/ANDSidePanel" unique_id=907970893]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 49.0
+offset_right = 97.0
+offset_bottom = 60.0
+text = "f"
+label_settings = SubResource("LabelSettings_o4ksx")
+
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button1" to="InventoryPanel/GridContainer/Button1" method="_on_pressed"]
