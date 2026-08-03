@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://7f2gmph5b6u2"]
 
-[ext_resource type="Texture2D" uid="uid://b48r5r3v8thp3" path="res://Assets/HackerInventoryPack/hacker_inventory_panel.png" id="1_wdn4f"]
+[ext_resource type="Texture2D" uid="uid://dwlge3la2kv56" path="res://Assets/HackerInventoryPack/hacker_panel.png" id="1_0n8tc"]
+[ext_resource type="FontFile" uid="uid://cffopwkd67fsc" path="res://Assets/MGS1_Fonts/MGS1 Codec.ttf" id="2_k1vlg"]
 [ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="2_k5gp2"]
 [ext_resource type="Texture2D" uid="uid://w1bp1ld1vl3" path="res://Assets/HackerInventoryPack/hacker_slot_hover.png" id="3_yxepq"]
+[ext_resource type="Texture2D" uid="uid://b121yk51l6bx2" path="res://Assets/HackerInventoryPack/hacker-side-panel.png" id="4_0n8tc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yxepq"]
+texture = ExtResource("1_0n8tc")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0n8tc"]
 texture = ExtResource("2_k5gp2")
@@ -12,118 +17,176 @@ region_rect = Rect2(28, 28, 73, 73)
 texture = ExtResource("3_yxepq")
 region_rect = Rect2(24, 24, 82, 82)
 
+[sub_resource type="LabelSettings" id="LabelSettings_c5ffv"]
+font = ExtResource("2_k1vlg")
+font_size = 40
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c5ffv"]
+texture = ExtResource("4_0n8tc")
+
 [node name="Inventory" type="Node2D" unique_id=1282777030]
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1721672881]
-offset_right = 800.0
-offset_bottom = 500.0
+[node name="InventoryPanel" type="Panel" parent="." unique_id=1262405203]
+offset_left = 2.9999995
+offset_right = 795.5
+offset_bottom = 599.99994
 scale = Vector2(0.4, 0.4)
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("1_wdn4f")
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
 
-[node name="GridContainer" type="GridContainer" parent="TextureRect" unique_id=516039560]
+[node name="GridContainer" type="GridContainer" parent="InventoryPanel" unique_id=516039560]
 layout_mode = 0
-offset_left = 85.0
-offset_top = 104.0
-offset_right = 713.0
-offset_bottom = 444.0
+offset_left = 82.5
+offset_top = 152.5
+offset_right = 710.5
+offset_bottom = 497.49994
 theme_override_constants/h_separation = 32
 theme_override_constants/v_separation = 20
 columns = 5
 
-[node name="Button1" type="Button" parent="TextureRect/GridContainer" unique_id=312762983]
+[node name="Button1" type="Button" parent="InventoryPanel/GridContainer" unique_id=312762983]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
-text = "and gate"
+text = "and
+gate"
 
-[node name="Button2" type="Button" parent="TextureRect/GridContainer" unique_id=112394361]
+[node name="Button2" type="Button" parent="InventoryPanel/GridContainer" unique_id=112394361]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
-text = "or gate"
+text = "or
+gate"
 
-[node name="Button3" type="Button" parent="TextureRect/GridContainer" unique_id=54158340]
+[node name="Button3" type="Button" parent="InventoryPanel/GridContainer" unique_id=54158340]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
-text = "xor gate"
+text = "xor
+gate"
 
-[node name="Button4" type="Button" parent="TextureRect/GridContainer" unique_id=147863429]
+[node name="Button4" type="Button" parent="InventoryPanel/GridContainer" unique_id=147863429]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
-text = "inverter"
+text = "inve-
+rter"
 
-[node name="Button5" type="Button" parent="TextureRect/GridContainer" unique_id=2053404621]
+[node name="Button5" type="Button" parent="InventoryPanel/GridContainer" unique_id=2053404621]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
-text = "minterms"
+text = "min-
+terms"
 
-[node name="Button6" type="Button" parent="TextureRect/GridContainer" unique_id=2083816968]
+[node name="Button6" type="Button" parent="InventoryPanel/GridContainer" unique_id=2083816968]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 text = "binary"
 
-[node name="Button7" type="Button" parent="TextureRect/GridContainer" unique_id=2128945947]
+[node name="Button7" type="Button" parent="InventoryPanel/GridContainer" unique_id=2128945947]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Button8" type="Button" parent="TextureRect/GridContainer" unique_id=2070247849]
+[node name="Button8" type="Button" parent="InventoryPanel/GridContainer" unique_id=2070247849]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Button9" type="Button" parent="TextureRect/GridContainer" unique_id=1943605616]
+[node name="Button9" type="Button" parent="InventoryPanel/GridContainer" unique_id=1943605616]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Button10" type="Button" parent="TextureRect/GridContainer" unique_id=271487326]
+[node name="Button10" type="Button" parent="InventoryPanel/GridContainer" unique_id=271487326]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Button11" type="Button" parent="TextureRect/GridContainer" unique_id=877249986]
+[node name="Button11" type="Button" parent="InventoryPanel/GridContainer" unique_id=877249986]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Button12" type="Button" parent="TextureRect/GridContainer" unique_id=1308291476]
+[node name="Button12" type="Button" parent="InventoryPanel/GridContainer" unique_id=1308291476]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Button13" type="Button" parent="TextureRect/GridContainer" unique_id=626077513]
+[node name="Button13" type="Button" parent="InventoryPanel/GridContainer" unique_id=626077513]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Button14" type="Button" parent="TextureRect/GridContainer" unique_id=1445529867]
+[node name="Button14" type="Button" parent="InventoryPanel/GridContainer" unique_id=1445529867]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
-[node name="Button15" type="Button" parent="TextureRect/GridContainer" unique_id=76786345]
+[node name="Button15" type="Button" parent="InventoryPanel/GridContainer" unique_id=76786345]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+
+[node name="Label" type="Label" parent="InventoryPanel" unique_id=694425620]
+layout_mode = 0
+offset_left = 97.49999
+offset_top = 82.5
+offset_right = 240.5
+offset_bottom = 117.5
+text = "inventory"
+label_settings = SubResource("LabelSettings_c5ffv")
+
+[node name="SidePanel" type="Panel" parent="." unique_id=1965831140]
+offset_left = -181.0
+offset_right = 9.0
+offset_bottom = 240.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_c5ffv")
