@@ -7,8 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://b121yk51l6bx2" path="res://Assets/HackerInventoryPack/hacker-side-panel.png" id="4_0n8tc"]
 [ext_resource type="Script" uid="uid://j5whjhnr3o3i" path="res://Scripts/inventory_button_1.gd" id="5_c5ffv"]
 [ext_resource type="Script" uid="uid://dct10y5xgl8km" path="res://Scripts/inventory_button_2.gd" id="6_trvqw"]
+[ext_resource type="Script" uid="uid://pruo65josrc0" path="res://Scripts/inventory_button_3.gd" id="7_bvt08"]
 [ext_resource type="Texture2D" uid="uid://ugeyblyprf8i" path="res://Assets/LogicGates/AND_gate.png" id="7_sd8fj"]
+[ext_resource type="Script" uid="uid://ckvtlaljbr70k" path="res://Scripts/inventory_button_4.gd" id="8_2rjgx"]
 [ext_resource type="Script" uid="uid://8gcpk4n4rqhd" path="res://Scripts/side_panel.gd" id="8_aqnmd"]
+[ext_resource type="Texture2D" uid="uid://capw3y6yhs1vg" path="res://Assets/LogicGates/OR_gate.png" id="10_o4ksx"]
+[ext_resource type="Texture2D" uid="uid://b4cav84yhguuc" path="res://Assets/LogicGates/XOR_gate.png" id="12_mgnjo"]
+[ext_resource type="Texture2D" uid="uid://dvmmmjvicq54s" path="res://Assets/LogicGates/Inverter.png" id="13_mgnjo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yxepq"]
 texture = ExtResource("1_0n8tc")
@@ -71,7 +76,7 @@ theme_override_constants/h_separation = 32
 theme_override_constants/v_separation = 20
 columns = 5
 
-[node name="Button1" type="Button" parent="InventoryPanel/GridContainer" unique_id=312762983]
+[node name="AND" type="Button" parent="InventoryPanel/GridContainer" unique_id=312762983]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
@@ -82,7 +87,7 @@ text = "and
 gate"
 script = ExtResource("5_c5ffv")
 
-[node name="Button2" type="Button" parent="InventoryPanel/GridContainer" unique_id=112394361]
+[node name="OR" type="Button" parent="InventoryPanel/GridContainer" unique_id=112394361]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
@@ -102,6 +107,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 text = "xor
 gate"
+script = ExtResource("7_bvt08")
 
 [node name="Button4" type="Button" parent="InventoryPanel/GridContainer" unique_id=147863429]
 custom_minimum_size = Vector2(100, 100)
@@ -112,6 +118,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 text = "inve-
 rter"
+script = ExtResource("8_2rjgx")
 
 [node name="Button5" type="Button" parent="InventoryPanel/GridContainer" unique_id=2053404621]
 custom_minimum_size = Vector2(100, 100)
@@ -214,6 +221,7 @@ script = ExtResource("8_aqnmd")
 metadata/_edit_use_anchors_ = true
 
 [node name="ANDSidePanel" type="Panel" parent="SidePanel" unique_id=1227021613]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 18.0
@@ -267,12 +275,195 @@ label_settings = SubResource("LabelSettings_aqnmd")
 
 [node name="f" type="Label" parent="SidePanel/ANDSidePanel" unique_id=907970893]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 49.0
-offset_right = 97.0
-offset_bottom = 60.0
+offset_left = 87.0
+offset_top = 50.0
+offset_right = 96.0
+offset_bottom = 61.0
 text = "f"
 label_settings = SubResource("LabelSettings_o4ksx")
 
-[connection signal="pressed" from="InventoryPanel/GridContainer/Button1" to="InventoryPanel/GridContainer/Button1" method="_on_pressed"]
-[connection signal="pressed" from="InventoryPanel/GridContainer/Button2" to="InventoryPanel/GridContainer/Button2" method="_on_pressed"]
+[node name="ORSidePanel" type="Panel" parent="SidePanel" unique_id=1594243040]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 172.0
+offset_bottom = 221.0
+
+[node name="Header" type="Label" parent="SidePanel/ORSidePanel" unique_id=1108390798]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 15.0
+text = "OR GATE"
+label_settings = SubResource("LabelSettings_trvqw")
+
+[node name="TextureRect" type="TextureRect" parent="SidePanel/ORSidePanel" unique_id=1917608973]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 26.0
+offset_right = 83.0
+offset_bottom = 86.0
+texture = ExtResource("10_o4ksx")
+
+[node name="TruthTable" type="Label" parent="SidePanel/ORSidePanel" unique_id=1857179669]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 84.0
+offset_right = 119.0
+offset_bottom = 165.0
+text = "Truth Table:
+		x  y | f
+		--------
+		0  0 | 0
+		0  1 | 1
+		1  0 | 1
+		1  1 | 1"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="xy" type="Label" parent="SidePanel/ORSidePanel" unique_id=383073823]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 37.0
+offset_right = 20.0
+offset_bottom = 70.0
+text = "x
+
+y"
+label_settings = SubResource("LabelSettings_aqnmd")
+
+[node name="f" type="Label" parent="SidePanel/ORSidePanel" unique_id=1629751175]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 50.0
+offset_right = 96.0
+offset_bottom = 61.0
+text = "f"
+label_settings = SubResource("LabelSettings_o4ksx")
+
+[node name="XORSidePanel" type="Panel" parent="SidePanel" unique_id=351297796]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 172.0
+offset_bottom = 221.0
+
+[node name="Header" type="Label" parent="SidePanel/XORSidePanel" unique_id=353255944]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 15.0
+text = "XOR GATE"
+label_settings = SubResource("LabelSettings_trvqw")
+
+[node name="TextureRect" type="TextureRect" parent="SidePanel/XORSidePanel" unique_id=1438894531]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 26.0
+offset_right = 83.0
+offset_bottom = 86.0
+texture = ExtResource("12_mgnjo")
+
+[node name="TruthTable" type="Label" parent="SidePanel/XORSidePanel" unique_id=1059407330]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 84.0
+offset_right = 119.0
+offset_bottom = 165.0
+text = "Truth Table:
+		x  y | f
+		--------
+		0  0 | 0
+		0  1 | 1
+		1  0 | 1
+		1  1 | 0"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="xy" type="Label" parent="SidePanel/XORSidePanel" unique_id=1845746244]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 37.0
+offset_right = 19.0
+offset_bottom = 70.0
+text = "x
+
+y"
+label_settings = SubResource("LabelSettings_aqnmd")
+
+[node name="f" type="Label" parent="SidePanel/XORSidePanel" unique_id=428566405]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 50.0
+offset_right = 96.0
+offset_bottom = 61.0
+text = "f"
+label_settings = SubResource("LabelSettings_o4ksx")
+
+[node name="InverterSidePanel" type="Panel" parent="SidePanel" unique_id=659960598]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 172.0
+offset_bottom = 221.0
+
+[node name="Header" type="Label" parent="SidePanel/InverterSidePanel" unique_id=997241751]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 15.0
+text = "Inverter"
+label_settings = SubResource("LabelSettings_trvqw")
+
+[node name="TextureRect" type="TextureRect" parent="SidePanel/InverterSidePanel" unique_id=1264084299]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 19.0
+offset_top = 22.0
+offset_right = 80.0
+offset_bottom = 82.0
+texture = ExtResource("13_mgnjo")
+
+[node name="TruthTable" type="Label" parent="SidePanel/InverterSidePanel" unique_id=1719759625]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 84.0
+offset_right = 119.0
+offset_bottom = 165.0
+text = "Truth Table:
+		x | f
+		-----
+		0 | 1
+		1 | 0"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="xy" type="Label" parent="SidePanel/InverterSidePanel" unique_id=1029227422]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 48.0
+offset_right = 18.0
+offset_bottom = 57.0
+text = "X"
+label_settings = SubResource("LabelSettings_aqnmd")
+
+[node name="f" type="Label" parent="SidePanel/InverterSidePanel" unique_id=2142521317]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 50.0
+offset_right = 96.0
+offset_bottom = 61.0
+text = "f"
+label_settings = SubResource("LabelSettings_o4ksx")
+
+[connection signal="pressed" from="InventoryPanel/GridContainer/AND" to="InventoryPanel/GridContainer/AND" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/OR" to="InventoryPanel/GridContainer/OR" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button3" to="InventoryPanel/GridContainer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button4" to="InventoryPanel/GridContainer/Button4" method="_on_pressed"]
