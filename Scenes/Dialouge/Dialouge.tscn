@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddsqbjgddpo0i"]
 
-[ext_resource type="Script" uid="uid://dfvsck46pb5c2" path="res://Scenes/Dialouge/dialouge.gd" id="1_s6nkx"]
+[ext_resource type="Script" uid="uid://dfvsck46pb5c2" path="res://Scripts/Dialouge/dialouge.gd" id="1_s6nkx"]
 [ext_resource type="Texture2D" uid="uid://eg6x1spbt5n6" path="res://Assets/oneShotAssets/uiAssets/main_menu_cursor.png" id="2_trd5b"]
 
 [node name="DialougeUI" type="Control" unique_id=729462109]
