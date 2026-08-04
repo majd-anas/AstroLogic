@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c583x380cw53g"]
+[gd_scene load_steps=0 format=3 uid="uid://c583x380cw53g"]
 
 [ext_resource type="Script" uid="uid://f3jevl0h707b" path="res://Scripts/control.gd" id="1_cewbp"]
 [ext_resource type="Texture2D" uid="uid://cvile3ej5mr54" path="res://Assets/Calculator-ASSETS/Screens/screen_01.png" id="2_cnfr3"]
