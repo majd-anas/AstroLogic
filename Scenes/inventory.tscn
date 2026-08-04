@@ -5,13 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="2_k5gp2"]
 [ext_resource type="Texture2D" uid="uid://w1bp1ld1vl3" path="res://Assets/HackerInventoryPack/hacker_slot_hover.png" id="3_yxepq"]
 [ext_resource type="Texture2D" uid="uid://b121yk51l6bx2" path="res://Assets/HackerInventoryPack/hacker-side-panel.png" id="4_0n8tc"]
-[ext_resource type="Script" uid="uid://j5whjhnr3o3i" path="res://Scripts/inventory_button_1.gd" id="5_c5ffv"]
-[ext_resource type="Script" uid="uid://dct10y5xgl8km" path="res://Scripts/inventory_button_2.gd" id="6_trvqw"]
-[ext_resource type="Script" uid="uid://pruo65josrc0" path="res://Scripts/inventory_button_3.gd" id="7_bvt08"]
+[ext_resource type="Script" uid="uid://j5whjhnr3o3i" path="res://Scripts/InventoryScripts/inventory_button_1.gd" id="5_c5ffv"]
+[ext_resource type="Script" uid="uid://dct10y5xgl8km" path="res://Scripts/InventoryScripts/inventory_button_2.gd" id="6_trvqw"]
+[ext_resource type="Script" uid="uid://pruo65josrc0" path="res://Scripts/InventoryScripts/inventory_button_3.gd" id="7_bvt08"]
 [ext_resource type="Texture2D" uid="uid://ugeyblyprf8i" path="res://Assets/LogicGates/AND_gate.png" id="7_sd8fj"]
-[ext_resource type="Script" uid="uid://ckvtlaljbr70k" path="res://Scripts/inventory_button_4.gd" id="8_2rjgx"]
-[ext_resource type="Script" uid="uid://8gcpk4n4rqhd" path="res://Scripts/side_panel.gd" id="8_aqnmd"]
+[ext_resource type="Script" uid="uid://ckvtlaljbr70k" path="res://Scripts/InventoryScripts/inventory_button_4.gd" id="8_2rjgx"]
+[ext_resource type="Script" uid="uid://8gcpk4n4rqhd" path="res://Scripts/InventoryScripts/side_panel.gd" id="8_aqnmd"]
+[ext_resource type="Script" uid="uid://cw03wgu4jh1b0" path="res://Scripts/InventoryScripts/inventory_button_5.gd" id="9_074r3"]
 [ext_resource type="Texture2D" uid="uid://capw3y6yhs1vg" path="res://Assets/LogicGates/OR_gate.png" id="10_o4ksx"]
+[ext_resource type="Script" uid="uid://joiwt65bnthd" path="res://Scripts/InventoryScripts/inventory_button_6.gd" id="10_q5cdx"]
+[ext_resource type="Script" uid="uid://cocnn3isp6mt3" path="res://Scripts/InventoryScripts/inventory_button_7.gd" id="11_r01aq"]
 [ext_resource type="Texture2D" uid="uid://b4cav84yhguuc" path="res://Assets/LogicGates/XOR_gate.png" id="12_mgnjo"]
 [ext_resource type="Texture2D" uid="uid://dvmmmjvicq54s" path="res://Assets/LogicGates/Inverter.png" id="13_mgnjo"]
 
@@ -51,7 +54,7 @@ font = ExtResource("2_k1vlg")
 offset_left = 179.00002
 offset_top = -2.0
 offset_right = 971.5
-offset_bottom = 597.99994
+offset_bottom = 655.49994
 scale = Vector2(0.4, 0.4)
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -68,16 +71,16 @@ label_settings = SubResource("LabelSettings_c5ffv")
 
 [node name="GridContainer" type="GridContainer" parent="InventoryPanel" unique_id=516039560]
 layout_mode = 0
-offset_left = 82.5
-offset_top = 152.5
-offset_right = 710.5
-offset_bottom = 497.49994
-theme_override_constants/h_separation = 32
+offset_left = 62.499977
+offset_top = 170.0
+offset_right = 730.5
+offset_bottom = 570.0
+theme_override_constants/h_separation = 17
 theme_override_constants/v_separation = 20
 columns = 5
 
-[node name="AND" type="Button" parent="InventoryPanel/GridContainer" unique_id=312762983]
-custom_minimum_size = Vector2(100, 100)
+[node name="AND_button" type="Button" parent="InventoryPanel/GridContainer" unique_id=312762983]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
@@ -87,8 +90,8 @@ text = "and
 gate"
 script = ExtResource("5_c5ffv")
 
-[node name="OR" type="Button" parent="InventoryPanel/GridContainer" unique_id=112394361]
-custom_minimum_size = Vector2(100, 100)
+[node name="OR_button" type="Button" parent="InventoryPanel/GridContainer" unique_id=112394361]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
@@ -98,8 +101,8 @@ text = "or
 gate"
 script = ExtResource("6_trvqw")
 
-[node name="Button3" type="Button" parent="InventoryPanel/GridContainer" unique_id=54158340]
-custom_minimum_size = Vector2(100, 100)
+[node name="XOR_button" type="Button" parent="InventoryPanel/GridContainer" unique_id=54158340]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
@@ -109,8 +112,8 @@ text = "xor
 gate"
 script = ExtResource("7_bvt08")
 
-[node name="Button4" type="Button" parent="InventoryPanel/GridContainer" unique_id=147863429]
-custom_minimum_size = Vector2(100, 100)
+[node name="inverter_button" type="Button" parent="InventoryPanel/GridContainer" unique_id=147863429]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
@@ -120,8 +123,8 @@ text = "inve-
 rter"
 script = ExtResource("8_2rjgx")
 
-[node name="Button5" type="Button" parent="InventoryPanel/GridContainer" unique_id=2053404621]
-custom_minimum_size = Vector2(100, 100)
+[node name="minterms_button" type="Button" parent="InventoryPanel/GridContainer" unique_id=2053404621]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
@@ -129,26 +132,31 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 text = "min-
 terms"
+script = ExtResource("9_074r3")
 
-[node name="Button6" type="Button" parent="InventoryPanel/GridContainer" unique_id=2083816968]
-custom_minimum_size = Vector2(100, 100)
+[node name="maxterms_button" type="Button" parent="InventoryPanel/GridContainer" unique_id=2083816968]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+text = "max-
+trems"
+script = ExtResource("10_q5cdx")
+
+[node name="binary_button" type="Button" parent="InventoryPanel/GridContainer" unique_id=2128945947]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 text = "binary"
-
-[node name="Button7" type="Button" parent="InventoryPanel/GridContainer" unique_id=2128945947]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_k1vlg")
-theme_override_font_sizes/font_size = 26
-theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
-theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+script = ExtResource("11_r01aq")
 
 [node name="Button8" type="Button" parent="InventoryPanel/GridContainer" unique_id=2070247849]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
@@ -156,7 +164,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
 [node name="Button9" type="Button" parent="InventoryPanel/GridContainer" unique_id=1943605616]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
@@ -164,7 +172,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
 [node name="Button10" type="Button" parent="InventoryPanel/GridContainer" unique_id=271487326]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
@@ -172,7 +180,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
 [node name="Button11" type="Button" parent="InventoryPanel/GridContainer" unique_id=877249986]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
@@ -180,7 +188,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
 [node name="Button12" type="Button" parent="InventoryPanel/GridContainer" unique_id=1308291476]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
@@ -188,7 +196,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
 [node name="Button13" type="Button" parent="InventoryPanel/GridContainer" unique_id=626077513]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
@@ -196,7 +204,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
 [node name="Button14" type="Button" parent="InventoryPanel/GridContainer" unique_id=1445529867]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
@@ -204,7 +212,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
 [node name="Button15" type="Button" parent="InventoryPanel/GridContainer" unique_id=76786345]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
@@ -212,13 +220,12 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
 
 [node name="SidePanel" type="Panel" parent="." unique_id=1965831140]
-offset_left = 2.0
+offset_left = 1.0
 offset_top = -2.0
-offset_right = 192.0
-offset_bottom = 238.0
+offset_right = 191.0
+offset_bottom = 261.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_c5ffv")
 script = ExtResource("8_aqnmd")
-metadata/_edit_use_anchors_ = true
 
 [node name="ANDSidePanel" type="Panel" parent="SidePanel" unique_id=1227021613]
 visible = false
@@ -250,9 +257,9 @@ texture = ExtResource("7_sd8fj")
 [node name="TruthTable" type="Label" parent="SidePanel/ANDSidePanel" unique_id=21734333]
 layout_mode = 0
 offset_left = 3.0
-offset_top = 84.0
+offset_top = 87.0
 offset_right = 119.0
-offset_bottom = 165.0
+offset_bottom = 168.0
 text = "Truth Table:
 		x  y | f
 		--------
@@ -312,9 +319,9 @@ texture = ExtResource("10_o4ksx")
 [node name="TruthTable" type="Label" parent="SidePanel/ORSidePanel" unique_id=1857179669]
 layout_mode = 0
 offset_left = 3.0
-offset_top = 84.0
+offset_top = 87.0
 offset_right = 119.0
-offset_bottom = 165.0
+offset_bottom = 168.0
 text = "Truth Table:
 		x  y | f
 		--------
@@ -374,9 +381,9 @@ texture = ExtResource("12_mgnjo")
 [node name="TruthTable" type="Label" parent="SidePanel/XORSidePanel" unique_id=1059407330]
 layout_mode = 0
 offset_left = 3.0
-offset_top = 84.0
+offset_top = 87.0
 offset_right = 119.0
-offset_bottom = 165.0
+offset_bottom = 168.0
 text = "Truth Table:
 		x  y | f
 		--------
@@ -407,6 +414,7 @@ text = "f"
 label_settings = SubResource("LabelSettings_o4ksx")
 
 [node name="InverterSidePanel" type="Panel" parent="SidePanel" unique_id=659960598]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 18.0
@@ -420,7 +428,7 @@ offset_left = 4.0
 offset_top = 6.0
 offset_right = 158.0
 offset_bottom = 15.0
-text = "Inverter"
+text = "INVERTER"
 label_settings = SubResource("LabelSettings_trvqw")
 
 [node name="TextureRect" type="TextureRect" parent="SidePanel/InverterSidePanel" unique_id=1264084299]
@@ -435,9 +443,9 @@ texture = ExtResource("13_mgnjo")
 [node name="TruthTable" type="Label" parent="SidePanel/InverterSidePanel" unique_id=1719759625]
 layout_mode = 0
 offset_left = 3.0
-offset_top = 84.0
+offset_top = 87.0
 offset_right = 119.0
-offset_bottom = 165.0
+offset_bottom = 168.0
 text = "Truth Table:
 		x | f
 		-----
@@ -463,7 +471,135 @@ offset_bottom = 61.0
 text = "f"
 label_settings = SubResource("LabelSettings_o4ksx")
 
-[connection signal="pressed" from="InventoryPanel/GridContainer/AND" to="InventoryPanel/GridContainer/AND" method="_on_pressed"]
-[connection signal="pressed" from="InventoryPanel/GridContainer/OR" to="InventoryPanel/GridContainer/OR" method="_on_pressed"]
-[connection signal="pressed" from="InventoryPanel/GridContainer/Button3" to="InventoryPanel/GridContainer/Button3" method="_on_pressed"]
-[connection signal="pressed" from="InventoryPanel/GridContainer/Button4" to="InventoryPanel/GridContainer/Button4" method="_on_pressed"]
+[node name="MintermsSidePanel" type="Panel" parent="SidePanel" unique_id=899737616]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 172.0
+offset_bottom = 221.0
+
+[node name="Header" type="Label" parent="SidePanel/MintermsSidePanel" unique_id=320368520]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 158.0
+offset_bottom = 14.0
+text = "MINTERMS:"
+label_settings = SubResource("LabelSettings_trvqw")
+
+[node name="Table" type="Label" parent="SidePanel/MintermsSidePanel" unique_id=765093216]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 23.0
+offset_right = 120.0
+offset_bottom = 212.0
+text = "m0 = a'b'c'd'
+m1 = a'b'c'd
+m2 = a'b'cd'
+m3 = a'b'cd
+m4 = a'bc'd'
+m5 = a'bc'd
+m6 = a'bcd'
+m7 = a'bcd
+m8 = ab'c'd'
+m9 = ab'c'd
+m10 = ab'cd'
+m11 = ab'cd
+m12 = abc'd'
+m13 = abc'd
+m14 = abcd'
+m15 = abcd"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="MaxtermsSidePanel" type="Panel" parent="SidePanel" unique_id=38017849]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 172.0
+offset_bottom = 221.0
+
+[node name="Header" type="Label" parent="SidePanel/MaxtermsSidePanel" unique_id=8408212]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 158.0
+offset_bottom = 14.0
+text = "MAXTERMS:"
+label_settings = SubResource("LabelSettings_trvqw")
+
+[node name="Table" type="Label" parent="SidePanel/MaxtermsSidePanel" unique_id=182483086]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 23.0
+offset_right = 129.0
+offset_bottom = 212.0
+text = "m0 = a+b+c+d
+m1 = a+b+c+d'
+m2 = a+b+c'+d
+m3 = a+b+c'+d'
+m4 = a+b'+c+d
+m5 = a+b'+c+d'
+m6 = a+b'+c'+d
+m7 = a+b'+c'+d'
+m8 = a'+b+c+d
+m9 = a'+b+c+d'
+m10 = a'+b+c'+d
+m11 = a'+b+c'+d'
+m12 = a'+b'+c+d
+m13 = a'+b'+c+d'
+m14 = a'+b'+c'+d
+m15 = a'+b'+c'+d'"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="BinarySidePanel" type="Panel" parent="SidePanel" unique_id=1178129635]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 172.0
+offset_bottom = 221.0
+
+[node name="Header" type="Label" parent="SidePanel/BinarySidePanel" unique_id=926636051]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 158.0
+offset_bottom = 14.0
+text = "decimal     binary"
+label_settings = SubResource("LabelSettings_trvqw")
+
+[node name="Table" type="Label" parent="SidePanel/BinarySidePanel" unique_id=1398373644]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 140.0
+offset_bottom = 213.0
+text = " 0 	        0000
+ 1         0001
+ 2         0010
+ 3         0011
+ 4         0100
+ 5         0101
+ 6         0110
+ 7         0111
+ 8	         1000
+ 9         1001
+10         1010
+11         1011
+12         1100
+13         1101
+14         1110
+15         1111"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[connection signal="pressed" from="InventoryPanel/GridContainer/AND_button" to="InventoryPanel/GridContainer/AND_button" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/OR_button" to="InventoryPanel/GridContainer/OR_button" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/XOR_button" to="InventoryPanel/GridContainer/XOR_button" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/inverter_button" to="InventoryPanel/GridContainer/inverter_button" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/minterms_button" to="InventoryPanel/GridContainer/minterms_button" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/maxterms_button" to="InventoryPanel/GridContainer/maxterms_button" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/binary_button" to="InventoryPanel/GridContainer/binary_button" method="_on_pressed"]
