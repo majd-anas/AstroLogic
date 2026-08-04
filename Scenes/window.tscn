@@ -1,0 +1,101 @@
+[gd_scene load_steps=13 format=3 uid="uid://blu4rgoufpolg"]
+
+[ext_resource type="Texture2D" uid="uid://b48r5r3v8thp3" path="res://Assets/HackerInventoryPack/hacker_inventory_panel.png" id="1_0xhjo"]
+[ext_resource type="Script" uid="uid://32ie1rbeyqih" path="res://Scenes/container.gd" id="2_0slyu"]
+[ext_resource type="PackedScene" uid="uid://b84mbv2rh1t6w" path="res://Scenes/km.tscn" id="5_gs3ir"]
+[ext_resource type="Script" uid="uid://4pg4gsg7vo0y" path="res://Scenes/button.gd" id="5_gvfsm"]
+[ext_resource type="Texture2D" uid="uid://bvxnjppf3yv0q" path="res://Assets/HackerInventoryPack/hacker_slot_selected.png" id="5_r37kj"]
+[ext_resource type="Texture2D" uid="uid://chwkaytuw4x4d" path="res://Assets/HackerInventoryPack/hacker_slot_legendary.png" id="6_pff0d"]
+[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="7_23jqw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r37kj"]
+texture = ExtResource("1_0xhjo")
+modulate_color = Color(0.40069774, 0.40069774, 0.40069768, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pff0d"]
+bg_color = Color(0.023529412, 0.07450981, 0.03529412, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8vpwn"]
+texture = ExtResource("5_r37kj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j100b"]
+texture = ExtResource("6_pff0d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_23jqw"]
+texture = ExtResource("6_pff0d")
+
+[node name="Window" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_r37kj")
+
+[node name="Container" type="Container" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("2_0slyu")
+
+[node name="KM4" parent="Panel/Container" instance=ExtResource("5_gs3ir")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.035
+anchor_right = 0.035
+anchor_bottom = 0.19900002
+offset_left = 67.0
+offset_top = 38.155
+offset_right = 220.5
+offset_bottom = 61.155
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("7_23jqw")
+theme_override_font_sizes/font_size = 51
+theme_override_styles/normal = SubResource("StyleBoxFlat_pff0d")
+text = "expression"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8350694
+anchor_top = 0.11265432
+anchor_right = 0.93654865
+anchor_bottom = 0.2977037
+offset_right = 0.09600067
+offset_bottom = 0.08799744
+theme_override_fonts/font = ExtResource("7_23jqw")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_8vpwn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_j100b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_23jqw")
+text = "x"
+autowrap_mode = 2
+autowrap_trim_flags = 0
+clip_text = true
+text_direction = 3
+script = ExtResource("5_gvfsm")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

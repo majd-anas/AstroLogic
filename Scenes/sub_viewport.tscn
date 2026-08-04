@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjwdlvb7qvdtc"]
+
+[ext_resource type="PackedScene" uid="uid://2uu22y34i802" path="res://Scenes/km2.tscn" id="1_rdwol"]
+
+[node name="SubViewport" type="SubViewport"]
+
+[node name="KM" parent="." instance=ExtResource("1_rdwol")]
