@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://7f2gmph5b6u2"]
 
 [ext_resource type="Texture2D" uid="uid://dwlge3la2kv56" path="res://Assets/HackerInventoryPack/hacker_panel.png" id="1_0n8tc"]
+[ext_resource type="Script" uid="uid://rymw17htcymr" path="res://Scripts/InventoryScripts/inventory.gd" id="1_32ipq"]
 [ext_resource type="FontFile" uid="uid://cffopwkd67fsc" path="res://Assets/MGS1_Fonts/MGS1 Codec.ttf" id="2_k1vlg"]
 [ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="2_k5gp2"]
 [ext_resource type="Texture2D" uid="uid://w1bp1ld1vl3" path="res://Assets/HackerInventoryPack/hacker_slot_hover.png" id="3_yxepq"]
@@ -49,6 +50,8 @@ font = ExtResource("2_k1vlg")
 font = ExtResource("2_k1vlg")
 
 [node name="Inventory" type="Node2D" unique_id=1282777030]
+scale = Vector2(2, 2)
+script = ExtResource("1_32ipq")
 
 [node name="InventoryPanel" type="Panel" parent="." unique_id=1262405203]
 offset_left = 179.00002
