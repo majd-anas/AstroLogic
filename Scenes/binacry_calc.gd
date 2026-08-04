@@ -3,7 +3,7 @@ extends Control
 @onready var display: Label = $panelContainer/VBoxContainer/HBoxContainer5/Panel/Label
 
 # The problem expression shown to the player, e.g. "AB'+C"
-var problem_expression: String = "AB'C+AB'C'+A'BC"
+var problem_expression: String = "100101"
 
 const PYTHON_EXE := "python3"  # use full path if python3 isn't on PATH
 const SCRIPT_REL := "res://python/calc.py"
@@ -59,43 +59,10 @@ func _on_equals_pressed() -> void:
 		display.text = "Correct!"
 	else:
 		display.text = "Incorrect (try again)"
-		print("Expected something equivalent to: ", result["simplified"])
+
 
 func run_check(problem: String, answer: String) -> Dictionary:
-	var request_path := "user://request.json"
-	var response_path := "user://response.json"
-
-	var request_data := {
-		"expression": problem,
-		"answer": answer
+	return {
+		"correct": str(problem.bin_to_int()) == answer
 	}
-
-	var req_file := FileAccess.open(request_path, FileAccess.WRITE)
-	req_file.store_string(JSON.stringify(request_data))
-	req_file.close()
-
-	var script_abs := ProjectSettings.globalize_path(SCRIPT_REL)
-	var request_abs := ProjectSettings.globalize_path(request_path)
-	var response_abs := ProjectSettings.globalize_path(response_path)
-
-	var output: Array = []
-	var exit_code := OS.execute(PYTHON_EXE, [script_abs, request_abs, response_abs], output, true)
-
-	print("Python stdout: ", output)
-
-	if exit_code != 0:
-		return {"error": "Python script exited with code %d" % exit_code}
-
-	if not FileAccess.file_exists(response_path):
-		return {"error": "No response file produced"}
-
-	var resp_file := FileAccess.open(response_path, FileAccess.READ)
-	var response_text := resp_file.get_as_text()
-	resp_file.close()
-
-	var json := JSON.new()
-	var parse_status := json.parse(response_text)
-	if parse_status != OK:
-		return {"error": "Failed to parse response JSON: %s" % json.get_error_message()}
-
-	return json.data
+	

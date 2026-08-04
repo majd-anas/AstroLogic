@@ -1,0 +1,299 @@
+[gd_scene format=3 uid="uid://bmryif2xonwa8"]
+
+[ext_resource type="Texture2D" uid="uid://cvile3ej5mr54" path="res://Assets/Calculator-ASSETS/Screens/screen_01.png" id="1_jquw2"]
+[ext_resource type="Script" uid="uid://bjflhqykwa48v" path="res://Scenes/binacry_calc.gd" id="1_sllnl"]
+[ext_resource type="Texture2D" uid="uid://0e08i2wqqbuw" path="res://Assets/Calculator-ASSETS/Screens/screen_03.png" id="2_sllnl"]
+[ext_resource type="Texture2D" uid="uid://ghw7v5ypv7rk" path="res://Assets/Calculator-ASSETS/SmallButtons/buttons_19.png" id="4_lr0wk"]
+[ext_resource type="Texture2D" uid="uid://d3w7gedg0lbxg" path="res://Assets/Calculator-ASSETS/BasesButtons/bases_02.png" id="5_rra8b"]
+[ext_resource type="Texture2D" uid="uid://bu2scmluj5l4j" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_05.png" id="6_jquw2"]
+[ext_resource type="Texture2D" uid="uid://bw4n6hsg3n6mp" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_06.png" id="7_sllnl"]
+[ext_resource type="Texture2D" uid="uid://b7176jbduoag8" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_07.png" id="8_wbiaw"]
+[ext_resource type="Texture2D" uid="uid://cvmpice7igu5u" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_08.png" id="9_c3m3q"]
+[ext_resource type="Texture2D" uid="uid://c2n8kb3lcgg2w" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_09.png" id="10_v1qt5"]
+[ext_resource type="Texture2D" uid="uid://dvfsdeqa24cay" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_10.png" id="11_y7tg4"]
+[ext_resource type="Texture2D" uid="uid://b3o5bhs5wxd8i" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_11.png" id="12_4aqyw"]
+[ext_resource type="Texture2D" uid="uid://cr32xv00pvacj" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_12.png" id="13_uq8x6"]
+[ext_resource type="Texture2D" uid="uid://bfgsfmne8h1pe" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_13.png" id="14_s8xau"]
+[ext_resource type="Texture2D" uid="uid://dqi0judyq6u70" path="res://Assets/Calculator-ASSETS/SmallButtons/buttons_17.png" id="15_qonyf"]
+[ext_resource type="Texture2D" uid="uid://d4iksr5k3vkmr" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_22.png" id="16_ensvv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lrbgi"]
+texture = ExtResource("1_jquw2")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v35iv"]
+texture = ExtResource("2_sllnl")
+
+[node name="Control" type="Control" unique_id=862842085]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -752.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sllnl")
+
+[node name="panelContainer" type="PanelContainer" parent="." unique_id=1265612416]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.275
+anchor_top = 0.027
+anchor_right = 0.62200004
+anchor_bottom = 0.95300007
+offset_left = -108.899994
+offset_top = -16.092001
+offset_right = 153.688
+offset_bottom = -16.140015
+theme_override_styles/panel = SubResource("StyleBoxTexture_lrbgi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="panelContainer" unique_id=1211388725]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="panelContainer/VBoxContainer" unique_id=1875165448]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.84
+
+[node name="Panel" type="Panel" parent="panelContainer/VBoxContainer/HBoxContainer5" unique_id=1151755988]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_v35iv")
+
+[node name="Label" type="Label" parent="panelContainer/VBoxContainer/HBoxContainer5/Panel" unique_id=1724015210]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.9850001
+offset_left = 15.769012
+offset_top = 6.8380013
+offset_right = -13.230988
+offset_bottom = -10.807007
+pivot_offset = Vector2(-50.86499, 51.418)
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 50
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="panelContainer/VBoxContainer" unique_id=1140193597]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="btnA" type="TextureButton" parent="panelContainer/VBoxContainer/HBoxContainer" unique_id=2101314754]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("4_lr0wk")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="panelContainer/VBoxContainer/HBoxContainer/btnA" unique_id=407933619]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_rra8b")
+
+[node name="btnA2" type="TextureButton" parent="panelContainer/VBoxContainer/HBoxContainer" unique_id=1434364512]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("6_jquw2")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="panelContainer/VBoxContainer/HBoxContainer/btnA2" unique_id=861103417]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_rra8b")
+
+[node name="btnA3" type="TextureButton" parent="panelContainer/VBoxContainer/HBoxContainer" unique_id=1305573035]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("7_sllnl")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="panelContainer/VBoxContainer/HBoxContainer/btnA3" unique_id=1754108053]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_rra8b")
+
+[node name="btnA4" type="TextureButton" parent="panelContainer/VBoxContainer/HBoxContainer" unique_id=1489730416]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("8_wbiaw")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="panelContainer/VBoxContainer/HBoxContainer/btnA4" unique_id=1434697568]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_rra8b")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="panelContainer/VBoxContainer" unique_id=2073234155]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="btnA5" type="TextureButton" parent="panelContainer/VBoxContainer/HBoxContainer2" unique_id=1640235980]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("9_c3m3q")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="panelContainer/VBoxContainer/HBoxContainer2/btnA5" unique_id=182012896]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_rra8b")
+
+[node name="btnA6" type="TextureButton" parent="panelContainer/VBoxContainer/HBoxContainer2" unique_id=1010285649]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("10_v1qt5")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="panelContainer/VBoxContainer/HBoxContainer2/btnA6" unique_id=470045970]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_rra8b")
+
+[node name="btnA7" type="TextureButton" parent="panelContainer/VBoxContainer/HBoxContainer2" unique_id=878455593]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("11_y7tg4")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="panelContainer/VBoxContainer/HBoxContainer2/btnA7" unique_id=1222151159]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_rra8b")
+
+[node name="btnA8" type="TextureButton" parent="panelContainer/VBoxContainer/HBoxContainer2" unique_id=1662274377]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("12_4aqyw")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="panelContainer/VBoxContainer/HBoxContainer2/btnA8" unique_id=309512476]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_rra8b")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="panelContainer/VBoxContainer" unique_id=5512776]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="btnA9" type="TextureButton" parent="panelContainer/VBoxContainer/HBoxContainer3" unique_id=121773836]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("13_uq8x6")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="panelContainer/VBoxContainer/HBoxContainer3/btnA9" unique_id=426533408]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_rra8b")
+
+[node name="btnA10" type="TextureButton" parent="panelContainer/VBoxContainer/HBoxContainer3" unique_id=198113879]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("14_s8xau")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="panelContainer/VBoxContainer/HBoxContainer3/btnA10" unique_id=1371889021]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_rra8b")
+
+[node name="btnA11" type="TextureButton" parent="panelContainer/VBoxContainer/HBoxContainer3" unique_id=1808970464]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("15_qonyf")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="panelContainer/VBoxContainer/HBoxContainer3/btnA11" unique_id=1961785264]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_rra8b")
+
+[node name="btnA12" type="TextureButton" parent="panelContainer/VBoxContainer/HBoxContainer3" unique_id=1074734015]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("16_ensvv")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="panelContainer/VBoxContainer/HBoxContainer3/btnA12" unique_id=1995988993]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_rra8b")
+
+[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer/btnA" to="." method="on_char_pressed" binds= ["1"]]
+[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer/btnA2" to="." method="on_char_pressed" binds= ["2"]]
+[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer/btnA3" to="." method="on_char_pressed" binds= ["3"]]
+[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer/btnA4" to="." method="on_char_pressed" binds= ["4"]]
+[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer2/btnA5" to="." method="on_char_pressed" binds= ["5"]]
+[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer2/btnA6" to="." method="on_char_pressed" binds= ["6"]]
+[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer2/btnA7" to="." method="on_char_pressed" binds= ["7"]]
+[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer2/btnA8" to="." method="on_char_pressed" binds= ["8"]]
+[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnA9" to="." method="on_char_pressed" binds= ["9"]]
+[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnA10" to="." method="on_char_pressed" binds= ["0"]]
+[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnA11" to="." method="_on_equals_pressed"]
+[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnA12" to="." method="on_char_pressed" binds= ["0"]]
