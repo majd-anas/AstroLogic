@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=0 format=3 uid="uid://c1x115jg7rrxw"]
+
+[ext_resource type="Texture2D" uid="uid://dvmmmjvicq54s" path="res://Assets/LogicGates/Inverter.png" id="1_ctcyq"]
+[ext_resource type="Script" uid="uid://0jgj5hossnyy" path="res://Scripts/item_data.gd" id="1_fkxge"]
+
+[resource]
+script = ExtResource("1_fkxge")
+item_name = "Inverter"
+icon = ExtResource("1_ctcyq")
+metadata/_custom_type_script = "uid://0jgj5hossnyy"
