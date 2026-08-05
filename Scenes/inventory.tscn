@@ -480,6 +480,7 @@ text = "f"
 label_settings = SubResource("LabelSettings_o4ksx")
 
 [node name="MintermsSidePanel" type="Panel" parent="SidePanel" unique_id=899737616]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 18.0
@@ -608,7 +609,6 @@ text = "4"
 script = ExtResource("21_iw64u")
 
 [node name="MaxtermsSidePanel" type="Panel" parent="SidePanel" unique_id=38017849]
-visible = false
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 18.0
@@ -625,11 +625,41 @@ offset_bottom = 14.0
 text = "MAXTERMS:"
 label_settings = SubResource("LabelSettings_trvqw")
 
-[node name="Table" type="Label" parent="SidePanel/MaxtermsSidePanel" unique_id=182483086]
+[node name="Table2" type="Label" parent="SidePanel/MaxtermsSidePanel" unique_id=767189403]
 layout_mode = 0
 offset_left = 4.0
 offset_top = 23.0
-offset_right = 129.0
+offset_right = 120.0
+offset_bottom = 212.0
+text = "m0 = a+b
+m1 = a+b'
+m2 = a'+b
+m3 = a'+b'"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="Table3" type="Label" parent="SidePanel/MaxtermsSidePanel" unique_id=1559808606]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = 23.0
+offset_right = 120.0
+offset_bottom = 212.0
+text = "m0 = a+b+c
+m1 = a+b+c'
+m2 = a+b'+c
+m3 = a+b'+c'
+m4 = a'+b+c
+m5 = a'+b+c'
+m6 = a'+b'+c
+m7 = a'+b'+c'"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="Table4" type="Label" parent="SidePanel/MaxtermsSidePanel" unique_id=1457155453]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = 23.0
+offset_right = 120.0
 offset_bottom = 212.0
 text = "m0 = a+b+c+d
 m1 = a+b+c+d'
@@ -648,6 +678,63 @@ m13 = a'+b'+c+d'
 m14 = a'+b'+c'+d
 m15 = a'+b'+c'+d'"
 label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="ButtonsPanel" type="Panel" parent="SidePanel/MaxtermsSidePanel" unique_id=1598961982]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 78.0
+offset_top = -4.0
+offset_right = 152.5
+offset_bottom = 25.5
+
+[node name="2" type="Button" parent="SidePanel/MaxtermsSidePanel/ButtonsPanel" unique_id=165026382]
+layout_mode = 0
+offset_left = 6.5
+offset_top = 5.0
+offset_right = 26.5
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_32ipq")
+text = "2"
+script = ExtResource("19_18ikp")
+
+[node name="3" type="Button" parent="SidePanel/MaxtermsSidePanel/ButtonsPanel" unique_id=1838474096]
+layout_mode = 0
+offset_left = 28.5
+offset_top = 5.0
+offset_right = 48.5
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_32ipq")
+text = "3"
+script = ExtResource("20_6nypo")
+
+[node name="4" type="Button" parent="SidePanel/MaxtermsSidePanel/ButtonsPanel" unique_id=1196651633]
+layout_mode = 0
+offset_left = 51.5
+offset_top = 5.0
+offset_right = 71.5
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_32ipq")
+text = "4"
+script = ExtResource("21_iw64u")
 
 [node name="BinarySidePanel" type="Panel" parent="SidePanel" unique_id=1178129635]
 visible = false
@@ -701,3 +788,6 @@ label_settings = SubResource("LabelSettings_sd8fj")
 [connection signal="pressed" from="SidePanel/MintermsSidePanel/ButtonsPanel/2" to="SidePanel/MintermsSidePanel/ButtonsPanel/2" method="_on_pressed"]
 [connection signal="pressed" from="SidePanel/MintermsSidePanel/ButtonsPanel/3" to="SidePanel/MintermsSidePanel/ButtonsPanel/3" method="_on_pressed"]
 [connection signal="pressed" from="SidePanel/MintermsSidePanel/ButtonsPanel/4" to="SidePanel/MintermsSidePanel/ButtonsPanel/4" method="_on_pressed"]
+[connection signal="pressed" from="SidePanel/MaxtermsSidePanel/ButtonsPanel/2" to="SidePanel/MaxtermsSidePanel/ButtonsPanel/2" method="_on_pressed"]
+[connection signal="pressed" from="SidePanel/MaxtermsSidePanel/ButtonsPanel/3" to="SidePanel/MaxtermsSidePanel/ButtonsPanel/3" method="_on_pressed"]
+[connection signal="pressed" from="SidePanel/MaxtermsSidePanel/ButtonsPanel/4" to="SidePanel/MaxtermsSidePanel/ButtonsPanel/4" method="_on_pressed"]
