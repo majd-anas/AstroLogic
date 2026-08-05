@@ -1,0 +1,863 @@
+[gd_scene format=3 uid="uid://7f2gmph5b6u2"]
+
+[ext_resource type="Texture2D" uid="uid://dwlge3la2kv56" path="res://Assets/HackerInventoryPack/hacker_panel.png" id="1_0n8tc"]
+[ext_resource type="Script" uid="uid://rymw17htcymr" path="res://Scripts/InventoryScripts/inventory.gd" id="1_32ipq"]
+[ext_resource type="FontFile" uid="uid://cffopwkd67fsc" path="res://Assets/MGS1_Fonts/MGS1 Codec.ttf" id="2_k1vlg"]
+[ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="2_k5gp2"]
+[ext_resource type="Texture2D" uid="uid://w1bp1ld1vl3" path="res://Assets/HackerInventoryPack/hacker_slot_hover.png" id="3_yxepq"]
+[ext_resource type="Texture2D" uid="uid://b121yk51l6bx2" path="res://Assets/HackerInventoryPack/hacker-side-panel.png" id="4_0n8tc"]
+[ext_resource type="Script" uid="uid://j5whjhnr3o3i" path="res://Scripts/InventoryScripts/inventory_button_1.gd" id="5_c5ffv"]
+[ext_resource type="Script" uid="uid://dct10y5xgl8km" path="res://Scripts/InventoryScripts/inventory_button_2.gd" id="6_trvqw"]
+[ext_resource type="Script" uid="uid://pruo65josrc0" path="res://Scripts/InventoryScripts/inventory_button_3.gd" id="7_bvt08"]
+[ext_resource type="Texture2D" uid="uid://ugeyblyprf8i" path="res://Assets/LogicGates/AND_gate.png" id="7_sd8fj"]
+[ext_resource type="Script" uid="uid://ckvtlaljbr70k" path="res://Scripts/InventoryScripts/inventory_button_4.gd" id="8_2rjgx"]
+[ext_resource type="Script" uid="uid://8gcpk4n4rqhd" path="res://Scripts/InventoryScripts/side_panel.gd" id="8_aqnmd"]
+[ext_resource type="Script" uid="uid://cw03wgu4jh1b0" path="res://Scripts/InventoryScripts/inventory_button_5.gd" id="9_074r3"]
+[ext_resource type="Texture2D" uid="uid://capw3y6yhs1vg" path="res://Assets/LogicGates/OR_gate.png" id="10_o4ksx"]
+[ext_resource type="Script" uid="uid://joiwt65bnthd" path="res://Scripts/InventoryScripts/inventory_button_6.gd" id="10_q5cdx"]
+[ext_resource type="Script" uid="uid://cocnn3isp6mt3" path="res://Scripts/InventoryScripts/inventory_button_7.gd" id="11_r01aq"]
+[ext_resource type="Texture2D" uid="uid://b4cav84yhguuc" path="res://Assets/LogicGates/XOR_gate.png" id="12_mgnjo"]
+[ext_resource type="Texture2D" uid="uid://dvmmmjvicq54s" path="res://Assets/LogicGates/Inverter.png" id="13_mgnjo"]
+[ext_resource type="Script" uid="uid://cx6jbjbqvuk2x" path="res://Scripts/InventoryScripts/2_variables.gd" id="19_18ikp"]
+[ext_resource type="Script" uid="uid://b41misfaatk8" path="res://Scripts/InventoryScripts/3_variables.gd" id="20_6nypo"]
+[ext_resource type="Script" uid="uid://cc6lrqentjfiv" path="res://Scripts/InventoryScripts/4_variables.gd" id="21_iw64u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yxepq"]
+texture = ExtResource("1_0n8tc")
+
+[sub_resource type="LabelSettings" id="LabelSettings_c5ffv"]
+font = ExtResource("2_k1vlg")
+font_size = 40
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0n8tc"]
+texture = ExtResource("2_k5gp2")
+region_rect = Rect2(28, 28, 73, 73)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k1vlg"]
+texture = ExtResource("3_yxepq")
+region_rect = Rect2(24, 24, 82, 82)
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_iw64u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c5ffv"]
+texture = ExtResource("4_0n8tc")
+
+[sub_resource type="LabelSettings" id="LabelSettings_trvqw"]
+font = ExtResource("2_k1vlg")
+
+[sub_resource type="LabelSettings" id="LabelSettings_sd8fj"]
+font = ExtResource("2_k1vlg")
+
+[sub_resource type="LabelSettings" id="LabelSettings_aqnmd"]
+font = ExtResource("2_k1vlg")
+
+[sub_resource type="LabelSettings" id="LabelSettings_o4ksx"]
+font = ExtResource("2_k1vlg")
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_32ipq"]
+
+[node name="Inventory" type="Node2D" unique_id=1282777030]
+scale = Vector2(2, 2)
+script = ExtResource("1_32ipq")
+
+[node name="InventoryPanel" type="Panel" parent="." unique_id=1262405203]
+offset_left = 179.00002
+offset_top = -2.0
+offset_right = 971.5
+offset_bottom = 655.49994
+scale = Vector2(0.4, 0.4)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_yxepq")
+
+[node name="Label" type="Label" parent="InventoryPanel" unique_id=694425620]
+layout_mode = 0
+offset_left = 97.49998
+offset_top = 82.49999
+offset_right = 287.49997
+offset_bottom = 117.49999
+text = "inventory"
+label_settings = SubResource("LabelSettings_c5ffv")
+
+[node name="GridContainer" type="GridContainer" parent="InventoryPanel" unique_id=516039560]
+layout_mode = 0
+offset_left = 62.499977
+offset_top = 170.0
+offset_right = 730.5
+offset_bottom = 570.0
+theme_override_constants/h_separation = 17
+theme_override_constants/v_separation = 20
+columns = 5
+
+[node name="Button1" type="Button" parent="InventoryPanel/GridContainer" unique_id=312762983]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+text = "and
+gate"
+script = ExtResource("5_c5ffv")
+
+[node name="Button2" type="Button" parent="InventoryPanel/GridContainer" unique_id=112394361]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+text = "or
+gate"
+script = ExtResource("6_trvqw")
+
+[node name="Button3" type="Button" parent="InventoryPanel/GridContainer" unique_id=54158340]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+text = "xor
+gate"
+script = ExtResource("7_bvt08")
+
+[node name="Button4" type="Button" parent="InventoryPanel/GridContainer" unique_id=147863429]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+text = "inve-
+rter"
+script = ExtResource("8_2rjgx")
+
+[node name="Button5" type="Button" parent="InventoryPanel/GridContainer" unique_id=2053404621]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+text = "min-
+terms"
+script = ExtResource("9_074r3")
+
+[node name="Button6" type="Button" parent="InventoryPanel/GridContainer" unique_id=2083816968]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+text = "max-
+trems"
+script = ExtResource("10_q5cdx")
+
+[node name="Button7" type="Button" parent="InventoryPanel/GridContainer" unique_id=2128945947]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+text = "binary"
+script = ExtResource("11_r01aq")
+
+[node name="Button8" type="Button" parent="InventoryPanel/GridContainer" unique_id=2070247849]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+
+[node name="Button9" type="Button" parent="InventoryPanel/GridContainer" unique_id=1943605616]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+
+[node name="Button10" type="Button" parent="InventoryPanel/GridContainer" unique_id=271487326]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+
+[node name="Button11" type="Button" parent="InventoryPanel/GridContainer" unique_id=877249986]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+
+[node name="Button12" type="Button" parent="InventoryPanel/GridContainer" unique_id=1308291476]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+
+[node name="Button13" type="Button" parent="InventoryPanel/GridContainer" unique_id=626077513]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+
+[node name="Button14" type="Button" parent="InventoryPanel/GridContainer" unique_id=1445529867]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+
+[node name="Button15" type="Button" parent="InventoryPanel/GridContainer" unique_id=76786345]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
+
+[node name="SidePanel" type="Panel" parent="." unique_id=1965831140]
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 191.0
+offset_bottom = 261.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_c5ffv")
+script = ExtResource("8_aqnmd")
+
+[node name="ANDSidePanel" type="Panel" parent="SidePanel" unique_id=1227021613]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 172.0
+offset_bottom = 221.0
+
+[node name="Header" type="Label" parent="SidePanel/ANDSidePanel" unique_id=1222141468]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 15.0
+text = "AND GATE"
+label_settings = SubResource("LabelSettings_trvqw")
+
+[node name="TextureRect" type="TextureRect" parent="SidePanel/ANDSidePanel" unique_id=1344684889]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 26.0
+offset_right = 83.0
+offset_bottom = 86.0
+texture = ExtResource("7_sd8fj")
+
+[node name="TruthTable" type="Label" parent="SidePanel/ANDSidePanel" unique_id=21734333]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 87.0
+offset_right = 119.0
+offset_bottom = 168.0
+text = "Truth Table:
+		x  y | f
+		--------
+		0  0 | 0
+		0  1 | 0
+		1  0 | 0
+		1  1 | 1"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="xy" type="Label" parent="SidePanel/ANDSidePanel" unique_id=94136698]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 37.0
+offset_right = 20.0
+offset_bottom = 70.0
+text = "x
+
+y"
+label_settings = SubResource("LabelSettings_aqnmd")
+
+[node name="f" type="Label" parent="SidePanel/ANDSidePanel" unique_id=907970893]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 50.0
+offset_right = 96.0
+offset_bottom = 61.0
+text = "f"
+label_settings = SubResource("LabelSettings_o4ksx")
+
+[node name="ORSidePanel" type="Panel" parent="SidePanel" unique_id=1594243040]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 172.0
+offset_bottom = 221.0
+
+[node name="Header" type="Label" parent="SidePanel/ORSidePanel" unique_id=1108390798]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 15.0
+text = "OR GATE"
+label_settings = SubResource("LabelSettings_trvqw")
+
+[node name="TextureRect" type="TextureRect" parent="SidePanel/ORSidePanel" unique_id=1917608973]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 26.0
+offset_right = 83.0
+offset_bottom = 86.0
+texture = ExtResource("10_o4ksx")
+
+[node name="TruthTable" type="Label" parent="SidePanel/ORSidePanel" unique_id=1857179669]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 87.0
+offset_right = 119.0
+offset_bottom = 168.0
+text = "Truth Table:
+		x  y | f
+		--------
+		0  0 | 0
+		0  1 | 1
+		1  0 | 1
+		1  1 | 1"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="xy" type="Label" parent="SidePanel/ORSidePanel" unique_id=383073823]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 37.0
+offset_right = 20.0
+offset_bottom = 70.0
+text = "x
+
+y"
+label_settings = SubResource("LabelSettings_aqnmd")
+
+[node name="f" type="Label" parent="SidePanel/ORSidePanel" unique_id=1629751175]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 50.0
+offset_right = 96.0
+offset_bottom = 61.0
+text = "f"
+label_settings = SubResource("LabelSettings_o4ksx")
+
+[node name="XORSidePanel" type="Panel" parent="SidePanel" unique_id=351297796]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 172.0
+offset_bottom = 221.0
+
+[node name="Header" type="Label" parent="SidePanel/XORSidePanel" unique_id=353255944]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 15.0
+text = "XOR GATE"
+label_settings = SubResource("LabelSettings_trvqw")
+
+[node name="TextureRect" type="TextureRect" parent="SidePanel/XORSidePanel" unique_id=1438894531]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 26.0
+offset_right = 83.0
+offset_bottom = 86.0
+texture = ExtResource("12_mgnjo")
+
+[node name="TruthTable" type="Label" parent="SidePanel/XORSidePanel" unique_id=1059407330]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 87.0
+offset_right = 119.0
+offset_bottom = 168.0
+text = "Truth Table:
+		x  y | f
+		--------
+		0  0 | 0
+		0  1 | 1
+		1  0 | 1
+		1  1 | 0"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="xy" type="Label" parent="SidePanel/XORSidePanel" unique_id=1845746244]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 37.0
+offset_right = 19.0
+offset_bottom = 70.0
+text = "x
+
+y"
+label_settings = SubResource("LabelSettings_aqnmd")
+
+[node name="f" type="Label" parent="SidePanel/XORSidePanel" unique_id=428566405]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 50.0
+offset_right = 96.0
+offset_bottom = 61.0
+text = "f"
+label_settings = SubResource("LabelSettings_o4ksx")
+
+[node name="InverterSidePanel" type="Panel" parent="SidePanel" unique_id=659960598]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 172.0
+offset_bottom = 221.0
+
+[node name="Header" type="Label" parent="SidePanel/InverterSidePanel" unique_id=997241751]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 158.0
+offset_bottom = 15.0
+text = "INVERTER"
+label_settings = SubResource("LabelSettings_trvqw")
+
+[node name="TextureRect" type="TextureRect" parent="SidePanel/InverterSidePanel" unique_id=1264084299]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 19.0
+offset_top = 22.0
+offset_right = 80.0
+offset_bottom = 82.0
+texture = ExtResource("13_mgnjo")
+
+[node name="TruthTable" type="Label" parent="SidePanel/InverterSidePanel" unique_id=1719759625]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 87.0
+offset_right = 119.0
+offset_bottom = 168.0
+text = "Truth Table:
+		x | f
+		-----
+		0 | 1
+		1 | 0"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="xy" type="Label" parent="SidePanel/InverterSidePanel" unique_id=1029227422]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 48.0
+offset_right = 18.0
+offset_bottom = 57.0
+text = "X"
+label_settings = SubResource("LabelSettings_aqnmd")
+
+[node name="f" type="Label" parent="SidePanel/InverterSidePanel" unique_id=2142521317]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 50.0
+offset_right = 96.0
+offset_bottom = 61.0
+text = "f"
+label_settings = SubResource("LabelSettings_o4ksx")
+
+[node name="MintermsSidePanel" type="Panel" parent="SidePanel" unique_id=899737616]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 22.0
+offset_right = 172.0
+offset_bottom = 222.0
+
+[node name="Header" type="Label" parent="SidePanel/MintermsSidePanel" unique_id=320368520]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 158.0
+offset_bottom = 14.0
+text = "MINTERMS:"
+label_settings = SubResource("LabelSettings_trvqw")
+
+[node name="Table2" type="Label" parent="SidePanel/MintermsSidePanel" unique_id=765093216]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 23.0
+offset_right = 120.0
+offset_bottom = 212.0
+text = "m0 = a'b'
+m1 = a'b
+m2 = ab'
+m3 = ab"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="Table3" type="Label" parent="SidePanel/MintermsSidePanel" unique_id=47970050]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = 23.0
+offset_right = 120.0
+offset_bottom = 212.0
+text = "m0 = a'b'c'
+m1 = a'b'c
+m2 = a'bc'
+m3 = a'bc
+m4 = ab'c'
+m5 = ab'c
+m6 = abc'
+m7 = abc"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="Table4" type="Label" parent="SidePanel/MintermsSidePanel" unique_id=800764853]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = 23.0
+offset_right = 120.0
+offset_bottom = 212.0
+text = "m0 = a'b'c'd'
+m1 = a'b'c'd
+m2 = a'b'cd'
+m3 = a'b'cd
+m4 = a'bc'd'
+m5 = a'bc'd
+m6 = a'bcd'
+m7 = a'bcd
+m8 = ab'c'd'
+m9 = ab'c'd
+m10 = ab'cd'
+m11 = ab'cd
+m12 = abc'd'
+m13 = abc'd
+m14 = abcd'
+m15 = abcd"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="ButtonsPanel" type="Panel" parent="SidePanel/MintermsSidePanel" unique_id=1485747893]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 78.0
+offset_top = -4.0
+offset_right = 152.5
+offset_bottom = 25.5
+
+[node name="2" type="Button" parent="SidePanel/MintermsSidePanel/ButtonsPanel" unique_id=1961609012]
+layout_mode = 0
+offset_left = 6.5
+offset_top = 5.0
+offset_right = 26.5
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_32ipq")
+text = "2"
+script = ExtResource("19_18ikp")
+
+[node name="3" type="Button" parent="SidePanel/MintermsSidePanel/ButtonsPanel" unique_id=126674812]
+layout_mode = 0
+offset_left = 28.5
+offset_top = 5.0
+offset_right = 48.5
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_32ipq")
+text = "3"
+script = ExtResource("20_6nypo")
+
+[node name="4" type="Button" parent="SidePanel/MintermsSidePanel/ButtonsPanel" unique_id=620944499]
+layout_mode = 0
+offset_left = 51.5
+offset_top = 5.0
+offset_right = 71.5
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_32ipq")
+text = "4"
+script = ExtResource("21_iw64u")
+
+[node name="MaxtermsSidePanel" type="Panel" parent="SidePanel" unique_id=38017849]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 22.0
+offset_right = 172.0
+offset_bottom = 222.0
+
+[node name="Header" type="Label" parent="SidePanel/MaxtermsSidePanel" unique_id=8408212]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 158.0
+offset_bottom = 14.0
+text = "MAXTERMS:"
+label_settings = SubResource("LabelSettings_trvqw")
+
+[node name="Table2" type="Label" parent="SidePanel/MaxtermsSidePanel" unique_id=767189403]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 23.0
+offset_right = 120.0
+offset_bottom = 212.0
+text = "m0 = a+b
+m1 = a+b'
+m2 = a'+b
+m3 = a'+b'"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="Table3" type="Label" parent="SidePanel/MaxtermsSidePanel" unique_id=1559808606]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = 23.0
+offset_right = 120.0
+offset_bottom = 212.0
+text = "m0 = a+b+c
+m1 = a+b+c'
+m2 = a+b'+c
+m3 = a+b'+c'
+m4 = a'+b+c
+m5 = a'+b+c'
+m6 = a'+b'+c
+m7 = a'+b'+c'"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="Table4" type="Label" parent="SidePanel/MaxtermsSidePanel" unique_id=1457155453]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = 23.0
+offset_right = 120.0
+offset_bottom = 212.0
+text = "m0 = a+b+c+d
+m1 = a+b+c+d'
+m2 = a+b+c'+d
+m3 = a+b+c'+d'
+m4 = a+b'+c+d
+m5 = a+b'+c+d'
+m6 = a+b'+c'+d
+m7 = a+b'+c'+d'
+m8 = a'+b+c+d
+m9 = a'+b+c+d'
+m10 = a'+b+c'+d
+m11 = a'+b+c'+d'
+m12 = a'+b'+c+d
+m13 = a'+b'+c+d'
+m14 = a'+b'+c'+d
+m15 = a'+b'+c'+d'"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[node name="ButtonsPanel" type="Panel" parent="SidePanel/MaxtermsSidePanel" unique_id=1598961982]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 78.0
+offset_top = -4.0
+offset_right = 152.5
+offset_bottom = 25.5
+
+[node name="2" type="Button" parent="SidePanel/MaxtermsSidePanel/ButtonsPanel" unique_id=165026382]
+layout_mode = 0
+offset_left = 6.5
+offset_top = 5.0
+offset_right = 26.5
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_32ipq")
+text = "2"
+script = ExtResource("19_18ikp")
+
+[node name="3" type="Button" parent="SidePanel/MaxtermsSidePanel/ButtonsPanel" unique_id=1838474096]
+layout_mode = 0
+offset_left = 28.5
+offset_top = 5.0
+offset_right = 48.5
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_32ipq")
+text = "3"
+script = ExtResource("20_6nypo")
+
+[node name="4" type="Button" parent="SidePanel/MaxtermsSidePanel/ButtonsPanel" unique_id=1196651633]
+layout_mode = 0
+offset_left = 51.5
+offset_top = 5.0
+offset_right = 71.5
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("2_k1vlg")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_32ipq")
+text = "4"
+script = ExtResource("21_iw64u")
+
+[node name="BinarySidePanel" type="Panel" parent="SidePanel" unique_id=1178129635]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 172.0
+offset_bottom = 221.0
+
+[node name="Header" type="Label" parent="SidePanel/BinarySidePanel" unique_id=926636051]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 158.0
+offset_bottom = 14.0
+text = "decimal     binary"
+label_settings = SubResource("LabelSettings_trvqw")
+
+[node name="Table" type="Label" parent="SidePanel/BinarySidePanel" unique_id=1398373644]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 140.0
+offset_bottom = 213.0
+text = " 0 	        0000
+ 1         0001
+ 2         0010
+ 3         0011
+ 4         0100
+ 5         0101
+ 6         0110
+ 7         0111
+ 8	         1000
+ 9         1001
+10         1010
+11         1011
+12         1100
+13         1101
+14         1110
+15         1111"
+label_settings = SubResource("LabelSettings_sd8fj")
+
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button1" to="InventoryPanel/GridContainer/Button1" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button2" to="InventoryPanel/GridContainer/Button2" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button3" to="InventoryPanel/GridContainer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button4" to="InventoryPanel/GridContainer/Button4" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button5" to="InventoryPanel/GridContainer/Button5" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button6" to="InventoryPanel/GridContainer/Button6" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button7" to="InventoryPanel/GridContainer/Button7" method="_on_pressed"]
+[connection signal="pressed" from="SidePanel/MintermsSidePanel/ButtonsPanel/2" to="SidePanel/MintermsSidePanel/ButtonsPanel/2" method="_on_pressed"]
+[connection signal="pressed" from="SidePanel/MintermsSidePanel/ButtonsPanel/3" to="SidePanel/MintermsSidePanel/ButtonsPanel/3" method="_on_pressed"]
+[connection signal="pressed" from="SidePanel/MintermsSidePanel/ButtonsPanel/4" to="SidePanel/MintermsSidePanel/ButtonsPanel/4" method="_on_pressed"]
+[connection signal="pressed" from="SidePanel/MaxtermsSidePanel/ButtonsPanel/2" to="SidePanel/MaxtermsSidePanel/ButtonsPanel/2" method="_on_pressed"]
+[connection signal="pressed" from="SidePanel/MaxtermsSidePanel/ButtonsPanel/3" to="SidePanel/MaxtermsSidePanel/ButtonsPanel/3" method="_on_pressed"]
+[connection signal="pressed" from="SidePanel/MaxtermsSidePanel/ButtonsPanel/4" to="SidePanel/MaxtermsSidePanel/ButtonsPanel/4" method="_on_pressed"]

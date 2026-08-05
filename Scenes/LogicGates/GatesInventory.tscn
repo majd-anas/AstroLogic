@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b6406nfu1vy84"]
 
-[ext_resource type="Script" uid="uid://dk8ijq8mxxksd" path="res://Scripts/GatesScripts/inventory.gd" id="1_1t2sq"]
+[ext_resource type="Script" uid="uid://dk8ijq8mxxksd" path="res://Scripts/GatesScripts/gates_inventory.gd" id="1_1t2sq"]
 [ext_resource type="Texture2D" uid="uid://ugeyblyprf8i" path="res://Assets/LogicGates/AND_gate.png" id="1_dfrlm"]
 [ext_resource type="Script" uid="uid://ihncf4spa3na" path="res://Scripts/GatesScripts/inventory_slot.gd" id="1_jyi5o"]
 [ext_resource type="Texture2D" uid="uid://capw3y6yhs1vg" path="res://Assets/LogicGates/OR_gate.png" id="4_1t2sq"]

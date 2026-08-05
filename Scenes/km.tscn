@@ -1,14 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://b84mbv2rh1t6w"]
+[gd_scene format=3 uid="uid://b84mbv2rh1t6w"]
 
 [ext_resource type="Script" uid="uid://dxxqltv1jpw06" path="res://Scripts/km.gd" id="1_hefsa"]
 [ext_resource type="Texture2D" uid="uid://b48r5r3v8thp3" path="res://Assets/HackerInventoryPack/hacker_inventory_panel.png" id="2_od5lo"]
-[ext_resource type="Script" uid="uid://32ie1rbeyqih" path="res://Scenes/container.gd" id="3_1y5xj"]
 [ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="3_8ll6u"]
 [ext_resource type="FontFile" uid="uid://cbv0nlxxdti8a" path="res://Assets/MGS1_Fonts/MGS1 Ammo.ttf" id="4_8ll6u"]
 [ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="4_tdcxy"]
 [ext_resource type="Texture2D" uid="uid://bvxnjppf3yv0q" path="res://Assets/HackerInventoryPack/hacker_slot_selected.png" id="7_028u5"]
 [ext_resource type="Texture2D" uid="uid://chwkaytuw4x4d" path="res://Assets/HackerInventoryPack/hacker_slot_legendary.png" id="8_eibh0"]
 [ext_resource type="Script" uid="uid://4pg4gsg7vo0y" path="res://Scenes/button.gd" id="9_5kq72"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1y5xj"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bovvf"]
 texture = ExtResource("2_od5lo")
@@ -33,7 +35,7 @@ texture = ExtResource("8_eibh0")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r1mqy"]
 texture = ExtResource("8_eibh0")
 
-[node name="KM" type="Control"]
+[node name="KM" type="Control" unique_id=670907571]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,7 +44,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hefsa")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel3" type="Panel" parent="." unique_id=2018096633]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1y5xj")
+
+[node name="Panel" type="Panel" parent="." unique_id=1125087192]
 modulate = Color(0.6052743, 0.6052743, 0.6052743, 1)
 layout_mode = 1
 anchors_preset = 15
@@ -52,7 +63,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_bovvf")
 
-[node name="Container" type="Container" parent="Panel"]
+[node name="Container" type="Container" parent="Panel" unique_id=1989012895]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -63,9 +74,8 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("3_1y5xj")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Panel" unique_id=655801746]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.32000002
@@ -86,7 +96,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_30elm")
 text = "expression"
 vertical_alignment = 1
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="Panel2" type="Panel" parent="." unique_id=730513114]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -101,7 +111,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_r7mq7")
 
-[node name="GridContainer" type="GridContainer" parent="Panel2"]
+[node name="GridContainer" type="GridContainer" parent="Panel2" unique_id=1984964602]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -116,14 +126,14 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 4
 
-[node name="Button" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button" type="TextureButton" parent="Panel2/GridContainer" unique_id=1594602309]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button" unique_id=334517490]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -143,14 +153,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button2" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button2" type="TextureButton" parent="Panel2/GridContainer" unique_id=1866168645]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button2"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button2" unique_id=1440442318]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -170,14 +180,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button3" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button3" type="TextureButton" parent="Panel2/GridContainer" unique_id=1172627811]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button3"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button3" unique_id=572802247]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -197,14 +207,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button4" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button4" type="TextureButton" parent="Panel2/GridContainer" unique_id=1737884927]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button4"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button4" unique_id=543671368]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -224,14 +234,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button5" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button5" type="TextureButton" parent="Panel2/GridContainer" unique_id=1524755363]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button5"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button5" unique_id=1091103057]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -251,14 +261,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button6" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button6" type="TextureButton" parent="Panel2/GridContainer" unique_id=1381264528]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button6"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button6" unique_id=1271947423]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -278,14 +288,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button7" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button7" type="TextureButton" parent="Panel2/GridContainer" unique_id=1167749555]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button7"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button7" unique_id=1071903226]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -305,14 +315,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button8" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button8" type="TextureButton" parent="Panel2/GridContainer" unique_id=357124068]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button8"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button8" unique_id=338010406]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -332,14 +342,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button9" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button9" type="TextureButton" parent="Panel2/GridContainer" unique_id=824216348]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button9"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button9" unique_id=1098635188]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -359,14 +369,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button10" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button10" type="TextureButton" parent="Panel2/GridContainer" unique_id=190051240]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button10"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button10" unique_id=1774679335]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -386,14 +396,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button11" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button11" type="TextureButton" parent="Panel2/GridContainer" unique_id=51595134]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button11"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button11" unique_id=640873977]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -413,14 +423,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button12" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button12" type="TextureButton" parent="Panel2/GridContainer" unique_id=1722038544]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button12"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button12" unique_id=1206043658]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -440,14 +450,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button13" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button13" type="TextureButton" parent="Panel2/GridContainer" unique_id=804631878]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button13"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button13" unique_id=298345967]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -467,14 +477,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button14" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button14" type="TextureButton" parent="Panel2/GridContainer" unique_id=1533200056]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button14"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button14" unique_id=1408778501]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -494,14 +504,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button15" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button15" type="TextureButton" parent="Panel2/GridContainer" unique_id=1427219371]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button15"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button15" unique_id=1082876303]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -521,14 +531,14 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button16" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button16" type="TextureButton" parent="Panel2/GridContainer" unique_id=898841600]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_8ll6u")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button16"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button16" unique_id=202599233]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -548,17 +558,17 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=611728119]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.85300004
-anchor_top = 0.15100001
-anchor_right = 0.919
-anchor_bottom = 0.26500002
-offset_left = -20.656067
-offset_top = -24.848007
-offset_right = 20.312012
-offset_bottom = 21.279984
+anchor_left = 0.88600004
+anchor_top = 0.20500001
+anchor_right = 0.88600004
+anchor_bottom = 0.20500001
+offset_left = -58.67206
+offset_top = -59.84001
+offset_right = 58.32794
+offset_bottom = 60.15999
 theme_override_colors/font_color = Color(0.003921569, 0.5803922, 0.007843138, 1)
 theme_override_fonts/font = ExtResource("4_tdcxy")
 theme_override_font_sizes/font_size = 70
