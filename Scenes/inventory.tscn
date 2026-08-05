@@ -475,7 +475,6 @@ text = "f"
 label_settings = SubResource("LabelSettings_o4ksx")
 
 [node name="MintermsSidePanel" type="Panel" parent="SidePanel" unique_id=899737616]
-visible = false
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 18.0
@@ -559,6 +558,7 @@ m15 = a'+b'+c'+d'"
 label_settings = SubResource("LabelSettings_sd8fj")
 
 [node name="BinarySidePanel" type="Panel" parent="SidePanel" unique_id=1178129635]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 18.0
