@@ -37,6 +37,8 @@ region_rect = Rect2(28, 28, 73, 73)
 texture = ExtResource("3_yxepq")
 region_rect = Rect2(24, 24, 82, 82)
 
+[sub_resource type="ButtonGroup" id="ButtonGroup_iw64u"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c5ffv"]
 texture = ExtResource("4_0n8tc")
 
@@ -87,79 +89,107 @@ theme_override_constants/h_separation = 17
 theme_override_constants/v_separation = 20
 columns = 5
 
-[node name="AND_button" type="Button" parent="InventoryPanel/GridContainer" unique_id=312762983]
+[node name="Button1" type="Button" parent="InventoryPanel/GridContainer" unique_id=312762983]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 text = "and
 gate"
 script = ExtResource("5_c5ffv")
 
-[node name="OR_button" type="Button" parent="InventoryPanel/GridContainer" unique_id=112394361]
+[node name="Button2" type="Button" parent="InventoryPanel/GridContainer" unique_id=112394361]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 text = "or
 gate"
 script = ExtResource("6_trvqw")
 
-[node name="XOR_button" type="Button" parent="InventoryPanel/GridContainer" unique_id=54158340]
+[node name="Button3" type="Button" parent="InventoryPanel/GridContainer" unique_id=54158340]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 text = "xor
 gate"
 script = ExtResource("7_bvt08")
 
-[node name="inverter_button" type="Button" parent="InventoryPanel/GridContainer" unique_id=147863429]
+[node name="Button4" type="Button" parent="InventoryPanel/GridContainer" unique_id=147863429]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 text = "inve-
 rter"
 script = ExtResource("8_2rjgx")
 
-[node name="minterms_button" type="Button" parent="InventoryPanel/GridContainer" unique_id=2053404621]
+[node name="Button5" type="Button" parent="InventoryPanel/GridContainer" unique_id=2053404621]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 text = "min-
 terms"
 script = ExtResource("9_074r3")
 
-[node name="maxterms_button" type="Button" parent="InventoryPanel/GridContainer" unique_id=2083816968]
+[node name="Button6" type="Button" parent="InventoryPanel/GridContainer" unique_id=2083816968]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 text = "max-
 trems"
 script = ExtResource("10_q5cdx")
 
-[node name="binary_button" type="Button" parent="InventoryPanel/GridContainer" unique_id=2128945947]
+[node name="Button7" type="Button" parent="InventoryPanel/GridContainer" unique_id=2128945947]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 text = "binary"
 script = ExtResource("11_r01aq")
 
@@ -169,7 +199,12 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 
 [node name="Button9" type="Button" parent="InventoryPanel/GridContainer" unique_id=1943605616]
 custom_minimum_size = Vector2(120, 120)
@@ -177,7 +212,12 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 
 [node name="Button10" type="Button" parent="InventoryPanel/GridContainer" unique_id=271487326]
 custom_minimum_size = Vector2(120, 120)
@@ -185,7 +225,12 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 
 [node name="Button11" type="Button" parent="InventoryPanel/GridContainer" unique_id=877249986]
 custom_minimum_size = Vector2(120, 120)
@@ -193,7 +238,12 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 
 [node name="Button12" type="Button" parent="InventoryPanel/GridContainer" unique_id=1308291476]
 custom_minimum_size = Vector2(120, 120)
@@ -201,7 +251,12 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 
 [node name="Button13" type="Button" parent="InventoryPanel/GridContainer" unique_id=626077513]
 custom_minimum_size = Vector2(120, 120)
@@ -209,7 +264,12 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 
 [node name="Button14" type="Button" parent="InventoryPanel/GridContainer" unique_id=1445529867]
 custom_minimum_size = Vector2(120, 120)
@@ -217,7 +277,12 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 
 [node name="Button15" type="Button" parent="InventoryPanel/GridContainer" unique_id=76786345]
 custom_minimum_size = Vector2(120, 120)
@@ -225,7 +290,12 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_k1vlg")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_0n8tc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k1vlg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_k1vlg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0n8tc")
+disabled = true
+toggle_mode = true
+button_group = SubResource("ButtonGroup_iw64u")
 
 [node name="SidePanel" type="Panel" parent="." unique_id=1965831140]
 offset_left = 1.0
@@ -480,13 +550,12 @@ text = "f"
 label_settings = SubResource("LabelSettings_o4ksx")
 
 [node name="MintermsSidePanel" type="Panel" parent="SidePanel" unique_id=899737616]
-visible = false
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 18.0
-offset_top = 21.0
+offset_top = 22.0
 offset_right = 172.0
-offset_bottom = 221.0
+offset_bottom = 222.0
 
 [node name="Header" type="Label" parent="SidePanel/MintermsSidePanel" unique_id=320368520]
 layout_mode = 0
@@ -609,12 +678,13 @@ text = "4"
 script = ExtResource("21_iw64u")
 
 [node name="MaxtermsSidePanel" type="Panel" parent="SidePanel" unique_id=38017849]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 18.0
-offset_top = 21.0
+offset_top = 22.0
 offset_right = 172.0
-offset_bottom = 221.0
+offset_bottom = 222.0
 
 [node name="Header" type="Label" parent="SidePanel/MaxtermsSidePanel" unique_id=8408212]
 layout_mode = 0
@@ -778,13 +848,13 @@ text = " 0 	        0000
 15         1111"
 label_settings = SubResource("LabelSettings_sd8fj")
 
-[connection signal="pressed" from="InventoryPanel/GridContainer/AND_button" to="InventoryPanel/GridContainer/AND_button" method="_on_pressed"]
-[connection signal="pressed" from="InventoryPanel/GridContainer/OR_button" to="InventoryPanel/GridContainer/OR_button" method="_on_pressed"]
-[connection signal="pressed" from="InventoryPanel/GridContainer/XOR_button" to="InventoryPanel/GridContainer/XOR_button" method="_on_pressed"]
-[connection signal="pressed" from="InventoryPanel/GridContainer/inverter_button" to="InventoryPanel/GridContainer/inverter_button" method="_on_pressed"]
-[connection signal="pressed" from="InventoryPanel/GridContainer/minterms_button" to="InventoryPanel/GridContainer/minterms_button" method="_on_pressed"]
-[connection signal="pressed" from="InventoryPanel/GridContainer/maxterms_button" to="InventoryPanel/GridContainer/maxterms_button" method="_on_pressed"]
-[connection signal="pressed" from="InventoryPanel/GridContainer/binary_button" to="InventoryPanel/GridContainer/binary_button" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button1" to="InventoryPanel/GridContainer/Button1" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button2" to="InventoryPanel/GridContainer/Button2" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button3" to="InventoryPanel/GridContainer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button4" to="InventoryPanel/GridContainer/Button4" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button5" to="InventoryPanel/GridContainer/Button5" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button6" to="InventoryPanel/GridContainer/Button6" method="_on_pressed"]
+[connection signal="pressed" from="InventoryPanel/GridContainer/Button7" to="InventoryPanel/GridContainer/Button7" method="_on_pressed"]
 [connection signal="pressed" from="SidePanel/MintermsSidePanel/ButtonsPanel/2" to="SidePanel/MintermsSidePanel/ButtonsPanel/2" method="_on_pressed"]
 [connection signal="pressed" from="SidePanel/MintermsSidePanel/ButtonsPanel/3" to="SidePanel/MintermsSidePanel/ButtonsPanel/3" method="_on_pressed"]
 [connection signal="pressed" from="SidePanel/MintermsSidePanel/ButtonsPanel/4" to="SidePanel/MintermsSidePanel/ButtonsPanel/4" method="_on_pressed"]
