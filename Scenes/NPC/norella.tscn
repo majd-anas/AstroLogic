@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://biu83hh2aji8t" path="res://Assets/oneShotAssets/npc/red_kip.png" id="1_as56w"]
 [ext_resource type="Script" uid="uid://b2tninhu4lri1" path="res://Scripts/Characters/norella.gd" id="1_jf0k1"]
+[ext_resource type="Resource" uid="uid://cggpx552ro00h" path="res://Dialouge/Resources/Norella.tres" id="2_foim0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jf0k1"]
 atlas = ExtResource("1_as56w")
@@ -162,10 +163,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_t60jb"]
 radius = 32.0
 
-[node name="Norella" type="CharacterBody2D" unique_id=211586725]
+[node name="Norella" type="CharacterBody2D" unique_id=13664699]
 position = Vector2(40, 27)
-collision_mask = 3
 script = ExtResource("1_jf0k1")
+dialogue = ExtResource("2_foim0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=809492583]
 position = Vector2(18.499998, 30.83333)
@@ -179,6 +180,7 @@ position = Vector2(18, 44)
 shape = SubResource("CapsuleShape2D_jf0k1")
 
 [node name="chatDetect" type="Area2D" parent="." unique_id=2001734221]
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetect" unique_id=649680086]
 position = Vector2(19, 31)

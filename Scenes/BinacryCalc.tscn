@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://bmryif2xonwa8"]
+[gd_scene format=3 uid="uid://bmryif2xonwa8"]
 
 [ext_resource type="Texture2D" uid="uid://cvile3ej5mr54" path="res://Assets/Calculator-ASSETS/Screens/screen_01.png" id="1_jquw2"]
 [ext_resource type="Script" uid="uid://bjflhqykwa48v" path="res://Scenes/binacry_calc.gd" id="1_sllnl"]

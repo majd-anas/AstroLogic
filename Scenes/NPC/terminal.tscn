@@ -51,19 +51,19 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o75dh"]
-size = Vector2(35, 26)
+size = Vector2(41, 31)
 
 [node name="terminal" type="StaticBody2D" unique_id=17724772]
 collision_layer = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1305570865]
-position = Vector2(2.25, -1.5)
-scale = Vector2(1.09375, 1.09375)
+position = Vector2(4.5000014, -2.9999988)
+scale = Vector2(1.1875, 1.1875)
 sprite_frames = SubResource("SpriteFrames_cdd66")
 animation = &"working"
 autoplay = "working"
 frame_progress = 0.7515271
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=304921009]
-position = Vector2(4.5, 3)
+position = Vector2(7.5, 1.5)
 shape = SubResource("RectangleShape2D_o75dh")

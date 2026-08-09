@@ -8,32 +8,32 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -100.0
-offset_top = -76.0
-offset_right = -275.0
-offset_bottom = -270.0
+offset_left = -3.0
+offset_top = -12.0
+offset_right = 31.0
+offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_s6nkx")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=752050660]
 layout_mode = 0
-offset_left = 104.0
-offset_top = 227.0
-offset_right = 1238.0753
-offset_bottom = 412.0
+offset_left = 7.0
+offset_top = 135.0
+offset_right = 1157.0
+offset_bottom = 326.0
 texture = ExtResource("2_trd5b")
 
 [node name="Label" type="Label" parent="NinePatchRect" unique_id=1880854368]
 layout_mode = 0
-offset_left = 11.24054
-offset_top = 11.0
-offset_right = 206.0
-offset_bottom = 55.0
+offset_left = 32.0
+offset_top = 17.0
+offset_right = 226.75946
+offset_bottom = 61.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect" unique_id=291269191]
 layout_mode = 0
-offset_left = 21.158264
-offset_top = 50.0
-offset_right = 1100.0
-offset_bottom = 163.0
+offset_left = 28.0
+offset_top = 72.0
+offset_right = 1103.8418
+offset_bottom = 164.0
