@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://c05rum5wgadao"]
 
-[ext_resource type="Script" uid="uid://d2ucw6ycfrfji" path="res://Scripts/Quests/QuestData.gd" id="1_lavs3"]
+[ext_resource type="Script" uid="uid://d2ucw6ycfrfji" path="res://Scripts/Quests/QuestData.gd" id="1_3wqe0"]
 
 [resource]
-script = ExtResource("1_lavs3")
+script = ExtResource("1_3wqe0")
 quest_id = "1"
-quest_name = "talk to norella"
+quest_name = "playerEnters"
 description = "norella introduces you to the game"
 metadata/_custom_type_script = "uid://d2ucw6ycfrfji"

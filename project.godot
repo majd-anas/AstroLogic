@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialougeManagerChar="*uid://bhx5vytbcyoks"
+QuestManager="*uid://dpll787t6bex0"
 
 [display]
 

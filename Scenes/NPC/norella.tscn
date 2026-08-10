@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://biu83hh2aji8t" path="res://Assets/oneShotAssets/npc/red_kip.png" id="1_as56w"]
 [ext_resource type="Script" uid="uid://b2tninhu4lri1" path="res://Scripts/Characters/norella.gd" id="1_jf0k1"]
-[ext_resource type="Resource" uid="uid://cggpx552ro00h" path="res://Dialouge/Resources/Norella.tres" id="2_foim0"]
+[ext_resource type="Resource" uid="uid://cggpx552ro00h" path="res://Dialouge/Resources/NorellaUseTerminal.tres" id="2_foim0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jf0k1"]
 atlas = ExtResource("1_as56w")

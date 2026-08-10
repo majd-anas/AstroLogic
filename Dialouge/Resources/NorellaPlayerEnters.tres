@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueDataChar" format=3 uid="uid://ded4frp3a5yg0"]
+
+[ext_resource type="Script" uid="uid://dkh34p78b3sbj" path="res://Scripts/Dialouge/DialougeDataChar.gd" id="1_8b0ew"]
+
+[resource]
+script = ExtResource("1_8b0ew")
+npc_name = "Norella"
+dialogue = Array[String](["OH! you are finally here!", "We have been waiting for so long come on your mission is about to start", "Come over here and press 'X' so we can talk more, you can move using the arrows keys on your keyboard"])
+metadata/_custom_type_script = "uid://dkh34p78b3sbj"

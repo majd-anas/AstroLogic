@@ -4,4 +4,7 @@
 
 [resource]
 script = ExtResource("1_n01jb")
+quest_id = "4"
+quest_name = "terminalTutorial"
+description = "interact with the terminal"
 metadata/_custom_type_script = "uid://d2ucw6ycfrfji"

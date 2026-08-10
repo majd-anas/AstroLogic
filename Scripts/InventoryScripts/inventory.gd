@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 var is_open : bool = false

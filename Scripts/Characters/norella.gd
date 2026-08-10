@@ -1,6 +1,8 @@
 extends CharacterBody2D
-@export var dialogue : DialogueDataChar
-
+@export var initial_dialogue: DialogueDataChar
+@export var note_dialogue: DialogueDataChar
+@export var inventory_dialogue: DialogueDataChar
+@export var terminal_dialogue: DialogueDataChar
 const SPEED = 50.0
 const SIDE_LENGTH = 64.0   # Size of the walk
 var current_side = 0
@@ -33,6 +35,11 @@ func _dialogue_finished():
 
 
 func _process(delta):
+	if QuestManager.is_quest_active("1"):
+		introductionScene()
+		QuestManager.complete_quest("1")	
+		QuestManager.start_quest("2")
+		
 	if is_roaming:
 		match current_state:
 		
@@ -52,10 +59,24 @@ func _process(delta):
 			can_chat=false
 			velocity=Vector2.ZERO
 			$AnimatedSprite2D.play("idle")
-			DialougeManagerChar.start(dialogue)
+			DialougeManagerChar.start(get_current_dialogue())
 
 
+func get_current_dialogue() -> DialogueDataChar:
 
+
+	if QuestManager.is_quest_active("2"):
+		return note_dialogue
+
+	if QuestManager.is_quest_active("3"):
+		return inventory_dialogue
+		
+	if QuestManager.is_quest_active("4"):
+		return terminal_dialogue
+
+	return initial_dialogue
+	
+	
 func choose(array):
 	array.shuffle()
 	return array.front()
@@ -86,7 +107,11 @@ func playAnimation(dir):
 		$AnimatedSprite2D.play("walk_r")
 	
 
+	
+func introductionScene():
+	DialougeManagerChar.start(get_current_dialogue())
 
+	
 func _on_chat_detect_body_entered(body: Node2D) -> void:
 	if body.name=="Player":
 		print("enter")

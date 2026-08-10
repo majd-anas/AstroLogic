@@ -56,11 +56,14 @@ font = ExtResource("2_k1vlg")
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_32ipq"]
 
-[node name="Inventory" type="Node2D" unique_id=1282777030]
+[node name="Inventory" type="Control" unique_id=1328285621]
+layout_mode = 3
+anchors_preset = 0
 scale = Vector2(2, 2)
 script = ExtResource("1_32ipq")
 
 [node name="InventoryPanel" type="Panel" parent="." unique_id=1262405203]
+layout_mode = 0
 offset_left = 179.00002
 offset_top = -2.0
 offset_right = 971.5
@@ -298,6 +301,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_iw64u")
 
 [node name="SidePanel" type="Panel" parent="." unique_id=1965831140]
+layout_mode = 0
 offset_left = 1.0
 offset_top = -2.0
 offset_right = 191.0

@@ -12,11 +12,15 @@
 [ext_resource type="TileSet" uid="uid://bsu5dr18stexl" path="res://tileset/redLab.tres" id="9_hpksi"]
 [ext_resource type="PackedScene" uid="uid://c0q8mbfkbc0su" path="res://Scenes/NPC/terminal.tscn" id="10_oxm50"]
 [ext_resource type="PackedScene" uid="uid://wwcrkx2frn3c" path="res://Scenes/NPC/norella.tscn" id="11_m4jtl"]
+[ext_resource type="Resource" uid="uid://ded4frp3a5yg0" path="res://Dialouge/Resources/NorellaPlayerEnters.tres" id="12_l8wlg"]
 [ext_resource type="PackedScene" uid="uid://ddsqbjgddpo0i" path="res://Scenes/Dialouge/Dialouge.tscn" id="12_ubbb8"]
 [ext_resource type="PackedScene" uid="uid://pr7ccfusygcd" path="res://Scenes/NPC/note.tscn" id="14_52rvi"]
 [ext_resource type="PackedScene" uid="uid://cuv3a2l4a5iiv" path="res://Scenes/NPC/scientestCoffee.tscn" id="14_b040f"]
+[ext_resource type="Resource" uid="uid://po87shqbc4ec" path="res://Dialouge/Resources/NorellaInventory.tres" id="14_ljdbi"]
+[ext_resource type="Resource" uid="uid://ddapuyj7d7hix" path="res://Dialouge/Resources/NorellaPickUpNote.tres" id="15_2242h"]
 [ext_resource type="Resource" uid="uid://b5y5ynxp31wvb" path="res://Dialouge/Resources/ScientestCoffee.tres" id="15_b040f"]
 [ext_resource type="PackedScene" uid="uid://cu8swnyx231h5" path="res://Scenes/NPC/door.tscn" id="16_jsm8f"]
+[ext_resource type="PackedScene" uid="uid://7f2gmph5b6u2" path="res://Scenes/inventory.tscn" id="17_p1n1i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b040f"]
 resource_name = "Background"
@@ -11298,12 +11302,9 @@ scale = Vector2(1.2, 1.2)
 tile_map_data = PackedByteArray("AAAGAAwABQAHAFMAAAAFAA0ABQAHAFMAAAATABMAHAAMAAwAAAAbABIABQABAEAAAAAPAAoABQACAFQAAAAJAA8ABQACAFQAAAAfABMABQAAACEAAAA=")
 tile_set = ExtResource("9_hpksi")
 
-[node name="terminal" parent="." unique_id=17724772 instance=ExtResource("10_oxm50")]
-position = Vector2(218, 206)
-
 [node name="Player" parent="." unique_id=258572958 instance=ExtResource("2_c6ejd")]
 z_index = 2
-position = Vector2(235, 240)
+position = Vector2(300, 410)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1619364663]
 zoom = Vector2(4, 4)
@@ -11317,13 +11318,20 @@ z_index = 1
 position = Vector2(166, 297)
 collision_layer = 2
 collision_mask = 2
-
-[node name="Note" parent="." unique_id=1921648736 instance=ExtResource("14_52rvi")]
-position = Vector2(269, 350)
+initial_dialogue = ExtResource("12_l8wlg")
+note_dialogue = ExtResource("15_2242h")
+inventory_dialogue = ExtResource("14_ljdbi")
+terminal_dialogue = ExtResource("15_2242h")
 
 [node name="ScientestCoffe" parent="." unique_id=1750988787 instance=ExtResource("14_b040f")]
 position = Vector2(543, 369)
 dialogue = ExtResource("15_b040f")
+
+[node name="terminal" parent="." unique_id=17724772 instance=ExtResource("10_oxm50")]
+position = Vector2(218, 206)
+
+[node name="Note" parent="." unique_id=1921648736 instance=ExtResource("14_52rvi")]
+position = Vector2(269, 350)
 
 [node name="Door" parent="." unique_id=488608063 instance=ExtResource("16_jsm8f")]
 position = Vector2(391, 166)
@@ -11342,3 +11350,15 @@ offset_top = 151.648
 offset_right = 799.144
 offset_bottom = 396.53598
 grow_vertical = 0
+
+[node name="Inventory" parent="UI" unique_id=1282777030 instance=ExtResource("17_p1n1i")]
+z_index = 10
+anchors_preset = -1
+anchor_left = 0.062000003
+anchor_top = 0.22700001
+anchor_right = 0.33200002
+anchor_bottom = 0.528
+offset_left = -40.424004
+offset_top = -29.096008
+offset_right = -351.46402
+offset_bottom = -224.14401

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueDataChar" format=3 uid="uid://ddapuyj7d7hix"]
+
+[ext_resource type="Script" uid="uid://dkh34p78b3sbj" path="res://Scripts/Dialouge/DialougeDataChar.gd" id="1_utg4e"]
+
+[resource]
+script = ExtResource("1_utg4e")
+npc_name = "Norella"
+dialogue = Array[String](["Hello! sorry for not introducing myself earlier! I am norella the lab head", "I will be guiding you through your training here on earth, so I won't be with you for long haha", "as you know, our neighbors in space are losing power and we are unable to communitacte with them", "Unfortunately, there knowledge about circuits is......", "lets say its out dated. If we don't act soon they will lose all power and all communication will be lost! I dread what could happen to them in such a dark world....", "Anyways.. I don't want to bore you with the details lets start!", "first things first, you need to know how to pick up items!", "see that glowing note over there? go pick it up by going near it and pressing 'x'"])
+metadata/_custom_type_script = "uid://dkh34p78b3sbj"
