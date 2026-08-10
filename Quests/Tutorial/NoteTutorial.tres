@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://cva34kke8k63l"]
+
+[ext_resource type="Script" uid="uid://d2ucw6ycfrfji" path="res://Scripts/Quests/QuestData.gd" id="1_jb2m8"]
+
+[resource]
+script = ExtResource("1_jb2m8")
+quest_id = "2"
+quest_name = "PickUp the note"
+description = "pick up the note lying on the ground"
+metadata/_custom_type_script = "uid://d2ucw6ycfrfji"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueDataChar" format=3 uid="uid://b5y5ynxp31wvb"]
+
+[ext_resource type="Script" uid="uid://dkh34p78b3sbj" path="res://Scripts/Dialouge/DialougeDataChar.gd" id="1_7m5eg"]
+
+[resource]
+script = ExtResource("1_7m5eg")
+npc_name = "Xorrein"
+dialogue = Array[String](["About time you got here I don't know why you took that long....hmmph!", "........", "sorry", "I need to finish my morning coffee", "I am not that cranky I swear!"])
+metadata/_custom_type_script = "uid://dkh34p78b3sbj"

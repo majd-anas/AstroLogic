@@ -44,8 +44,8 @@ func _process(delta):
 				move(delta)
 				playAnimation(dir)
 
-	if Input.is_action_just_pressed("interact") and can_chat:
-		if player_in_chat_zone and !is_chatting :
+	if Input.is_action_just_pressed("interact"):
+		if player_in_chat_zone and !is_chatting and can_chat:
 			print("chatting")
 			is_roaming=false
 			is_chatting=true
@@ -88,13 +88,13 @@ func playAnimation(dir):
 
 
 func _on_chat_detect_body_entered(body: Node2D) -> void:
-	if body is CharacterBody2D:
+	if body.name=="Player":
 		print("enter")
 		player_in_chat_zone=true
 
 
 func _on_chat_detect_body_exited(body: Node2D) -> void:
-	if body is CharacterBody2D:
+	if body.name=="Player":
 		print("exit")
 		player_in_chat_zone=false
 		can_chat=true

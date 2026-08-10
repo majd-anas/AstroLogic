@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cu8swnyx231h5"]
+
+[ext_resource type="Texture2D" uid="uid://8db82g8l6a7g" path="res://Assets/oneShotAssets/npc/door_automatic.png" id="1_xcfol"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5g7k"]
+atlas = ExtResource("1_xcfol")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6n5k"]
+atlas = ExtResource("1_xcfol")
+region = Rect2(48, 96, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2cea"]
+atlas = ExtResource("1_xcfol")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pbrt"]
+atlas = ExtResource("1_xcfol")
+region = Rect2(48, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71w56"]
+atlas = ExtResource("1_xcfol")
+region = Rect2(48, 64, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xg0yd"]
+atlas = ExtResource("1_xcfol")
+region = Rect2(48, 96, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dvr03"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5g7k")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6n5k")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2cea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pbrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71w56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xg0yd")
+}],
+"loop": true,
+"name": &"opening",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hghlx"]
+size = Vector2(40, 41)
+
+[node name="Door" type="AnimatableBody2D" unique_id=1015697581]
+collision_layer = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1700881511]
+position = Vector2(17.5, 11)
+scale = Vector2(1.0208333, 1.0625)
+sprite_frames = SubResource("SpriteFrames_dvr03")
+animation = &"opening"
+frame_progress = 0.37286672
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=564742655]
+position = Vector2(9, 5)
+shape = SubResource("RectangleShape2D_hghlx")

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dfvsck46pb5c2" path="res://Scripts/Dialouge/dialouge.gd" id="1_s6nkx"]
 [ext_resource type="Texture2D" uid="uid://eg6x1spbt5n6" path="res://Assets/oneShotAssets/uiAssets/main_menu_cursor.png" id="2_trd5b"]
+[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="3_7qx78"]
 
 [node name="DialougeUI" type="Control" unique_id=729462109]
 layout_mode = 3
@@ -26,14 +27,26 @@ texture = ExtResource("2_trd5b")
 
 [node name="Label" type="Label" parent="NinePatchRect" unique_id=1880854368]
 layout_mode = 0
-offset_left = 32.0
+offset_left = 26.0
 offset_top = 17.0
-offset_right = 226.75946
+offset_right = 220.75946
 offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("3_7qx78")
+theme_override_font_sizes/font_size = 64
+text = "Name"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect" unique_id=291269191]
 layout_mode = 0
 offset_left = 28.0
 offset_top = 72.0
-offset_right = 1103.8418
-offset_bottom = 164.0
+offset_right = 1007.0
+offset_bottom = 143.0
+theme_override_fonts/normal_font = ExtResource("3_7qx78")
+theme_override_font_sizes/normal_font_size = 40
+text = "Dialouge"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Timer" type="Timer" parent="." unique_id=1332044823]
+wait_time = 0.5
+one_shot = true
