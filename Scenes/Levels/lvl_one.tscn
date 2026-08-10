@@ -11279,6 +11279,9 @@ sources/3 = SubResource("TileSetAtlasSource_5ss5p")
 sources/5 = SubResource("TileSetAtlasSource_afxa2")
 sources/6 = SubResource("TileSetAtlasSource_e6o68")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e6o68"]
+distance = -482.0
+
 [node name="lvlOne" type="Node2D" unique_id=1179937505]
 script = ExtResource("1_n4oqd")
 
@@ -11308,10 +11311,10 @@ position = Vector2(300, 410)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1619364663]
 zoom = Vector2(4, 4)
-limit_left = 44
-limit_top = 28
+limit_left = 78
+limit_top = 55
 limit_right = 10000002
-limit_bottom = 10000028
+limit_bottom = 483
 
 [node name="Norella" parent="." unique_id=211586725 instance=ExtResource("11_m4jtl")]
 z_index = 1
@@ -11362,3 +11365,10 @@ offset_left = -40.424004
 offset_top = -29.096008
 offset_right = -351.46402
 offset_bottom = -224.14401
+
+[node name="Node2D" type="Area2D" parent="." unique_id=1050118818]
+position = Vector2(321, -1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D" unique_id=417745137]
+shape = SubResource("WorldBoundaryShape2D_e6o68")

@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_45o8a")
 npc_name = "Norella"
-dialogue = Array[String](["as you know, our neighbors in space are losing power and we are unable to communitacte with them", "Unfortunately, there knowledge about circuits is......", "lets say its out dated. If we don't act soon they will lose all power and all communication will be lost! I dread what could happen to them in such a dark world....", "Anyways.. I don't want to bore you to begin training you need to learn a few things, we will start by picking up that note over there the glowing one, press 'X' to pick it up", "come to me again when you are done. "])
+dialogue = Array[String](["I see you have already picked up the note", "you might be wondering where it went..", "its actually store in your \"inventroy\" think of it as your backpack where you hold items you collect", "these items are not limited to notes, it can be tools or even circuit components or maybe a little trinket you found in your journey", "to open your inventory press \"i\" on your key board", "I will let you explore what you already have inside it", "do not forget to come back and talk to me after you are done!"])
 metadata/_custom_type_script = "uid://dkh34p78b3sbj"

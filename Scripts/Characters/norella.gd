@@ -38,7 +38,6 @@ func _process(delta):
 	if QuestManager.is_quest_active("1"):
 		introductionScene()
 		QuestManager.complete_quest("1")	
-		QuestManager.start_quest("2")
 		
 	if is_roaming:
 		match current_state:
@@ -64,16 +63,19 @@ func _process(delta):
 
 func get_current_dialogue() -> DialogueDataChar:
 
-
-	if QuestManager.is_quest_active("2"):
-		return note_dialogue
-
-	if QuestManager.is_quest_active("3"):
-		return inventory_dialogue
-		
-	if QuestManager.is_quest_active("4"):
+	if QuestManager.is_quest_completed("3"):
+		QuestManager.start_quest("4")
 		return terminal_dialogue
 
+	if QuestManager.is_quest_completed("2"):
+		QuestManager.start_quest("3")
+		return inventory_dialogue
+		
+	if QuestManager.is_quest_completed("1"):
+		QuestManager.start_quest("2")
+		return note_dialogue
+
+		
 	return initial_dialogue
 	
 	
