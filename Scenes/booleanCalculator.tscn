@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://c583x380cw53g"]
 
 [ext_resource type="Script" uid="uid://f3jevl0h707b" path="res://Scripts/control.gd" id="1_cewbp"]
-[ext_resource type="Texture2D" uid="uid://dc311hscfrklt" path="res://Assets/download.jpg" id="2_7ol72"]
+[ext_resource type="Texture2D" uid="uid://brr7dc7b4hold" path="res://Assets/bricolaje.jpg" id="2_7ol72"]
 [ext_resource type="Texture2D" uid="uid://cvile3ej5mr54" path="res://Assets/Calculator-ASSETS/Screens/screen_01.png" id="2_cnfr3"]
 [ext_resource type="Texture2D" uid="uid://0e08i2wqqbuw" path="res://Assets/Calculator-ASSETS/Screens/screen_03.png" id="3_7ol72"]
+[ext_resource type="FontFile" uid="uid://b74y8xssvg6rh" path="res://Assets/Font name without Exclamation mark/FirstTimeWriting.otf" id="3_utjv0"]
 [ext_resource type="Texture2D" uid="uid://cra0budckspne" path="res://Assets/Calculator-ASSETS/buttons/A.png" id="4_utjv0"]
 [ext_resource type="Texture2D" uid="uid://bl6dpf76mb2bh" path="res://Assets/Calculator-ASSETS/buttons/B.png" id="5_6ef6h"]
 [ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="5_7ol72"]
@@ -24,6 +25,7 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ckhf"]
 texture = ExtResource("2_7ol72")
+modulate_color = Color(0.7722583, 0.7722583, 0.7722583, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dqysy"]
 texture = ExtResource("2_cnfr3")
@@ -53,8 +55,28 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_1ckhf")
 
+[node name="Expression" type="Label" parent="Panel" unique_id=1938908551]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.9850001
+offset_left = 87.0
+offset_top = 69.0
+offset_right = -722.0
+offset_bottom = -131.28003
+rotation = 0.13788101
+pivot_offset = Vector2(-50.86499, 51.418)
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.7372549, 0.73333335, 0.7529412, 1)
+theme_override_fonts/font = ExtResource("3_utjv0")
+theme_override_font_sizes/font_size = 50
+text = "PASSCODE"
+vertical_alignment = 1
+autowrap_mode = 3
+
 [node name="panelContainer" type="PanelContainer" parent="." unique_id=313632831]
-modulate = Color(0.94780666, 1.139574, 1.04643, 1)
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
@@ -94,9 +116,10 @@ offset_bottom = -10.807007
 pivot_offset = Vector2(-50.86499, 51.418)
 size_flags_horizontal = 3
 size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.7921569, 0.78431374, 0.83137256, 1)
 theme_override_fonts/font = ExtResource("5_7ol72")
 theme_override_font_sizes/font_size = 80
-text = "etg"
+text = "ENTER PASSCODE"
 vertical_alignment = 1
 autowrap_mode = 3
 

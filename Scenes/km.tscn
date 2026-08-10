@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b84mbv2rh1t6w"]
 
 [ext_resource type="Script" uid="uid://dxxqltv1jpw06" path="res://Scripts/km.gd" id="1_hefsa"]
-[ext_resource type="Texture2D" uid="uid://b48r5r3v8thp3" path="res://Assets/HackerInventoryPack/hacker_inventory_panel.png" id="2_od5lo"]
 [ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="3_8ll6u"]
 [ext_resource type="FontFile" uid="uid://cbv0nlxxdti8a" path="res://Assets/MGS1_Fonts/MGS1 Ammo.ttf" id="4_8ll6u"]
 [ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="4_tdcxy"]
@@ -9,22 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://chwkaytuw4x4d" path="res://Assets/HackerInventoryPack/hacker_slot_legendary.png" id="8_eibh0"]
 [ext_resource type="Script" uid="uid://4pg4gsg7vo0y" path="res://Scenes/button.gd" id="9_5kq72"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1y5xj"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1lqk"]
+bg_color = Color(0.015686275, 0.043137256, 0.019607844, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bovvf"]
-texture = ExtResource("2_od5lo")
-modulate_color = Color(0.40069774, 0.40069774, 0.40069768, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_30elm"]
-bg_color = Color(0.023529412, 0.07450981, 0.03529412, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r7mq7"]
-texture = ExtResource("2_od5lo")
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mg8yr"]
+bg_color = Color(0.015686275, 0.043137256, 0.019607844, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aoht1"]
 texture = ExtResource("7_028u5")
@@ -44,24 +32,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hefsa")
 
-[node name="Panel3" type="Panel" parent="." unique_id=2018096633]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_1y5xj")
-
 [node name="Panel" type="Panel" parent="." unique_id=1125087192]
-modulate = Color(0.6052743, 0.6052743, 0.6052743, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bovvf")
+theme_override_styles/panel = SubResource("StyleBoxFlat_s1lqk")
 
 [node name="Container" type="Container" parent="Panel" unique_id=1989012895]
 layout_mode = 1
@@ -92,7 +70,6 @@ size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 0.74509805, 0, 1)
 theme_override_fonts/font = ExtResource("4_tdcxy")
 theme_override_font_sizes/font_size = 51
-theme_override_styles/normal = SubResource("StyleBoxFlat_30elm")
 text = "expression"
 vertical_alignment = 1
 
@@ -109,7 +86,7 @@ offset_right = 187.5
 offset_bottom = 187.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_r7mq7")
+theme_override_styles/panel = SubResource("StyleBoxFlat_mg8yr")
 
 [node name="GridContainer" type="GridContainer" parent="Panel2" unique_id=1984964602]
 layout_mode = 1
@@ -561,14 +538,14 @@ vertical_alignment = 1
 [node name="Button" type="Button" parent="." unique_id=611728119]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.88600004
-anchor_top = 0.20500001
-anchor_right = 0.88600004
-anchor_bottom = 0.20500001
-offset_left = -58.67206
-offset_top = -59.84001
-offset_right = 58.32794
-offset_bottom = 60.15999
+anchor_left = 0.896
+anchor_top = 0.18100001
+anchor_right = 0.896
+anchor_bottom = 0.18100001
+offset_left = -47.192017
+offset_top = -44.28801
+offset_right = 46.807983
+offset_bottom = 43.71199
 theme_override_colors/font_color = Color(0.003921569, 0.5803922, 0.007843138, 1)
 theme_override_fonts/font = ExtResource("4_tdcxy")
 theme_override_font_sizes/font_size = 70
