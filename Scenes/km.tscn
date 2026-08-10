@@ -1,18 +1,20 @@
 [gd_scene format=3 uid="uid://b84mbv2rh1t6w"]
 
 [ext_resource type="Script" uid="uid://dxxqltv1jpw06" path="res://Scripts/km.gd" id="1_hefsa"]
+[ext_resource type="Texture2D" uid="uid://fk1l6cmp444n" path="res://Assets/monitor.png" id="2_4id1p"]
 [ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="3_8ll6u"]
+[ext_resource type="Texture2D" uid="uid://cw00ev1mytkig" path="res://Assets/monitor-2.png" id="4_1y5xj"]
 [ext_resource type="FontFile" uid="uid://cbv0nlxxdti8a" path="res://Assets/MGS1_Fonts/MGS1 Ammo.ttf" id="4_8ll6u"]
 [ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="4_tdcxy"]
 [ext_resource type="Texture2D" uid="uid://bvxnjppf3yv0q" path="res://Assets/HackerInventoryPack/hacker_slot_selected.png" id="7_028u5"]
 [ext_resource type="Texture2D" uid="uid://chwkaytuw4x4d" path="res://Assets/HackerInventoryPack/hacker_slot_legendary.png" id="8_eibh0"]
 [ext_resource type="Script" uid="uid://4pg4gsg7vo0y" path="res://Scenes/button.gd" id="9_5kq72"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1lqk"]
-bg_color = Color(0.015686275, 0.043137256, 0.019607844, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5kq72"]
+texture = ExtResource("2_4id1p")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mg8yr"]
-bg_color = Color(0.015686275, 0.043137256, 0.019607844, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bovvf"]
+texture = ExtResource("4_1y5xj")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aoht1"]
 texture = ExtResource("7_028u5")
@@ -39,7 +41,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_s1lqk")
+theme_override_styles/panel = SubResource("StyleBoxTexture_5kq72")
 
 [node name="Container" type="Container" parent="Panel" unique_id=1989012895]
 layout_mode = 1
@@ -86,7 +88,7 @@ offset_right = 187.5
 offset_bottom = 187.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_mg8yr")
+theme_override_styles/panel = SubResource("StyleBoxTexture_bovvf")
 
 [node name="GridContainer" type="GridContainer" parent="Panel2" unique_id=1984964602]
 layout_mode = 1
