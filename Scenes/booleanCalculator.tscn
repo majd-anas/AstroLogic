@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://brr7dc7b4hold" path="res://Assets/bricolaje.jpg" id="2_7ol72"]
 [ext_resource type="Texture2D" uid="uid://cvile3ej5mr54" path="res://Assets/Calculator-ASSETS/Screens/screen_01.png" id="2_cnfr3"]
 [ext_resource type="Texture2D" uid="uid://0e08i2wqqbuw" path="res://Assets/Calculator-ASSETS/Screens/screen_03.png" id="3_7ol72"]
-[ext_resource type="FontFile" uid="uid://b74y8xssvg6rh" path="res://Assets/Font name without Exclamation mark/FirstTimeWriting.otf" id="3_utjv0"]
+[ext_resource type="FontFile" uid="uid://bkyeqws3nam20" path="res://Assets/Unutterable_Font/Web Open Font Format (.woff)/Unutterable-Regular.woff" id="3_utjv0"]
 [ext_resource type="Texture2D" uid="uid://cra0budckspne" path="res://Assets/Calculator-ASSETS/buttons/A.png" id="4_utjv0"]
 [ext_resource type="Texture2D" uid="uid://bl6dpf76mb2bh" path="res://Assets/Calculator-ASSETS/buttons/B.png" id="5_6ef6h"]
-[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="5_7ol72"]
+[ext_resource type="FontFile" uid="uid://2l0rr7xi388x" path="res://Assets/Linerama_Font_1_14/TrueType (.ttf)/Linerama-Bold.ttf" id="6_utjv0"]
 [ext_resource type="Texture2D" uid="uid://br12qwv7mlnqt" path="res://Assets/Calculator-ASSETS/buttons/C.png" id="6_wxdld"]
 [ext_resource type="Texture2D" uid="uid://dnf0cq7h73c5n" path="res://Assets/Calculator-ASSETS/buttons/OrBtn.png" id="7_n1r22"]
 [ext_resource type="Texture2D" uid="uid://cfa356l48iaia" path="res://Assets/Calculator-ASSETS/buttons/D.png" id="8_xnchu"]
@@ -70,6 +70,7 @@ pivot_offset = Vector2(-50.86499, 51.418)
 size_flags_horizontal = 3
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.7372549, 0.73333335, 0.7529412, 1)
+theme_override_colors/font_outline_color = Color(0.24705882, 0.25882354, 0.29803923, 1)
 theme_override_fonts/font = ExtResource("3_utjv0")
 theme_override_font_sizes/font_size = 50
 text = "PASSCODE"
@@ -117,8 +118,8 @@ pivot_offset = Vector2(-50.86499, 51.418)
 size_flags_horizontal = 3
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.7921569, 0.78431374, 0.83137256, 1)
-theme_override_fonts/font = ExtResource("5_7ol72")
-theme_override_font_sizes/font_size = 80
+theme_override_fonts/font = ExtResource("6_utjv0")
+theme_override_font_sizes/font_size = 40
 text = "ENTER PASSCODE"
 vertical_alignment = 1
 autowrap_mode = 3
