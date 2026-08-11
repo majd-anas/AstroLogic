@@ -4,12 +4,18 @@ extends Control
 @onready var name_label = $NinePatchRect/Label
 @onready var text_label = $NinePatchRect/RichTextLabel
 @onready var timer: Timer = $Timer
+@onready var portrait: TextureRect = $NinePatchRect/Portrait
 var current_tween: Tween
 
-func set_text(name, text,duration: float = 1.0):
+func set_text(name, text,charPortrait,duration: float = 1.0):
 	if name != "":
 		name_label.text = name
-
+	if charPortrait:
+		portrait.texture=charPortrait
+		portrait.show()
+	else:
+		portrait.hide()
+		
 	text_label.text = text
 	text_label.visible_ratio = 0.0 # Start empty
 	

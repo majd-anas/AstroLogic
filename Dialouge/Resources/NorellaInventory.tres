@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="DialogueDataChar" format=3 uid="uid://po87shqbc4ec"]
 
 [ext_resource type="Script" uid="uid://dkh34p78b3sbj" path="res://Scripts/Dialouge/DialougeDataChar.gd" id="1_45o8a"]
+[ext_resource type="Texture2D" uid="uid://cy2nvkocortu0" path="res://Assets/oneShotAssets/portraits/kip.png" id="1_55wav"]
 
 [resource]
 script = ExtResource("1_45o8a")
 npc_name = "Norella"
 dialogue = Array[String](["I see you have already picked up the note", "you might be wondering where it went..", "its actually store in your \"inventroy\" think of it as your backpack where you hold items you collect", "these items are not limited to notes, it can be tools or even circuit components or maybe a little trinket you found in your journey", "to open your inventory press \"i\" on your key board", "I will let you explore what you already have inside it", "do not forget to come back and talk to me after you are done!"])
+portrait = ExtResource("1_55wav")
 metadata/_custom_type_script = "uid://dkh34p78b3sbj"
