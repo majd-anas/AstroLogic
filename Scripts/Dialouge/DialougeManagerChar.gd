@@ -6,9 +6,17 @@ var current_dialogue : Array[String]
 var current_index = 0
 
 var dialogue_box
-func _ready():
-	dialogue_box = get_tree().current_scene.get_node("UI/DialogueBox")
-	dialogue_box.hide()
+
+func _ready() -> void:
+	
+	await get_tree().process_frame
+	
+	dialogue_box = get_tree().current_scene.get_node_or_null("UI/DialogueBox")
+	
+	if dialogue_box:
+		dialogue_box.hide()
+	else:
+		print("DialogueManager: UI/DialogueBox not found.")
 	
 func start(dialogue_resource):
 	current_dialogue = dialogue_resource.dialogue

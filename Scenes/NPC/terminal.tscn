@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://c0q8mbfkbc0su"]
 
 [ext_resource type="Texture2D" uid="uid://bwkpww5ic17xl" path="res://Assets/oneShotAssets/npc/pc.png" id="1_o75dh"]
+[ext_resource type="Script" uid="uid://dr4rauofdrfe0" path="res://Scripts/Characters/terminal.gd" id="1_oxer3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxer3"]
+size = Vector2(36, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oxer3"]
 atlas = ExtResource("1_o75dh")
@@ -50,11 +54,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o75dh"]
-size = Vector2(41, 31)
+[sub_resource type="CircleShape2D" id="CircleShape2D_o75dh"]
+radius = 27.166155
 
 [node name="terminal" type="StaticBody2D" unique_id=17724772]
 collision_layer = 2
+script = ExtResource("1_oxer3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1310621101]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_oxer3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1305570865]
 position = Vector2(4.5000014, -2.9999988)
@@ -64,6 +73,12 @@ animation = &"working"
 autoplay = "working"
 frame_progress = 0.7515271
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=304921009]
-position = Vector2(7.5, 1.5)
-shape = SubResource("RectangleShape2D_o75dh")
+[node name="OpenTerminalArea" type="Area2D" parent="." unique_id=1098186941]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpenTerminalArea" unique_id=198894361]
+position = Vector2(7, 5)
+shape = SubResource("CircleShape2D_o75dh")
+debug_color = Color(0.7337603, 0.40425092, 0.638143, 0.41960785)
+
+[connection signal="body_entered" from="OpenTerminalArea" to="." method="_on_open_terminal_area_body_entered"]
+[connection signal="body_exited" from="OpenTerminalArea" to="." method="_on_open_terminal_area_body_exited"]

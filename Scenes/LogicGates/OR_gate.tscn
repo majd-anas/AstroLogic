@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://b0gxpp0liif2"]
 
+[ext_resource type="Script" uid="uid://qw18h31c5cws" path="res://Scripts/GatesScripts/or_gate.gd" id="1_i0m1f"]
 [ext_resource type="Texture2D" uid="uid://capw3y6yhs1vg" path="res://Assets/LogicGates/OR_gate.png" id="1_yd8d2"]
 [ext_resource type="Script" uid="uid://bm8v27tgr5mb0" path="res://Scripts/GatesScripts/gate_drag.gd" id="2_qr8fs"]
 [ext_resource type="Script" uid="uid://de1yl7cp8fahv" path="res://Scripts/GatesScripts/gate_input.gd" id="3_xq658"]
 [ext_resource type="Script" uid="uid://dofhhyfwg2pso" path="res://Scripts/GatesScripts/OR_output.gd" id="4_o680v"]
+[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="4_utrqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blc2l"]
 size = Vector2(23, 28)
 
 [node name="Node2D" type="Node2D" unique_id=1065677274]
+position = Vector2(172, 63.000004)
+scale = Vector2(2.2972667, 2.2972667)
+script = ExtResource("1_i0m1f")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=649997609]
 position = Vector2(0, 0.07999611)
@@ -28,7 +33,9 @@ offset_left = -32.0
 offset_top = -20.0
 offset_right = -24.0
 offset_bottom = -12.0
-theme_override_font_sizes/font_size = 8
+scale = Vector2(1, 1.0800601)
+theme_override_fonts/font = ExtResource("4_utrqw")
+theme_override_font_sizes/font_size = 16
 script = ExtResource("3_xq658")
 metadata/_edit_use_anchors_ = true
 
@@ -36,16 +43,21 @@ metadata/_edit_use_anchors_ = true
 offset_left = -32.0
 offset_right = -24.0
 offset_bottom = 8.0
-theme_override_font_sizes/font_size = 8
+scale = Vector2(1, 1.0800601)
+theme_override_fonts/font = ExtResource("4_utrqw")
+theme_override_font_sizes/font_size = 16
 script = ExtResource("3_xq658")
 metadata/_edit_use_anchors_ = true
 
 [node name="output" type="Label" parent="." unique_id=591476687]
-offset_left = 21.0
-offset_top = -7.0
-offset_right = 33.0
-offset_bottom = 7.0
-theme_override_font_sizes/font_size = 10
+offset_left = 20.023796
+offset_top = -7.8354
+offset_right = 32.023796
+offset_bottom = 6.1646
+scale = Vector2(1, 1.08006)
+theme_override_fonts/font = ExtResource("4_utrqw")
+theme_override_font_sizes/font_size = 16
+vertical_alignment = 1
 script = ExtResource("4_o680v")
 metadata/_edit_use_anchors_ = true
 

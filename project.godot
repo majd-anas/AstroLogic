@@ -26,7 +26,7 @@ QuestManager="*uid://dpll787t6bex0"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
 [dotnet]
@@ -82,3 +82,4 @@ interact={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/stretch/mode="canvas_items"
