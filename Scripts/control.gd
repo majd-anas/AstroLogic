@@ -1,6 +1,7 @@
 extends Control
 
 @onready var display: Label = $panelContainer/VBoxContainer/HBoxContainer5/Panel/Label
+@onready var expression: Label = $Panel/Expression
 
 # The problem expression shown to the player, e.g. "AB'+C"
 var problem_expression: String = "AB'C+AB'C'+A'BC"
@@ -12,7 +13,7 @@ func _ready() -> void:
 	connect_buttons($panelContainer/VBoxContainer)
 	display.text = ""
 	print(problem_expression)
-
+	expression.text= problem_expression
 func connect_buttons(node: Node):
 	for child in node.get_children():
 		if child is TextureButton:
