@@ -22,7 +22,13 @@
 [ext_resource type="Resource" uid="uid://cggpx552ro00h" path="res://Dialouge/Resources/NorellaUseTerminal.tres" id="15_l8wlg"]
 [ext_resource type="PackedScene" uid="uid://cu8swnyx231h5" path="res://Scenes/NPC/door.tscn" id="16_jsm8f"]
 [ext_resource type="PackedScene" uid="uid://7f2gmph5b6u2" path="res://Scenes/inventory.tscn" id="17_p1n1i"]
+[ext_resource type="PackedScene" uid="uid://fwyaelrvclvn" path="res://Scenes/Dialouge/dialougeInteractableArea.tscn" id="21_ljdbi"]
+[ext_resource type="Resource" uid="uid://smrfbplbf8hw" path="res://Dialouge/Resources/interactableAreas/Fridge.tres" id="22_oh46h"]
 [ext_resource type="PackedScene" uid="uid://t4r87cig2a0n" path="res://Scenes/Puzzles/TutorialGatePuzzle.tscn" id="23_gbv2n"]
+[ext_resource type="Resource" uid="uid://bxf0i872wo5jo" path="res://Dialouge/Resources/interactableAreas/Sign.tres" id="23_hrw0d"]
+[ext_resource type="Resource" uid="uid://d0ivyxwxamvc2" path="res://Dialouge/Resources/interactableAreas/bookArea.tres" id="24_sdnb0"]
+[ext_resource type="Resource" uid="uid://d4jxi8i6wyeyx" path="res://Dialouge/Resources/interactableAreas/trash.tres" id="25_girs5"]
+[ext_resource type="Resource" uid="uid://bmsu3m8t1e8en" path="res://Dialouge/Resources/interactableAreas/Terminal.tres" id="26_nm2jm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b040f"]
 resource_name = "Background"
@@ -11282,7 +11288,7 @@ sources/5 = SubResource("TileSetAtlasSource_afxa2")
 sources/6 = SubResource("TileSetAtlasSource_e6o68")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e6o68"]
-distance = -482.0
+distance = -476.0
 
 [node name="lvlOne" type="Node2D" unique_id=1179937505]
 script = ExtResource("1_n4oqd")
@@ -11299,7 +11305,7 @@ tile_set = SubResource("TileSet_l8wlg")
 
 [node name="Furniture" type="TileMapLayer" parent="Map" unique_id=356148897]
 scale = Vector2(1.2, 1.2)
-tile_map_data = PackedByteArray("AAAJAAsABQADACQAAAAOAAsABQADACQAAAAbABIABQAAAD4AAAAeABIABQAAAD4AAAAZAAkAAwACACwAAAAFAAsABQACAFIAAAAbAA8ABQACAFIAAAAbAAkAAwACACwAAAAbAAwABQAGAF8AAAAaAAwABQACAF8AAAAaAA0ABQAAAF8AAAANAAkABQABAB8AAAAOAAkABQABAB8AAAAZAA0ABQAEABcAAAAHAAsABQADAFIAAAAGAA8AEwADAAAAAAAGABAABQAAAEIAAAAJABAABQAAAEIAAAAMAA8AEwADAAAAAAAMABAABQAAAEIAAAA=")
+tile_map_data = PackedByteArray("AAAJAAsABQADACQAAAAOAAsABQADACQAAAAbABIABQAAAD4AAAAeABIABQAAAD4AAAAZAAkAAwACACwAAAAFAAsABQACAFIAAAAbAA8ABQACAFIAAAAbAAwABQAGAF8AAAAaAAwABQACAF8AAAAaAA0ABQAAAF8AAAANAAkABQABAB8AAAAOAAkABQABAB8AAAAHAAsABQADAFIAAAAJABAABQAAAEIAAAAMABAABQAAAEIAAAAGABAABQAAAEIAAAAGAA8AEwADAAAAAAAMAA8AEwADAAAAAAAZAA0ABQAEABcAAAAbAAkAAwACACwAAAA=")
 tile_set = ExtResource("9_hpksi")
 
 [node name="decoration" type="TileMapLayer" parent="Map" unique_id=1203428012]
@@ -11340,6 +11346,40 @@ position = Vector2(269, 350)
 
 [node name="Door" parent="." unique_id=488608063 instance=ExtResource("16_jsm8f")]
 position = Vector2(391, 166)
+
+[node name="InteractableAreas" type="Node2D" parent="." unique_id=1821052784]
+
+[node name="FridgeArea" parent="InteractableAreas" unique_id=2113839448 instance=ExtResource("21_ljdbi")]
+position = Vector2(499, 187)
+dialogue = ExtResource("22_oh46h")
+
+[node name="Sign" parent="InteractableAreas" unique_id=478823427 instance=ExtResource("21_ljdbi")]
+position = Vector2(374, 371)
+dialogue = ExtResource("23_hrw0d")
+
+[node name="BookArea" parent="InteractableAreas" unique_id=1021617050 instance=ExtResource("21_ljdbi")]
+position = Vector2(506, 253)
+dialogue = ExtResource("24_sdnb0")
+
+[node name="trash" parent="InteractableAreas" unique_id=241629386 instance=ExtResource("21_ljdbi")]
+position = Vector2(114, 237)
+scale = Vector2(0.5, 0.5)
+dialogue = ExtResource("25_girs5")
+
+[node name="trash2" parent="InteractableAreas" unique_id=684261243 instance=ExtResource("21_ljdbi")]
+position = Vector2(527, 305)
+scale = Vector2(0.5, 0.5)
+dialogue = ExtResource("25_girs5")
+
+[node name="terminals" parent="InteractableAreas" unique_id=792920346 instance=ExtResource("21_ljdbi")]
+position = Vector2(244, 294)
+scale = Vector2(0.5, 0.5)
+dialogue = ExtResource("26_nm2jm")
+
+[node name="terminals2" parent="InteractableAreas" unique_id=766849265 instance=ExtResource("21_ljdbi")]
+position = Vector2(124, 295)
+scale = Vector2(0.5, 0.5)
+dialogue = ExtResource("26_nm2jm")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=193463097]
 layer = 10

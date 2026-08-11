@@ -23,9 +23,13 @@ func start(dialogue_resource):
 	current_index = 0
 
 	dialogue_box.show()
-
+	var npc_name
+	if !dialogue_resource.npc_name:
+		npc_name="  "
+	else:
+		npc_name=dialogue_resource.npc_name
 	dialogue_box.set_text(
-		dialogue_resource.npc_name,
+		npc_name,
 		current_dialogue[current_index]
 	)
 
