@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://ci5bgi7gpt8lh"]
+
+[ext_resource type="Script" uid="uid://d2ucw6ycfrfji" path="res://Scripts/Quests/QuestData.gd" id="1_dm5ja"]
+
+[resource]
+script = ExtResource("1_dm5ja")
+quest_id = "3"
+quest_name = "InventoryTutorial"
+description = "open inventory"
+metadata/_custom_type_script = "uid://d2ucw6ycfrfji"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueDataChar" format=3 uid="uid://bxf0i872wo5jo"]
+
+[ext_resource type="Script" uid="uid://dkh34p78b3sbj" path="res://Scripts/Dialouge/DialougeDataChar.gd" id="1_421ne"]
+
+[resource]
+script = ExtResource("1_421ne")
+npc_name = "Earth Lab"
+dialogue = Array[String](["this is the earth's communication and training facility for space missions, only authorized personnel permitted"])
+metadata/_custom_type_script = "uid://dkh34p78b3sbj"

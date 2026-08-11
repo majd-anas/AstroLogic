@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueDataChar" format=3 uid="uid://cggpx552ro00h"]
+
+[ext_resource type="Texture2D" uid="uid://cy2nvkocortu0" path="res://Assets/oneShotAssets/portraits/kip.png" id="1_7h04p"]
+[ext_resource type="Script" uid="uid://dkh34p78b3sbj" path="res://Scripts/Dialouge/DialougeDataChar.gd" id="1_utg4e"]
+
+[resource]
+script = ExtResource("1_utg4e")
+npc_name = "Norella"
+dialogue = Array[String](["now there is one thing left and you will have completed your basic training", "see that blue glowing terminal over there? ", "you can press \"x\" to open it, it will display a simple puzzle that I need you to solve", "its a simple one! you actually have the answer right there in your inventory ! you have just got to make the gate displayed on the terminal output to 1", "why 1? well in digital logic 1 is the equivalent of \"on\" in electronics ", "think of it as a lamp! '0' is and off and a 1 is an 'on'", "Now go solve that puzzle! and do not forget to talk to me again to discuss what you will do next"])
+portrait = ExtResource("1_7h04p")
+metadata/_custom_type_script = "uid://dkh34p78b3sbj"

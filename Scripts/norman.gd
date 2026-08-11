@@ -18,6 +18,7 @@ func _physics_process(_delta: float) -> void:
 	elif direction.y > 0:
 		char.play("Run")
 	else: char.play("Talk")
+	
 	velocity = direction * speed
 	# 4. Built-in engine function to move the body and handle slide physics
 	move_and_slide()

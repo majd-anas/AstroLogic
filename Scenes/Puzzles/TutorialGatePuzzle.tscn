@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://t4r87cig2a0n"]
+
+[ext_resource type="Texture2D" uid="uid://b26pc62d6avrv" path="res://Assets/oneShotAssets/terminal/PC _ Computer_NO_ICONS.png" id="1_jj5cv"]
+[ext_resource type="Script" uid="uid://phlnga4j34t" path="res://Scripts/Puzzles/LevelOne/tutorial_gate_puzzle.gd" id="1_o0js8"]
+[ext_resource type="PackedScene" uid="uid://fxehdt1tyjvu" path="res://Scenes/LogicGates/AND_gate.tscn" id="2_gavcp"]
+[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="2_jj5cv"]
+[ext_resource type="Texture2D" uid="uid://d0f3oxmqerf31" path="res://Assets/computer_icons_asset_pack_v1.1/buttons.png" id="3_jj5cv"]
+[ext_resource type="Texture2D" uid="uid://chwkaytuw4x4d" path="res://Assets/HackerInventoryPack/hacker_slot_legendary.png" id="4_hqwqh"]
+[ext_resource type="Script" uid="uid://4pg4gsg7vo0y" path="res://Scenes/button.gd" id="5_o0js8"]
+[ext_resource type="Texture2D" uid="uid://dpxvoujsayllo" path="res://Assets/oneShotAssets/terminal/OkButton.png" id="7_gavcp"]
+[ext_resource type="PackedScene" uid="uid://b0gxpp0liif2" path="res://Scenes/LogicGates/OR_gate.tscn" id="8_7r6ie"]
+[ext_resource type="Script" uid="uid://be6ceb6h03x05" path="res://Scripts/Puzzles/LevelOne/okButton.gd" id="8_hqwqh"]
+[ext_resource type="Script" uid="uid://beg5k6e6m6un6" path="res://Scripts/Puzzles/LevelOne/start_prompt_ok_button.gd" id="9_e8mfp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t66sc"]
+texture = ExtResource("3_jj5cv")
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nq3wf"]
+texture = ExtResource("4_hqwqh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gavcp"]
+texture = ExtResource("3_jj5cv")
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="Control" type="Control" unique_id=2138501393]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o0js8")
+
+[node name="Panel2" type="NinePatchRect" parent="." unique_id=96148565]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jj5cv")
+
+[node name="Label" type="Label" parent="Panel2" unique_id=69690995]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.035
+anchor_right = 0.035
+anchor_bottom = 0.19900002
+offset_left = 88.0
+offset_top = -33.68
+offset_right = 789.68
+offset_bottom = -36.95201
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_jj5cv")
+theme_override_font_sizes/font_size = 51
+text = "make the out put '1' by changing the inputs "
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="Panel2" unique_id=148355558]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8758681
+anchor_top = 0.08950617
+anchor_right = 0.92352784
+anchor_bottom = 0.17642327
+offset_right = 0.095947266
+offset_bottom = 0.08799744
+theme_override_fonts/font = ExtResource("2_jj5cv")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_t66sc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nq3wf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gavcp")
+text = "x"
+autowrap_mode = 2
+autowrap_trim_flags = 0
+clip_text = true
+text_direction = 3
+script = ExtResource("5_o0js8")
+metadata/_edit_use_anchors_ = true
+
+[node name="ANDGATE" parent="Panel2" unique_id=1065677274 instance=ExtResource("2_gavcp")]
+position = Vector2(588.00006, 282)
+scale = Vector2(5.159999, 5.159999)
+
+[node name="ORGATE" parent="Panel2" unique_id=998218409 instance=ExtResource("8_7r6ie")]
+visible = false
+position = Vector2(586, 282.00003)
+scale = Vector2(5, 5)
+
+[node name="startPrompt" type="NinePatchRect" parent="Panel2" unique_id=999407810]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07700001
+anchor_top = 0.109000005
+anchor_right = 0.92100006
+anchor_bottom = 0.901
+offset_left = 0.29599
+offset_top = -18.632004
+offset_right = 0.00793457
+offset_bottom = 0.15197754
+texture = ExtResource("7_gavcp")
+script = ExtResource("9_e8mfp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel2/startPrompt" unique_id=735436765]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.296
+anchor_top = 0.38000003
+anchor_right = 0.708
+anchor_bottom = 0.628
+offset_left = 0.28799438
+offset_top = -0.16001892
+offset_right = -0.17602539
+offset_bottom = -0.0960083
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("2_jj5cv")
+theme_override_font_sizes/normal_font_size = 32
+text = "Welcome to the terminal!
+your puzzle today os to make the Gates output '1' 
+you can open your inventory to help you solve the puzzle
+
+press 'OK' to proceed to the puzzle
+
+"
+
+[node name="TextureButton" type="TextureButton" parent="Panel2/startPrompt" unique_id=1759008153]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45100003
+anchor_top = 0.611
+anchor_right = 0.54700005
+anchor_bottom = 0.69000006
+offset_left = -0.3720398
+offset_top = -0.052001953
+offset_right = 0.315979
+offset_bottom = -0.08001709
+
+[node name="finishPrompt" type="NinePatchRect" parent="Panel2" unique_id=799597041]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07700001
+anchor_top = 0.109000005
+anchor_right = 0.92100006
+anchor_bottom = 0.901
+offset_left = 0.29599
+offset_top = -18.632004
+offset_right = 0.00793457
+offset_bottom = 0.15197754
+texture = ExtResource("7_gavcp")
+script = ExtResource("8_hqwqh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel2/finishPrompt" unique_id=283268503]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.296
+anchor_top = 0.38000003
+anchor_right = 0.708
+anchor_bottom = 0.628
+offset_left = 0.28799438
+offset_top = -8.160019
+offset_right = -1.1760254
+offset_bottom = 4.9039917
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("2_jj5cv")
+theme_override_font_sizes/normal_font_size = 32
+text = "congratulations you completed your first ever puzzle!
+
+you can now proceed  to the next room
+go talk to norella a final time!
+
+press 'ok' or the 'X' button to exit the terminal
+"
+
+[node name="TextureButton" type="TextureButton" parent="Panel2/finishPrompt" unique_id=481787067]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45100003
+anchor_top = 0.611
+anchor_right = 0.54700005
+anchor_bottom = 0.69000006
+offset_left = -0.3720398
+offset_top = 3.947998
+offset_right = 0.315979
+offset_bottom = -0.08001709
+
+[connection signal="pressed" from="Panel2/Button2" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="Panel2/startPrompt/TextureButton" to="Panel2/startPrompt" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Panel2/finishPrompt/TextureButton" to="." method="_on_finish_prompt_pressed"]

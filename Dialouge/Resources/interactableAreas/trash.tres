@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueDataChar" format=3 uid="uid://d4jxi8i6wyeyx"]
+
+[ext_resource type="Script" uid="uid://dkh34p78b3sbj" path="res://Scripts/Dialouge/DialougeDataChar.gd" id="1_qknrb"]
+
+[resource]
+script = ExtResource("1_qknrb")
+dialogue = Array[String](["so much junk inside, its overflowing"])
+metadata/_custom_type_script = "uid://dkh34p78b3sbj"

@@ -1,10 +1,12 @@
-[gd_scene load_steps=0 format=3 uid="uid://bmryif2xonwa8"]
+[gd_scene format=3 uid="uid://bmryif2xonwa8"]
 
 [ext_resource type="Texture2D" uid="uid://cvile3ej5mr54" path="res://Assets/Calculator-ASSETS/Screens/screen_01.png" id="1_jquw2"]
-[ext_resource type="Script" uid="uid://bjflhqykwa48v" path="res://Scenes/binacry_calc.gd" id="1_sllnl"]
+[ext_resource type="Script" path="res://Scenes/binacry_calc.gd" id="1_sllnl"]
+[ext_resource type="Texture2D" uid="uid://dc311hscfrklt" path="res://Assets/download.jpg" id="2_jquw2"]
 [ext_resource type="Texture2D" uid="uid://0e08i2wqqbuw" path="res://Assets/Calculator-ASSETS/Screens/screen_03.png" id="2_sllnl"]
 [ext_resource type="Texture2D" uid="uid://ghw7v5ypv7rk" path="res://Assets/Calculator-ASSETS/SmallButtons/buttons_19.png" id="4_lr0wk"]
 [ext_resource type="Texture2D" uid="uid://d3w7gedg0lbxg" path="res://Assets/Calculator-ASSETS/BasesButtons/bases_02.png" id="5_rra8b"]
+[ext_resource type="FontFile" uid="uid://2l0rr7xi388x" path="res://Assets/Linerama_Font_1_14/TrueType (.ttf)/Linerama-Bold.ttf" id="5_sllnl"]
 [ext_resource type="Texture2D" uid="uid://bu2scmluj5l4j" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_05.png" id="6_jquw2"]
 [ext_resource type="Texture2D" uid="uid://bw4n6hsg3n6mp" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_06.png" id="7_sllnl"]
 [ext_resource type="Texture2D" uid="uid://b7176jbduoag8" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_07.png" id="8_wbiaw"]
@@ -16,6 +18,11 @@
 [ext_resource type="Texture2D" uid="uid://bfgsfmne8h1pe" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_13.png" id="14_s8xau"]
 [ext_resource type="Texture2D" uid="uid://dqi0judyq6u70" path="res://Assets/Calculator-ASSETS/SmallButtons/buttons_17.png" id="15_qonyf"]
 [ext_resource type="Texture2D" uid="uid://d4iksr5k3vkmr" path="res://Assets/Calculator-ASSETS/NormalButtons/buttons_22.png" id="16_ensvv"]
+[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="19_wbiaw"]
+[ext_resource type="Script" uid="uid://cq6bujjxgieoa" path="res://Scenes/buttonBinaryCalc.gd" id="20_c3m3q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rra8b"]
+texture = ExtResource("2_jquw2")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lrbgi"]
 texture = ExtResource("1_jquw2")
@@ -23,32 +30,68 @@ texture_margin_left = 2.0
 texture_margin_top = 2.0
 texture_margin_right = 2.0
 texture_margin_bottom = 2.0
+modulate_color = Color(0.4862745, 0.5411765, 0.58431375, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v35iv"]
 texture = ExtResource("2_sllnl")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lr0wk"]
+bg_color = Color(0.8156863, 0.93333334, 0.92941177, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dkek"]
+bg_color = Color(0.74183047, 0.09990384, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6wcb"]
+bg_color = Color(0.9968162, 0.12965216, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y7tg4"]
+bg_color = Color(1.2904384, 0.3892285, 0.27020073, 1)
 
 [node name="Control" type="Control" unique_id=862842085]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -752.0
-offset_bottom = -48.0
+offset_left = 377.0
+offset_top = 25.0
+offset_right = -375.0
+offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sllnl")
 
+[node name="Panel" type="Panel" parent="." unique_id=1184718118]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.94400007
+anchor_top = -0.042000003
+anchor_right = 1.9470001
+anchor_bottom = 1.042
+offset_left = -0.39996338
+offset_top = -1.7999973
+offset_right = -3.8000488
+offset_bottom = -5.200012
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rra8b")
+
 [node name="panelContainer" type="PanelContainer" parent="." unique_id=1265612416]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.275
-anchor_top = 0.027
-anchor_right = 0.62200004
-anchor_bottom = 0.95300007
-offset_left = -108.899994
-offset_top = -16.092001
-offset_right = 153.688
-offset_bottom = -16.140015
+anchor_left = 0.48600003
+anchor_top = 0.063
+anchor_right = 0.48600003
+anchor_bottom = 0.82000005
+offset_left = -162.40001
+offset_top = 0.20000076
+offset_right = 162.59999
+offset_bottom = -3.0517578e-05
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_lrbgi")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="panelContainer" unique_id=1211388725]
@@ -64,6 +107,19 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_v35iv")
 
+[node name="Panel" type="Panel" parent="panelContainer/VBoxContainer/HBoxContainer5/Panel" unique_id=186293805]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = -8.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lr0wk")
+
 [node name="Label" type="Label" parent="panelContainer/VBoxContainer/HBoxContainer5/Panel" unique_id=1724015210]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 1
@@ -73,11 +129,14 @@ anchor_bottom = 0.9850001
 offset_left = 15.769012
 offset_top = 6.8380013
 offset_right = -13.230988
-offset_bottom = -10.807007
+offset_bottom = -18.51001
 pivot_offset = Vector2(-50.86499, 51.418)
 size_flags_horizontal = 3
 size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.85882354, 0.23137255, 0.18431373, 1)
+theme_override_fonts/font = ExtResource("5_sllnl")
 theme_override_font_sizes/font_size = 50
+text = "code"
 vertical_alignment = 1
 autowrap_mode = 3
 
@@ -285,6 +344,25 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_rra8b")
 
+[node name="Button" type="Button" parent="." unique_id=1804859463]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.4660001
+anchor_top = 0.11000001
+anchor_right = 1.4660001
+anchor_bottom = 0.11000001
+offset_left = 0.5999756
+offset_top = -42.000008
+offset_right = 53.599976
+offset_bottom = 9.999992
+theme_override_fonts/font = ExtResource("19_wbiaw")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_0dkek")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u6wcb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y7tg4")
+text = "X"
+script = ExtResource("20_c3m3q")
+
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer/btnA" to="." method="on_char_pressed" binds= ["1"]]
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer/btnA2" to="." method="on_char_pressed" binds= ["2"]]
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer/btnA3" to="." method="on_char_pressed" binds= ["3"]]
@@ -297,3 +375,4 @@ texture = ExtResource("5_rra8b")
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnA10" to="." method="on_char_pressed" binds= ["0"]]
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnA11" to="." method="_on_equals_pressed"]
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnA12" to="." method="on_char_pressed" binds= ["0"]]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

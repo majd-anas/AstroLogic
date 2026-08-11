@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://ddsqbjgddpo0i"]
+
+[ext_resource type="Script" uid="uid://dfvsck46pb5c2" path="res://Scripts/Dialouge/dialouge.gd" id="1_s6nkx"]
+[ext_resource type="Texture2D" uid="uid://eg6x1spbt5n6" path="res://Assets/oneShotAssets/uiAssets/main_menu_cursor.png" id="2_trd5b"]
+[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="3_7qx78"]
+
+[node name="DialougeUI" type="Control" unique_id=729462109]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -12.0
+offset_right = 31.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s6nkx")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=752050660]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 135.0
+offset_right = 1157.0
+offset_bottom = 326.0
+texture = ExtResource("2_trd5b")
+
+[node name="Label" type="Label" parent="NinePatchRect" unique_id=1880854368]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 17.0
+offset_right = 220.75946
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("3_7qx78")
+theme_override_font_sizes/font_size = 64
+text = "Name"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect" unique_id=291269191]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 72.0
+offset_right = 933.0
+offset_bottom = 167.0
+theme_override_fonts/normal_font = ExtResource("3_7qx78")
+theme_override_font_sizes/normal_font_size = 40
+text = "Dialouge"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Portrait" type="TextureRect" parent="NinePatchRect" unique_id=1370769136]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.85600007
+anchor_top = 0.141
+anchor_right = 0.96300006
+anchor_bottom = 0.841
+offset_left = -0.40008545
+offset_top = 0.069000244
+offset_right = 13.549927
+offset_bottom = 0.018997192
+
+[node name="Timer" type="Timer" parent="." unique_id=1332044823]
+wait_time = 0.5
+one_shot = true
