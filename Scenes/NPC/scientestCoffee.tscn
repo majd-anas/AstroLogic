@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cuv3a2l4a5iiv"]
+
+[ext_resource type="Script" uid="uid://vaqx167dbciv" path="res://Scripts/Characters/scientest_coffee.gd" id="1_fur4u"]
+[ext_resource type="Texture2D" uid="uid://1v4q50tuhm1s" path="res://Assets/oneShotAssets/npc/red_scientists2.png" id="1_nhuub"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fur4u"]
+atlas = ExtResource("1_nhuub")
+region = Rect2(0, 0, 30, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mangn"]
+atlas = ExtResource("1_nhuub")
+region = Rect2(0, 50, 30, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5x2c"]
+atlas = ExtResource("1_nhuub")
+region = Rect2(0, 100, 30, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_how12"]
+atlas = ExtResource("1_nhuub")
+region = Rect2(0, 150, 30, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2y4ws"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fur4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mangn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5x2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_how12")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hdn7a"]
+radius = 11.0
+height = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mangn"]
+radius = 26.0
+
+[node name="Node2D" type="CharacterBody2D" unique_id=1750988787]
+collision_layer = 2
+collision_mask = 2
+motion_mode = 1
+script = ExtResource("1_fur4u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1280877641]
+sprite_frames = SubResource("SpriteFrames_2y4ws")
+autoplay = "default"
+frame_progress = 0.8242296
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=624835165]
+position = Vector2(-1, 9)
+shape = SubResource("CapsuleShape2D_hdn7a")
+
+[node name="chatDetect" type="Area2D" parent="." unique_id=140785474]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetect" unique_id=286016289]
+position = Vector2(-1, 4)
+shape = SubResource("CircleShape2D_mangn")
+
+[connection signal="body_entered" from="chatDetect" to="." method="_on_chat_detect_body_entered"]
+[connection signal="body_exited" from="chatDetect" to="." method="_on_chat_detect_body_exited"]

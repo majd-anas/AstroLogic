@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueDataChar" format=3 uid="uid://bmsu3m8t1e8en"]
+
+[ext_resource type="Script" uid="uid://dkh34p78b3sbj" path="res://Scripts/Dialouge/DialougeDataChar.gd" id="1_lc8pj"]
+
+[resource]
+script = ExtResource("1_lc8pj")
+dialogue = Array[String](["they are on, but nothing is open"])
+metadata/_custom_type_script = "uid://dkh34p78b3sbj"

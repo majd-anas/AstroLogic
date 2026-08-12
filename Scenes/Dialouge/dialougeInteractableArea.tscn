@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://fwyaelrvclvn"]
+
+[ext_resource type="Script" uid="uid://b0a4fpenws1ur" path="res://Scripts/Dialouge/dialouge_interactable_area.gd" id="1_ui6ea"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g6soc"]
+radius = 29.15476
+
+[node name="DialogueArea" type="Area2D" unique_id=2113839448]
+script = ExtResource("1_ui6ea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1845046028]
+shape = SubResource("CircleShape2D_g6soc")
+debug_color = Color(0.7065926, 0.48866582, 0, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

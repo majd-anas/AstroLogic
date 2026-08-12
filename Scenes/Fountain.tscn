@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bg33fxa2t0i78"]
+[gd_scene format=3 uid="uid://bg33fxa2t0i78"]
 
 [ext_resource type="Script" uid="uid://c8eunhqxy1d34" path="res://Scripts/fountain.gd" id="1_iianm"]
 [ext_resource type="Texture2D" uid="uid://dunf1ncvsfqct" path="res://Assets/SciFi_Asset/Tileset-Sci-Asset_Sprite.png" id="1_j20fm"]
@@ -62,23 +62,23 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_j20fm"]
 radius = 32.75668
 
-[node name="fountain" type="AnimatableBody2D"]
+[node name="fountain" type="AnimatableBody2D" unique_id=1915774336]
 light_mask = 2
 visibility_layer = 2
 position = Vector2(555, 306)
 input_pickable = true
 script = ExtResource("1_iianm")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2072374434]
 sprite_frames = SubResource("SpriteFrames_bt0xm")
 animation = &"Dirty"
 autoplay = "Dirty"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1634044374]
 shape = SubResource("CircleShape2D_j20fm")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=906591823]
 
-[node name="KM" parent="CanvasLayer" instance=ExtResource("3_5n5gl")]
+[node name="KM" parent="CanvasLayer" unique_id=1450063400 instance=ExtResource("3_5n5gl")]
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

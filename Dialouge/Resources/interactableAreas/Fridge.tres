@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueDataChar" format=3 uid="uid://smrfbplbf8hw"]
+
+[ext_resource type="Script" uid="uid://dkh34p78b3sbj" path="res://Scripts/Dialouge/DialougeDataChar.gd" id="1_lrbj1"]
+
+[resource]
+script = ExtResource("1_lrbj1")
+dialogue = Array[String](["There seems to be something inside", "as hard as you look you can not make it out"])
+metadata/_custom_type_script = "uid://dkh34p78b3sbj"

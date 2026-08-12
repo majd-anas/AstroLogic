@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://fxehdt1tyjvu"]
 
+[ext_resource type="Script" uid="uid://hyh8mx24jssi" path="res://Scripts/GatesScripts/and_gate.gd" id="1_g2dvp"]
 [ext_resource type="Texture2D" uid="uid://ugeyblyprf8i" path="res://Assets/LogicGates/AND_gate.png" id="1_pdasa"]
 [ext_resource type="Script" uid="uid://bm8v27tgr5mb0" path="res://Scripts/GatesScripts/gate_drag.gd" id="2_lojdo"]
+[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="3_5yd3b"]
 [ext_resource type="Script" uid="uid://de1yl7cp8fahv" path="res://Scripts/GatesScripts/gate_input.gd" id="3_carca"]
 [ext_resource type="Script" uid="uid://cjfn8l4p10odo" path="res://Scripts/GatesScripts/AND_output.gd" id="4_u0c2f"]
+[ext_resource type="FontFile" uid="uid://cbv0nlxxdti8a" path="res://Assets/MGS1_Fonts/MGS1 Ammo.ttf" id="5_k6lyg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blc2l"]
 size = Vector2(21.5, 28)
 
 [node name="Node2D" type="Node2D" unique_id=1065677274]
+position = Vector2(109, 50)
+script = ExtResource("1_g2dvp")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=649997609]
 position = Vector2(0, 0.07999611)
@@ -19,33 +24,36 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("1_pdasa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1446317359]
-position = Vector2(0.75, -0.07999611)
+position = Vector2(0.75, -0.0799942)
 shape = SubResource("RectangleShape2D_blc2l")
 script = ExtResource("2_lojdo")
 
 [node name="Input1" type="Button" parent="." unique_id=166666468]
-offset_left = -32.0
-offset_top = -20.0
-offset_right = -24.0
-offset_bottom = -12.0
-theme_override_font_sizes/font_size = 8
+offset_left = -31.0
+offset_top = -15.0
+offset_right = -23.0
+offset_bottom = -7.0
+theme_override_fonts/font = ExtResource("3_5yd3b")
+theme_override_font_sizes/font_size = 16
 script = ExtResource("3_carca")
 metadata/_edit_use_anchors_ = true
 
 [node name="Input2" type="Button" parent="." unique_id=83359266]
-offset_left = -32.0
-offset_right = -24.0
+offset_left = -31.0
+offset_right = -23.0
 offset_bottom = 8.0
-theme_override_font_sizes/font_size = 8
+theme_override_fonts/font = ExtResource("3_5yd3b")
+theme_override_font_sizes/font_size = 16
 script = ExtResource("3_carca")
 metadata/_edit_use_anchors_ = true
 
 [node name="output" type="Label" parent="." unique_id=591476687]
-offset_left = 21.0
-offset_top = -7.0
-offset_right = 33.0
-offset_bottom = 7.0
-theme_override_font_sizes/font_size = 10
+offset_left = 19.0
+offset_top = -6.0
+offset_right = 31.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("5_k6lyg")
+theme_override_font_sizes/font_size = 16
 script = ExtResource("4_u0c2f")
 metadata/_edit_use_anchors_ = true
 

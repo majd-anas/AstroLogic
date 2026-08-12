@@ -1,8 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://blu4rgoufpolg"]
+[gd_scene format=3 uid="uid://blu4rgoufpolg"]
 
 [ext_resource type="Texture2D" uid="uid://b48r5r3v8thp3" path="res://Assets/HackerInventoryPack/hacker_inventory_panel.png" id="1_0xhjo"]
-[ext_resource type="Script" uid="uid://32ie1rbeyqih" path="res://Scenes/container.gd" id="2_0slyu"]
-[ext_resource type="PackedScene" uid="uid://b84mbv2rh1t6w" path="res://Scenes/km.tscn" id="5_gs3ir"]
 [ext_resource type="Script" uid="uid://4pg4gsg7vo0y" path="res://Scenes/button.gd" id="5_gvfsm"]
 [ext_resource type="Texture2D" uid="uid://bvxnjppf3yv0q" path="res://Assets/HackerInventoryPack/hacker_slot_selected.png" id="5_r37kj"]
 [ext_resource type="Texture2D" uid="uid://chwkaytuw4x4d" path="res://Assets/HackerInventoryPack/hacker_slot_legendary.png" id="6_pff0d"]
@@ -24,7 +22,7 @@ texture = ExtResource("6_pff0d")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_23jqw"]
 texture = ExtResource("6_pff0d")
 
-[node name="Window" type="Control"]
+[node name="Window" type="Control" unique_id=2028050545]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,7 +30,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=290764702]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,23 +39,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_r37kj")
 
-[node name="Container" type="Container" parent="Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-script = ExtResource("2_0slyu")
-
-[node name="KM4" parent="Panel/Container" instance=ExtResource("5_gs3ir")]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Panel" unique_id=1206262920]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.035
@@ -76,7 +58,7 @@ text = "expression"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1943809439]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.8350694
