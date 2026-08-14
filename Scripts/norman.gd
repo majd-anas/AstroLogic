@@ -1,24 +1,96 @@
 extends CharacterBody2D
-@onready var char: AnimatedSprite2D = $AnimatedSprite2D
 
-# Adjust this value in the Inspector to change your speed
-@export var speed: float = 300.0
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-func _physics_process(_delta: float) -> void:
-	# 1. Get the direction vector based on your Input Map settings
-	var direction := Input.get_vector("left", "right", "up", "down")
-	if direction.x < 0: 
-		char.flip_h= true
-		char.play("Run")
-	elif direction.x >0:
-		char.flip_h= false
-		char.play("Run") 
-	elif direction.y < 0:
-		char.play("Run")
-	elif direction.y > 0:
-		char.play("Run")
-	else: char.play("Talk")
-	
-	velocity = direction * speed
-	# 4. Built-in engine function to move the body and handle slide physics
+@export var speed: float = 150.0
+
+# The direction the player was facing when they stopped moving.
+var last_direction := Vector2.DOWN
+
+
+func _physics_process(_delta):
+	# Get movement input.
+	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+
+	# Prevent diagonal movement from being faster.
+	if direction.length() > 0:
+		direction = direction.normalized()
+
+		velocity = direction * speed
+
+		# Remember the direction we're facing.
+		last_direction = direction
+
+		# Play the appropriate walking animation.
+		play_walk_animation(direction)
+	else:
+		velocity = Vector2.ZERO
+
+		# Play the appropriate idle animation.
+		play_idle_animation(last_direction)
+
 	move_and_slide()
+
+
+func play_walk_animation(direction: Vector2):
+	var animation_name := ""
+
+	# Mostly vertical movement
+	if abs(direction.x) < 0.3:
+		if direction.y < 0:
+			animation_name = "up"
+		else:
+			animation_name = "down"
+
+	# Mostly horizontal movement
+	elif abs(direction.y) < 0.3:
+		if direction.x < 0:
+			animation_name = "left"
+		else:
+			animation_name = "right"
+
+	# Diagonal movement
+	else:
+		if direction.x < 0 and direction.y < 0:
+			animation_name = "leftU"
+		elif direction.x < 0 and direction.y > 0:
+			animation_name = "leftD"
+		elif direction.x > 0 and direction.y < 0:
+			animation_name = "rightU"
+		elif direction.x > 0 and direction.y > 0:
+			animation_name = "rightD"
+
+	if animated_sprite.animation != animation_name:
+		animated_sprite.play(animation_name)
+
+
+func play_idle_animation(direction: Vector2):
+	var animation_name := ""
+
+	# Mostly vertical
+	if abs(direction.x) < 0.3:
+		if direction.y < 0:
+			animation_name = "idle_up"
+		else:
+			animation_name = "idle_down"
+
+	# Mostly horizontal
+	elif abs(direction.y) < 0.3:
+		if direction.x < 0:
+			animation_name = "idle_left"
+		else:
+			animation_name = "idle_right"
+
+	# Diagonal
+	else:
+		if direction.x < 0 and direction.y < 0:
+			animation_name = "idle_leftU"
+		elif direction.x < 0 and direction.y > 0:
+			animation_name = "idle_leftD"
+		elif direction.x > 0 and direction.y < 0:
+			animation_name = "idle_rightU"
+		elif direction.x > 0 and direction.y > 0:
+			animation_name = "idle_rightD"
+
+	if animated_sprite.animation != animation_name:
+		animated_sprite.play(animation_name)
