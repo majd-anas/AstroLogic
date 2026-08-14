@@ -5,9 +5,8 @@ extends Control
 @onready var fountain: AnimatableBody2D = $"../../Fountain"
 @onready var timer: Timer = $"../../Timer"
 @onready var grid: GridContainer = $Panel2/GridContainer
-@onready var label: Label = $Panel/Label
+@onready var label: Label = $Panel3/Label
 @onready var panel_2: Panel = $Panel2
-
 
 # K-map cell values
 const VAL_0 = "0"

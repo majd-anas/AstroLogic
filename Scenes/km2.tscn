@@ -1,22 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://2uu22y34i802"]
+[gd_scene format=3 uid="uid://2uu22y34i802"]
 
 [ext_resource type="Script" uid="uid://b5dhxpqb41wf4" path="res://Scripts/km_2.gd" id="1_5jevc"]
 [ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="2_5jevc"]
-[ext_resource type="Texture2D" uid="uid://b48r5r3v8thp3" path="res://Assets/HackerInventoryPack/hacker_inventory_panel.png" id="2_oj72o"]
+[ext_resource type="Texture2D" uid="uid://fk1l6cmp444n" path="res://Assets/monitor.png" id="2_tqyta"]
 [ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="3_n0yiu"]
+[ext_resource type="Texture2D" uid="uid://cw00ev1mytkig" path="res://Assets/monitor-2.png" id="4_rqawh"]
 [ext_resource type="Texture2D" uid="uid://bvxnjppf3yv0q" path="res://Assets/HackerInventoryPack/hacker_slot_selected.png" id="5_tqyta"]
 [ext_resource type="Texture2D" uid="uid://chwkaytuw4x4d" path="res://Assets/HackerInventoryPack/hacker_slot_legendary.png" id="6_rqawh"]
 [ext_resource type="Script" uid="uid://4pg4gsg7vo0y" path="res://Scenes/button.gd" id="7_x8t8v"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e062x"]
-texture = ExtResource("2_oj72o")
-modulate_color = Color(0.40069774, 0.40069774, 0.40069768, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6u755"]
-bg_color = Color(0.023529412, 0.07450981, 0.03529412, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x8t8v"]
+texture = ExtResource("2_tqyta")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_of3h0"]
-texture = ExtResource("2_oj72o")
+texture = ExtResource("4_rqawh")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2t18n"]
 texture = ExtResource("5_tqyta")
@@ -27,7 +24,7 @@ texture = ExtResource("6_rqawh")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vxtgy"]
 texture = ExtResource("6_rqawh")
 
-[node name="KM" type="Control"]
+[node name="KM" type="Control" unique_id=671484857]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,35 +33,48 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5jevc")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=286949043]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_e062x")
+theme_override_styles/panel = SubResource("StyleBoxTexture_x8t8v")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Container" type="Container" parent="Panel" unique_id=432186632]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel" unique_id=272243832]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.035
-anchor_right = 0.035
-anchor_bottom = 0.19900002
-offset_left = 67.0
-offset_top = 38.155
-offset_right = 220.5
-offset_bottom = 61.155
+anchor_left = 0.32000002
+anchor_top = 0.18400002
+anchor_right = 0.32000002
+anchor_bottom = 0.18400002
+offset_left = -295.64
+offset_top = -50.23201
+offset_right = 296.36
+offset_bottom = 49.76799
+grow_horizontal = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0.74509805, 0, 1)
 theme_override_fonts/font = ExtResource("3_n0yiu")
 theme_override_font_sizes/font_size = 51
-theme_override_styles/normal = SubResource("StyleBoxFlat_6u755")
 text = "expression"
-horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="Panel2" type="Panel" parent="." unique_id=1349820031]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -79,7 +89,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_of3h0")
 
-[node name="GridContainer" type="GridContainer" parent="Panel2"]
+[node name="GridContainer" type="GridContainer" parent="Panel2" unique_id=1815454236]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -94,14 +104,14 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 2
 
-[node name="Button" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button" type="TextureButton" parent="Panel2/GridContainer" unique_id=929545969]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("2_5jevc")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button" unique_id=382274822]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -119,14 +129,14 @@ text = "1
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button2" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button2" type="TextureButton" parent="Panel2/GridContainer" unique_id=2048064365]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("2_5jevc")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button2"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button2" unique_id=239880555]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -144,14 +154,14 @@ text = "1
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button4" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button4" type="TextureButton" parent="Panel2/GridContainer" unique_id=818153757]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("2_5jevc")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button4"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button4" unique_id=732899170]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -169,14 +179,14 @@ text = "1
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button5" type="TextureButton" parent="Panel2/GridContainer"]
+[node name="Button5" type="TextureButton" parent="Panel2/GridContainer" unique_id=1706847706]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture_normal = ExtResource("2_5jevc")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="Panel2/GridContainer/Button5"]
+[node name="Label" type="Label" parent="Panel2/GridContainer/Button5" unique_id=1520497536]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -194,7 +204,7 @@ text = "1
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=377499998]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.8350694
