@@ -29,6 +29,11 @@
 [ext_resource type="Resource" uid="uid://d0ivyxwxamvc2" path="res://Dialouge/Resources/interactableAreas/bookArea.tres" id="24_sdnb0"]
 [ext_resource type="Resource" uid="uid://d4jxi8i6wyeyx" path="res://Dialouge/Resources/interactableAreas/trash.tres" id="25_girs5"]
 [ext_resource type="Resource" uid="uid://bmsu3m8t1e8en" path="res://Dialouge/Resources/interactableAreas/Terminal.tres" id="26_nm2jm"]
+[ext_resource type="PackedScene" uid="uid://rjkk0380gvj7" path="res://Scenes/Hint/hint.tscn" id="30_hrw0d"]
+[ext_resource type="Resource" uid="uid://bleqmf0hduqmq" path="res://Hint/talkToNorella.tres" id="32_girs5"]
+[ext_resource type="Resource" uid="uid://cfbf142brijcv" path="res://Hint/PickNote.tres" id="32_nm2jm"]
+[ext_resource type="Resource" uid="uid://uebn4fuvsww4" path="res://Hint/goToTerminal.tres" id="33_nm2jm"]
+[ext_resource type="Resource" uid="uid://1n3ya6hq1kqa" path="res://Hint/openInventory.tres" id="33_vqmnc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b040f"]
 resource_name = "Background"
@@ -11383,6 +11388,7 @@ dialogue = ExtResource("26_nm2jm")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=193463097]
 layer = 10
+visible = false
 
 [node name="DialogueBox" parent="UI" unique_id=729462109 instance=ExtResource("12_ubbb8")]
 anchors_preset = -1
@@ -11398,6 +11404,7 @@ grow_vertical = 0
 
 [node name="Inventory" parent="UI" unique_id=1282777030 instance=ExtResource("17_p1n1i")]
 z_index = 10
+texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.062000003
 anchor_top = 0.22700001
@@ -11417,3 +11424,24 @@ collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D" unique_id=417745137]
 shape = SubResource("WorldBoundaryShape2D_e6o68")
+
+[node name="Hint" type="Node2D" parent="." unique_id=841277272]
+
+[node name="Move" parent="Hint" unique_id=1821934930 instance=ExtResource("30_hrw0d")]
+position = Vector2(191, 391)
+
+[node name="TalkToNorella" parent="Hint" unique_id=1759071766 instance=ExtResource("30_hrw0d")]
+position = Vector2(146, 289)
+hint = ExtResource("32_girs5")
+
+[node name="PickNote" parent="Hint" unique_id=500641619 instance=ExtResource("30_hrw0d")]
+position = Vector2(228, 335)
+hint = ExtResource("32_nm2jm")
+
+[node name="Inventory" parent="Hint" unique_id=2095414818 instance=ExtResource("30_hrw0d")]
+position = Vector2(146, 290)
+hint = ExtResource("33_vqmnc")
+
+[node name="Terminal" parent="Hint" unique_id=919550342 instance=ExtResource("30_hrw0d")]
+position = Vector2(182, 184)
+hint = ExtResource("33_nm2jm")

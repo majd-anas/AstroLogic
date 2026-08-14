@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://rjkk0380gvj7"]
+
+[ext_resource type="Script" uid="uid://c3g2dej2k85yu" path="res://Scripts/Hint/hint.gd" id="1_oxmtl"]
+[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="2_4fgbu"]
+[ext_resource type="Resource" uid="uid://dwj2oydn18y3u" path="res://Hint/move.tres" id="2_ekkwy"]
+
+[node name="Hint" type="Node2D" unique_id=1821934930]
+self_modulate = Color(1, 1, 1, 0)
+script = ExtResource("1_oxmtl")
+hint = ExtResource("2_ekkwy")
+
+[node name="Label" type="Label" parent="." unique_id=675147810]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_4fgbu")
+theme_override_font_sizes/font_size = 16
+text = "HINT
+"

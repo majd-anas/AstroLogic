@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="HintData" format=3 uid="uid://uebn4fuvsww4"]
+
+[ext_resource type="Script" uid="uid://4v4kp43p7wcr" path="res://Scripts/Hint/HintData.gd" id="1_io5lp"]
+
+[resource]
+script = ExtResource("1_io5lp")
+hint_name = "Terminal"
+hint_text = "press 'x' to open the puzzle"
+metadata/_custom_type_script = "uid://4v4kp43p7wcr"
