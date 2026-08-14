@@ -32,7 +32,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_r5g7k")
 }],
-"loop": true,
+"loop": 1,
 "name": &"closed",
 "speed": 5.0
 }, {
@@ -40,7 +40,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e6n5k")
 }],
-"loop": true,
+"loop": 1,
 "name": &"open",
 "speed": 5.0
 }, {
@@ -57,7 +57,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xg0yd")
 }],
-"loop": true,
+"loop": 1,
 "name": &"opening",
 "speed": 5.0
 }]
@@ -76,5 +76,6 @@ animation = &"opening"
 frame_progress = 0.37286672
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=564742655]
+visible = false
 position = Vector2(9, 5)
 shape = SubResource("RectangleShape2D_hghlx")

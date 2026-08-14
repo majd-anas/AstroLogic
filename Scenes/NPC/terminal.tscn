@@ -32,7 +32,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oxer3")
 }],
-"loop": false,
+"loop": 0,
 "name": &"solved",
 "speed": 5.0
 }, {
@@ -49,7 +49,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hiarm")
 }],
-"loop": true,
+"loop": 1,
 "name": &"working",
 "speed": 5.0
 }]
@@ -74,6 +74,7 @@ autoplay = "working"
 frame_progress = 0.7515271
 
 [node name="OpenTerminalArea" type="Area2D" parent="." unique_id=1098186941]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OpenTerminalArea" unique_id=198894361]
 position = Vector2(7, 5)
