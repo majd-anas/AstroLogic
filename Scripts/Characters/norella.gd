@@ -41,6 +41,7 @@ func _ready():
 func _dialogue_finished():
 	is_chatting = false
 	is_roaming = true
+	print("finished dilaouge sent!")
 	if !QuestManager.is_quest_completed("0"):
 		emit_signal("showMovementHint")
 	

@@ -4,11 +4,17 @@ extends CharacterBody2D
 
 @export var speed: float = 150.0
 
+var can_move=true
 # The direction the player was facing when they stopped moving.
 var last_direction := Vector2.DOWN
 
 
 func _physics_process(_delta):
+	if !can_move:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+		
 	# Get movement input.
 	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 

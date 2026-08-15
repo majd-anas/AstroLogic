@@ -7,7 +7,7 @@ var current_index = 0
 var current_dialogue_resource: DialogueDataChar
 var dialogue_box
 var player
-
+var dialogue_active=false
 func _ready() -> void:
 	
 	await get_tree().process_frame
@@ -22,6 +22,14 @@ func _ready() -> void:
 	
 	
 func start(dialogue_resource):
+	if dialogue_resource == null:
+		return
+	
+	if dialogue_resource.dialogue.is_empty():
+		return
+	
+	dialogue_active = true
+	
 	pause_player(player)
 	current_dialogue_resource = dialogue_resource
 	current_dialogue = dialogue_resource.dialogue
@@ -47,6 +55,7 @@ func next():
 	current_index += 1
 
 	if current_index >= current_dialogue.size():
+		dialogue_active=false
 		dialogue_box.hide()
 		emit_signal("dialogue_finished")
 		unpause_player(player)
@@ -63,9 +72,10 @@ func next():
 		current_dialogue_resource.portrait
 	)
 
-func _input(event):
 
-	if event.is_action_pressed("interact"):
+
+func _input(event):
+	if event.is_action_pressed("interact") and dialogue_active:
 		next()
 		
 		
