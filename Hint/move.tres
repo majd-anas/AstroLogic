@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_lghsd")
 hint_name = "move by keys"
-hint_text = "use the arrow keys on your key board to move"
+hint_text = "use the arrow-keys on your key board to move"
 metadata/_custom_type_script = "uid://4v4kp43p7wcr"

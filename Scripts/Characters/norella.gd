@@ -3,8 +3,9 @@ extends CharacterBody2D
 @export var note_dialogue: DialogueDataChar
 @export var inventory_dialogue: DialogueDataChar
 @export var terminal_dialogue: DialogueDataChar
-const SPEED = 50.0
-const SIDE_LENGTH = 64.0   # Size of the walk
+signal showMovementHint
+const SPEED = 80.0
+const SIDE_LENGTH = 150.0   # Size of the walk
 var current_side = 0
 var distance_moved = 0.0
 var can_chat=true
@@ -31,6 +32,9 @@ func _ready():
 func _dialogue_finished():
 	is_chatting = false
 	is_roaming = true
+	if !QuestManager.is_quest_completed("0"):
+		emit_signal("showMovementHint")
+	
 	#can_chat=false
 
 
@@ -73,6 +77,7 @@ func get_current_dialogue() -> DialogueDataChar:
 		
 	if QuestManager.is_quest_completed("1"):
 		QuestManager.start_quest("2")
+		print("here")
 		return note_dialogue
 
 		

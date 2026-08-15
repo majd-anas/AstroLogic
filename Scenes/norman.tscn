@@ -272,7 +272,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0melx")
 }],
-"loop": 1,
+"loop": true,
 "name": &"down",
 "speed": 5.0
 }, {
@@ -292,7 +292,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_de26a")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle_down",
 "speed": 5.0
 }, {
@@ -312,7 +312,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iilbd")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle_left",
 "speed": 5.0
 }, {
@@ -332,7 +332,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_58vm3")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle_leftD",
 "speed": 5.0
 }, {
@@ -352,7 +352,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kx8nv")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle_leftU",
 "speed": 5.0
 }, {
@@ -372,7 +372,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wkv4b")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle_right",
 "speed": 5.0
 }, {
@@ -392,7 +392,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xhhmn")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle_rightD",
 "speed": 5.0
 }, {
@@ -412,7 +412,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t84y2")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle_rightU",
 "speed": 5.0
 }, {
@@ -432,7 +432,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3hk35")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle_up",
 "speed": 5.0
 }, {
@@ -446,7 +446,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hxh26")
 }],
-"loop": 1,
+"loop": true,
 "name": &"left",
 "speed": 5.0
 }, {
@@ -460,7 +460,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7oi57")
 }],
-"loop": 1,
+"loop": true,
 "name": &"leftD",
 "speed": 5.0
 }, {
@@ -474,7 +474,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n82ui")
 }],
-"loop": 1,
+"loop": true,
 "name": &"leftU",
 "speed": 5.0
 }, {
@@ -488,7 +488,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cs0d3")
 }],
-"loop": 1,
+"loop": true,
 "name": &"right",
 "speed": 5.0
 }, {
@@ -502,7 +502,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_h2spc")
 }],
-"loop": 1,
+"loop": true,
 "name": &"rightD",
 "speed": 5.0
 }, {
@@ -516,7 +516,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mqvgd")
 }],
-"loop": 1,
+"loop": true,
 "name": &"rightU",
 "speed": 5.0
 }, {
@@ -530,14 +530,14 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wbhl4")
 }],
-"loop": 1,
+"loop": true,
 "name": &"up",
 "speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rrr76"]
 radius = 5.7720613
-height = 20.18382
+height = 13.235292
 
 [node name="Norman" type="CharacterBody2D" unique_id=257562774]
 z_index = 2
@@ -552,7 +552,7 @@ sprite_frames = SubResource("SpriteFrames_fbi57")
 animation = &"down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1354305010]
-position = Vector2(-1.0000048, 0.32353055)
+position = Vector2(-0.58823526, 4.705882)
 scale = Vector2(1.6, 1.6)
 shape = SubResource("CapsuleShape2D_rrr76")
 debug_color = Color(0.94375, 0.5027496, 0.4571289, 0.41960785)
