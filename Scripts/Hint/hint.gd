@@ -19,6 +19,6 @@ func flash() -> void:
 	var tween = create_tween()
 	tween.set_loops()
 
-	tween.tween_property(label, "modulate:a", 0.0, 1)
-	tween.tween_property(label, "modulate:a", 1.0, 0.5)
+	tween.tween_property(label, "modulate:a", 0.0, 0.7)
+	tween.tween_property(label, "modulate:a", 1.0, 0.7)
 	

@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_io5lp")
 hint_name = "Terminal"
-hint_text = "press 'x' to open the puzzle"
+hint_text = "press 'x' to open terminal"
 metadata/_custom_type_script = "uid://4v4kp43p7wcr"

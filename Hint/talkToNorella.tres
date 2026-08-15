@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_bonv7")
 hint_name = "talk to norella"
-hint_text = "press 'x' near norella"
+hint_text = "talk to norella by pressing 'x' near her"
 metadata/_custom_type_script = "uid://4v4kp43p7wcr"

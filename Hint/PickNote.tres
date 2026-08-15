@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_qkeqh")
 hint_name = "Pick Npte"
-hint_text = "press 'x' near the note to pick up"
+hint_text = "press 'x' to pick up note"
 metadata/_custom_type_script = "uid://4v4kp43p7wcr"
