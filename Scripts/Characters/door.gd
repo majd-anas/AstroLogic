@@ -7,14 +7,13 @@ extends AnimatableBody2D
 func _ready() -> void:
 	pass
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func openDoor():
 	animated_sprite_2d.play("opening")
-	queue_free()
+	collision_shape_2d.disabled=true
 	
 func closeDoor():
 	pass

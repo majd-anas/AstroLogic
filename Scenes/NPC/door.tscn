@@ -80,3 +80,4 @@ autoplay = "closed"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=564742655]
 position = Vector2(9, 5)
 shape = SubResource("RectangleShape2D_hghlx")
+disabled = true
