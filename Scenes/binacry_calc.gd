@@ -1,7 +1,12 @@
 extends Control
 
 @onready var display: Label = $panelContainer/VBoxContainer/HBoxContainer5/Panel/Label
+@onready var expression: Label = $Expression
+@onready var inventory: Control = $"../Inventory"
+@onready var timer: Timer = $Timer
 
+signal hideKeypadHint
+signal solvedPuzzle
 # The problem expression shown to the player, e.g. "AB'+C"
 var problem_expression: String = "100101"
 
@@ -12,7 +17,21 @@ func _ready() -> void:
 	connect_buttons($panelContainer/VBoxContainer)
 	display.text = ""
 	print(problem_expression)
+	expression.text=problem_expression
+	timer.timeout.connect(_on_timer_timeout)
+	
 
+
+func _process(_delta: float) -> void:
+	if visible:
+		if inventory.visible:
+			set_mouse_filter_recursive(self, Control.MOUSE_FILTER_IGNORE)
+			print("here")
+			pass
+		else:
+			set_mouse_filter_recursive(self, Control.MOUSE_FILTER_PASS)
+			pass
+	pass
 func connect_buttons(node: Node):
 	for child in node.get_children():
 		if child is TextureButton:
@@ -22,7 +41,14 @@ func connect_buttons(node: Node):
 			child.mouse_exited.connect(_on_mouse_exited.bind(child))
 		else:
 			connect_buttons(child)
-			
+
+func set_mouse_filter_recursive(node: Node, filter: Control.MouseFilter) -> void:
+	if node is Control:
+		node.mouse_filter = filter
+
+	for child in node.get_children():
+		set_mouse_filter_recursive(child, filter)
+		
 func on_char_pressed(char: String) -> void:
 	display.text += char
 
@@ -57,12 +83,43 @@ func _on_equals_pressed() -> void:
 
 	if result.get("correct", false):
 		display.text = "Correct!"
+		set_puzzle_input(false)
+		emit_signal("solvedPuzzle")
+		emit_signal("hideKeypadHint")
+		
 	else:
 		display.text = "Incorrect (try again)"
-
+		timer.start()
 
 func run_check(problem: String, answer: String) -> Dictionary:
 	return {
 		"correct": str(problem.bin_to_int()) == answer
 	}
 	
+
+
+func _on_delete_btn_pressed() -> void:
+	if display.text.length() > 0:
+		display.text = display.text.erase(display.text.length() - 1, 1)
+
+
+func _on_button_close_pressed() -> void:
+	hide()
+	
+	
+func set_puzzle_input(enabled: bool) -> void:
+	for child in get_all_buttons(self):
+		child.disabled = not enabled
+
+func get_all_buttons(node: Node) -> Array[TextureButton]:
+	var buttons: Array[TextureButton] = []
+
+	for child in node.get_children():
+		if child is TextureButton:
+			buttons.append(child)
+		buttons.append_array(get_all_buttons(child))
+
+	return buttons
+
+func _on_timer_timeout() -> void:
+	display.text=""

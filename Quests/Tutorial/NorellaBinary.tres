@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://cgd6qyepv1uoc"]
+
+[ext_resource type="Script" uid="uid://d2ucw6ycfrfji" path="res://Scripts/Quests/QuestData.gd" id="1_attby"]
+
+[resource]
+script = ExtResource("1_attby")
+quest_id = "5"
+quest_name = "binary system"
+description = "look through inventory to learn about converion"
+metadata/_custom_type_script = "uid://d2ucw6ycfrfji"

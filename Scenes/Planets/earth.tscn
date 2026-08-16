@@ -11336,6 +11336,9 @@ wait_time = 0.8
 [node name="Inventory" type="CanvasLayer" parent="." unique_id=1730205958]
 
 [node name="Inventory" parent="Inventory" unique_id=1282777030 instance=ExtResource("14_g4jk5")]
-position = Vector2(84, 114)
+offset_left = 84.0
+offset_top = 114.0
+offset_right = 84.0
+offset_bottom = 114.0
 
 [connection signal="timeout" from="Timer" to="CanvasLayer/XO" method="_on_timer_timeout"]

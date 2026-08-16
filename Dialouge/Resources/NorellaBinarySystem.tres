@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueDataChar" format=3 uid="uid://d2li1akdcyd1j"]
+
+[ext_resource type="Texture2D" uid="uid://cy2nvkocortu0" path="res://Assets/oneShotAssets/portraits/kip.png" id="1_ln5qm"]
+[ext_resource type="Script" uid="uid://dkh34p78b3sbj" path="res://Scripts/Dialouge/DialougeDataChar.gd" id="2_w8ahf"]
+
+[resource]
+script = ExtResource("2_w8ahf")
+npc_name = "Norella"
+dialogue = Array[String](["Okay we are almost done with this part of the lab! your next challenge........", "Binary to Decimal conversion! exciting eh?", "........ ", "you don't seem very talkative for our galatic savior ", "Anyways! where were we", "binary to decimal! a simple concept really, you take a bunch of zeros and ones then turn them to our beloved decimal system", "take for example '10' this is not a ten it converts to a 'two' or 2 in the decimal system", "take amoment to look through your inventory about these conversions, to get an idea of how they work", "its the slot labeled 'Binary', once you are done with that lets talk more!"])

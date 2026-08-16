@@ -7,6 +7,9 @@ extends Node2D
 @onready var camera_2d_player: Camera2D = $Player/Camera2D
 @onready var hint_terminal: Node2D = $terminal/HintTerminal
 @onready var terminal: StaticBody2D = $terminal
+@onready var binary_puzzle: Control = $UI/BinaryPuzzle
+@onready var keypad: StaticBody2D = $Keypad
+@onready var hint_key_pad: Node2D = $Keypad/HintKeyPad
 
 
 # Called when the node enters the scene tree for the first time.
@@ -23,7 +26,36 @@ func _process(delta: float) -> void:
 		hint.hide()
 
 
+func showcase_keypad() -> void:
+	pause_player()
+	var original_position = camera_2d_player.global_position
+	var terminal_position = keypad.global_position
 
+	# Move camera to terminal
+	var tween = create_tween()
+	tween.tween_property(
+		camera_2d_player,
+		"global_position",
+		terminal_position,
+		1.0
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+	await tween.finished
+
+	# Stay at terminal for 2 seconds
+	await get_tree().create_timer(2.0).timeout
+
+	# Return camera to player
+	tween = create_tween()
+	tween.tween_property(
+		camera_2d_player,
+		"global_position",
+		original_position,
+		1.0
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	unpause_player()
+	
+	
 func showcase_terminal() -> void:
 	pause_player()
 	var original_position = camera_2d_player.global_position
@@ -99,3 +131,23 @@ func _on_norella_showcase_terminal() -> void:
 
 func _on_terminal_puzzle_hide_terminal_hint() -> void:
 	hint_terminal.hide()
+
+
+func _on_keypad_open_keypad_puzzle() -> void:
+	binary_puzzle.show()
+
+
+func _on_binary_puzzle_solved_puzzle() -> void:
+	QuestManager.complete_quest("6")
+
+
+func _on_binary_puzzle_hide_keypad_hint() -> void:
+	hint_key_pad.hide()
+
+
+func _on_norella_show_keypad_hint() -> void:
+	hint_key_pad.show()
+
+
+func _on_norella_show_case_keypad() -> void:
+	showcase_keypad()
