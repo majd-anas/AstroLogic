@@ -622,6 +622,7 @@ hint = SubResource("Resource_mv32x")
 position = Vector2(888, -403)
 color = Color(0.928125, 0.94878906, 1, 1)
 
+[connection signal="openDoor" from="." to="." method="_on_open_door"]
 [connection signal="tree_exiting" from="Note" to="." method="_on_note_tree_exiting"]
 [connection signal="hideInventroyHint" from="UI/Inventory" to="." method="_on_inventory_hide_inventroy_hint"]
 [connection signal="hideTerminalHint" from="UI/TerminalPuzzle" to="." method="_on_terminal_puzzle_hide_terminal_hint"]

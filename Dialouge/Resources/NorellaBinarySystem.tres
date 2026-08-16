@@ -7,3 +7,5 @@
 script = ExtResource("2_w8ahf")
 npc_name = "Norella"
 dialogue = Array[String](["Okay we are almost done with this part of the lab! your next challenge........", "Binary to Decimal conversion! exciting eh?", "........ ", "you don't seem very talkative for our galatic savior ", "Anyways! where were we", "binary to decimal! a simple concept really, you take a bunch of zeros and ones then turn them to our beloved decimal system", "take for example '10' this is not a ten it converts to a 'two' or 2 in the decimal system", "take amoment to look through your inventory about these conversions, to get an idea of how they work", "its the slot labeled 'Binary', once you are done with that lets talk more!"])
+portrait = ExtResource("1_ln5qm")
+metadata/_custom_type_script = "uid://dkh34p78b3sbj"

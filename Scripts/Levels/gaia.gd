@@ -10,8 +10,9 @@ extends Node2D
 @onready var binary_puzzle: Control = $UI/BinaryPuzzle
 @onready var keypad: StaticBody2D = $Keypad
 @onready var hint_key_pad: Node2D = $Keypad/HintKeyPad
+@onready var door: AnimatableBody2D = $Door
 
-
+signal openDoor
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	QuestManager.start_quest("0")
@@ -139,6 +140,7 @@ func _on_keypad_open_keypad_puzzle() -> void:
 
 func _on_binary_puzzle_solved_puzzle() -> void:
 	QuestManager.complete_quest("6")
+	emit_signal("openDoor")
 
 
 func _on_binary_puzzle_hide_keypad_hint() -> void:
@@ -151,3 +153,7 @@ func _on_norella_show_keypad_hint() -> void:
 
 func _on_norella_show_case_keypad() -> void:
 	showcase_keypad()
+
+
+func _on_open_door() -> void:
+	door.openDoor()
