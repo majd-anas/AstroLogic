@@ -72,7 +72,7 @@ stretch_mode = 0
 script = ExtResource("5_x2875")
 metadata/_edit_use_anchors_ = true
 
-[node name="Earth" type="TextureButton" parent="." unique_id=557546250 groups=["Planets"]]
+[node name="Gaia" type="TextureButton" parent="." unique_id=557546250 groups=["Planets"]]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
@@ -123,7 +123,7 @@ texture_normal = ExtResource("6_j0k6p")
 stretch_mode = 0
 script = ExtResource("8_8glue")
 
-[node name="Zuse" type="TextureButton" parent="." unique_id=1701786035 groups=["Planets"]]
+[node name="Zeus" type="TextureButton" parent="." unique_id=1701786035 groups=["Planets"]]
 unique_name_in_owner = true
 material = SubResource("CanvasItemMaterial_uotyi")
 layout_mode = 1
@@ -157,19 +157,19 @@ script = ExtResource("14_byaam")
 [connection signal="mouse_entered" from="Nyx" to="Nyx" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Nyx" to="Nyx" method="_on_mouse_exited"]
 [connection signal="pressed" from="Nyx" to="Nyx" method="_on_pressed"]
-[connection signal="mouse_entered" from="Earth" to="Earth" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Earth" to="Earth" method="_on_mouse_exited"]
-[connection signal="pressed" from="Earth" to="Earth" method="_on_pressed"]
+[connection signal="mouse_entered" from="Gaia" to="Gaia" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Gaia" to="Gaia" method="_on_mouse_exited"]
+[connection signal="pressed" from="Gaia" to="Gaia" method="_on_pressed"]
 [connection signal="mouse_entered" from="Ares" to="Ares" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Ares" to="Ares" method="_on_mouse_exited"]
 [connection signal="pressed" from="Ares" to="Ares" method="_on_pressed"]
 [connection signal="mouse_entered" from="Ares2" to="Ares2" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Ares2" to="Ares2" method="_on_mouse_exited"]
 [connection signal="pressed" from="Ares2" to="Ares2" method="_on_pressed"]
-[connection signal="mouse_entered" from="Zuse" to="Zuse" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Zuse" to="Zuse" method="_on_mouse_exited"]
-[connection signal="pressed" from="Zuse" to="Zuse" method="_on_pressed"]
-[connection signal="visibility_changed" from="Zuse" to="Zuse" method="_on_visibility_changed"]
+[connection signal="mouse_entered" from="Zeus" to="Zeus" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Zeus" to="Zeus" method="_on_mouse_exited"]
+[connection signal="pressed" from="Zeus" to="Zeus" method="_on_pressed"]
+[connection signal="visibility_changed" from="Zeus" to="Zeus" method="_on_visibility_changed"]
 [connection signal="mouse_entered" from="PlanetCoder" to="PlanetCoder" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PlanetCoder" to="PlanetCoder" method="_on_mouse_exited"]
 [connection signal="pressed" from="PlanetCoder" to="PlanetCoder" method="_on_pressed"]
