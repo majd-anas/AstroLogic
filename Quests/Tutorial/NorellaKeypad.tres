@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://djvhegyg7mbnu"]
+
+[ext_resource type="Script" uid="uid://d2ucw6ycfrfji" path="res://Scripts/Quests/QuestData.gd" id="1_xkihw"]
+
+[resource]
+script = ExtResource("1_xkihw")
+quest_id = "6"
+quest_name = "keypad puzzle"
+description = "solve the keypad puzzle to open the door"
+metadata/_custom_type_script = "uid://d2ucw6ycfrfji"

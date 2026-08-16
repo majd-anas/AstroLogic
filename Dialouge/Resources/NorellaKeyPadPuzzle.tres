@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueDataChar" format=3 uid="uid://ch1cq8b1y3u7r"]
+
+[ext_resource type="Texture2D" uid="uid://cy2nvkocortu0" path="res://Assets/oneShotAssets/portraits/kip.png" id="1_nyeop"]
+[ext_resource type="Script" uid="uid://dkh34p78b3sbj" path="res://Scripts/Dialouge/DialougeDataChar.gd" id="2_ucblv"]
+
+[resource]
+script = ExtResource("2_ucblv")
+npc_name = "Norella"
+dialogue = Array[String](["Now to apply your knowledge to the real world and the only way to open that door to the other room.......", "you have got to solve a binary to decimal conversion! I curated that challenge especially for you to ensure you are ready", "remeber you can always use your inventory to help you solve whenever you are stuck! ", "and if all else fails... well maybe you are just not ready and need to look up some stuff", "now, go off and open that door, I have something exciting waiting for you on the other side!"])
+portrait = ExtResource("1_nyeop")
+metadata/_custom_type_script = "uid://dkh34p78b3sbj"

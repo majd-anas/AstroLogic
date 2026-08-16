@@ -3,6 +3,8 @@ extends CharacterBody2D
 @export var note_dialogue: DialogueDataChar
 @export var inventory_dialogue: DialogueDataChar
 @export var terminal_dialogue: DialogueDataChar
+@export var binary_dialogue: DialogueDataChar
+@export var keypad_dialogue: DialogueDataChar
 
 signal showMovementHint
 signal showTalkingHint
@@ -12,6 +14,9 @@ signal showInventoryHint
 signal showcaseTerminal
 signal showTerminalHint
 signal hideTerminalHint
+signal completeBinaryQuest
+signal showKeypadHint
+signal showCaseKeypad
 
 const SPEED = 80.0
 const SIDE_LENGTH = 150.0   # Size of the walk
@@ -45,12 +50,17 @@ func _dialogue_finished():
 	if !QuestManager.is_quest_completed("0"):
 		emit_signal("showMovementHint")
 	
-	if QuestManager.is_quest_active("3"):
+	if QuestManager.is_quest_active("3") || QuestManager.is_quest_active("5"):
 		emit_signal("showInventoryHint")
 	
 	if QuestManager.is_quest_active("4"):
 		emit_signal("showTerminalHint")
 		emit_signal("showcaseTerminal")
+
+	
+	if QuestManager.is_quest_active("6"):
+		emit_signal("showKeypadHint")
+		emit_signal("showCaseKeypad")
 	
 	#can_chat=false
 
@@ -86,6 +96,14 @@ func _process(delta):
 
 func get_current_dialogue() -> DialogueDataChar:
 
+	if QuestManager.is_quest_completed("5"):
+		QuestManager.start_quest("6")
+		return keypad_dialogue
+		
+	if QuestManager.is_quest_completed("4"):
+		QuestManager.start_quest("5")
+		return binary_dialogue
+		
 	if QuestManager.is_quest_completed("3"):
 		QuestManager.start_quest("4")
 		return terminal_dialogue

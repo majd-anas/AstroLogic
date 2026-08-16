@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cu8swnyx231h5"]
 
+[ext_resource type="Script" uid="uid://lh7tv8op406n" path="res://Scripts/Characters/door.gd" id="1_r5g7k"]
 [ext_resource type="Texture2D" uid="uid://8db82g8l6a7g" path="res://Assets/oneShotAssets/npc/door_automatic.png" id="1_xcfol"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r5g7k"]
@@ -32,7 +33,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_r5g7k")
 }],
-"loop": true,
+"loop": false,
 "name": &"closed",
 "speed": 5.0
 }, {
@@ -40,7 +41,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e6n5k")
 }],
-"loop": true,
+"loop": false,
 "name": &"open",
 "speed": 5.0
 }, {
@@ -57,7 +58,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xg0yd")
 }],
-"loop": true,
+"loop": false,
 "name": &"opening",
 "speed": 5.0
 }]
@@ -67,15 +68,16 @@ size = Vector2(40, 41)
 
 [node name="Door" type="AnimatableBody2D" unique_id=1015697581]
 collision_layer = 2
+script = ExtResource("1_r5g7k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1700881511]
 position = Vector2(17.5, 11)
 scale = Vector2(1.0208333, 1.0625)
 sprite_frames = SubResource("SpriteFrames_dvr03")
-animation = &"opening"
-frame_progress = 0.37286672
+animation = &"closed"
+autoplay = "closed"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=564742655]
-visible = false
 position = Vector2(9, 5)
 shape = SubResource("RectangleShape2D_hghlx")
+disabled = true
