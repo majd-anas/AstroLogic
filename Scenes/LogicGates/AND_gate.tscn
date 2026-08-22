@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://de1yl7cp8fahv" path="res://Scripts/GatesScripts/gate_input.gd" id="3_carca"]
 [ext_resource type="Script" uid="uid://cjfn8l4p10odo" path="res://Scripts/GatesScripts/AND_output.gd" id="4_u0c2f"]
 [ext_resource type="FontFile" uid="uid://cbv0nlxxdti8a" path="res://Assets/MGS1_Fonts/MGS1 Ammo.ttf" id="5_k6lyg"]
-[ext_resource type="Script" uid="uid://b78fydtcc5l6s" path="res://Scripts/line_2d.gd" id="8_ocwb6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blc2l"]
 size = Vector2(21.5, 28)
@@ -48,7 +47,6 @@ script = ExtResource("3_carca")
 metadata/_edit_use_anchors_ = true
 
 [node name="output" type="Button" parent="." unique_id=1964358665]
-unique_name_in_owner = true
 offset_left = 19.0
 offset_top = -6.0
 offset_right = 31.0
@@ -58,10 +56,7 @@ theme_override_font_sizes/font_size = 16
 script = ExtResource("4_u0c2f")
 metadata/_edit_use_anchors_ = true
 
-[node name="Line2D" type="Line2D" parent="." unique_id=844269356]
-script = ExtResource("8_ocwb6")
-
 [connection signal="input_event" from="Area2D" to="Area2D/CollisionShape2D" method="_on_area_2d_input_event"]
 [connection signal="pressed" from="Input1" to="Input1" method="_on_pressed"]
 [connection signal="pressed" from="Input2" to="Input2" method="_on_pressed"]
-[connection signal="pressed" from="output" to="Line2D" method="_on_output_pressed"]
+[connection signal="pressed" from="output" to="output" method="_on_pressed"]

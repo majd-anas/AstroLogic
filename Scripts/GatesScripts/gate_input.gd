@@ -1,6 +1,6 @@
 extends Button
 
-@onready var outgoing_line: Line2D = $"../Line2D"
+@onready var output: Button = $"../output"
 var source = null
 var incoming_line = null
 
@@ -18,7 +18,7 @@ func _on_pressed() -> void:
 			text = "1"
 		else:
 			text = "0"
-	elif not outgoing_line.is_extending:
+	elif CircuitsManager.source != output:
 		text = CircuitsManager.value
 		CircuitsManager.extending = false
 		var button_center = global_position + (size / 2)
