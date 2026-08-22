@@ -10,7 +10,7 @@ var destination = null
 func _ready() -> void:
 	width = 3
 	default_color = Color.BLACK
-	if output == null and has_node("%output"):
+	if has_node("%output"):
 		output = %output as Button
 
 func _process(delta: float) -> void:
@@ -70,12 +70,13 @@ func start_connection(coordinates : Vector2) -> void:
 	CircuitsManager.line = self
 
 func terminate_connection() -> void:
-	if get_child_count() > 0:
-		button_center = output.global_position + (output.size / 2)
-		get_child(0).set_point_position(0,points[0])
-	clear_points()
 	if destination != null:
 		destination.source = null
 	destination = null
 	is_extending = false
 	CircuitsManager.extending = false
+	if get_child_count() > 0:
+		get_child(0).set_point_position(0,points[0])
+		get_child(0).reparent(get_parent())
+		queue_free()
+	clear_points()
