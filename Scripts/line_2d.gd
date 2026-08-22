@@ -1,12 +1,12 @@
 extends Line2D
 
 @onready var output: Button = $"../output"
+@onready var line_2d: Line2D = $"."
 var is_extending = false
 var destination = null
 
 func _process(delta: float) -> void:
 	if is_extending:
-		CircuitsManager.value = output.text
 		set_point_position(1, get_local_mouse_position())
 		if not CircuitsManager.extending:
 			set_point_position(1, to_local(CircuitsManager.destination_position))
@@ -20,12 +20,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
 		var mouse_pos = get_local_mouse_position()
 		if is_point_near_line(mouse_pos, width / 2.0):
-			clear_points()
-			is_extending = false
-			CircuitsManager.extending = false
-			if destination != null:
-				destination.source = null
-			destination = null
+			terminate_connection()
 
 func is_point_near_line(click_pos: Vector2, tolerance: float) -> bool:
 	if points.size() < 2:
@@ -33,7 +28,6 @@ func is_point_near_line(click_pos: Vector2, tolerance: float) -> bool:
 		
 	var p1 = points[0]
 	var p2 = points[1]
-	
 	var closest_point = Geometry2D.get_closest_point_to_segment(click_pos, p1, p2)
 
 	if click_pos.distance_to(closest_point) <= tolerance:
@@ -42,11 +36,11 @@ func is_point_near_line(click_pos: Vector2, tolerance: float) -> bool:
 	return false
 
 
-func _on_output_pressed() -> void:
-	clear_points()
-	if destination != null:
-		destination.source = null
-	destination = null
+func _on_output_pressed() -> void:	
+	terminate_connection()
+	start_connection()
+
+func start_connection() -> void:
 	var button_center = to_local(output.global_position) + (output.size / 2)
 	add_point(button_center)
 	add_point(get_local_mouse_position())
@@ -54,4 +48,12 @@ func _on_output_pressed() -> void:
 	CircuitsManager.extending = true
 	CircuitsManager.value = output.text
 	CircuitsManager.source = output
-	CircuitsManager.destination = null
+	CircuitsManager.line = line_2d
+
+func terminate_connection() -> void:
+	clear_points()
+	if destination != null:
+		destination.source = null
+	destination = null
+	is_extending = false
+	CircuitsManager.extending = false
