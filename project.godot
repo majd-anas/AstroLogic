@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 DialougeManagerChar="*uid://bhx5vytbcyoks"
 QuestManager="*uid://dpll787t6bex0"
+CircuitsManager="*uid://b40alpvncle1k"
 
 [display]
 

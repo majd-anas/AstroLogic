@@ -48,7 +48,7 @@ theme_override_font_sizes/font_size = 16
 script = ExtResource("3_xq658")
 metadata/_edit_use_anchors_ = true
 
-[node name="output" type="Label" parent="." unique_id=591476687]
+[node name="output" type="Button" parent="." unique_id=1294550137]
 offset_left = 20.023796
 offset_top = -7.8354
 offset_right = 32.023796
@@ -56,7 +56,6 @@ offset_bottom = 6.1646
 scale = Vector2(1, 1.08006)
 theme_override_fonts/font = ExtResource("4_utrqw")
 theme_override_font_sizes/font_size = 16
-vertical_alignment = 1
 script = ExtResource("4_o680v")
 metadata/_edit_use_anchors_ = true
 

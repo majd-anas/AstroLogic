@@ -14,7 +14,6 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	var node
 	if data == "AND":
 		node = AND_GATE.instantiate()
-		
 	elif data == "OR":
 		node = OR_GATE.instantiate()
 	
