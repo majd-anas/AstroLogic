@@ -1,4 +1,4 @@
-extends Label
+extends Button
 
 @onready var input_1: Button = $"../Input1"
 @onready var input_2: Button = $"../Input2"

@@ -13,6 +13,7 @@
 size = Vector2(21.5, 28)
 
 [node name="Node2D" type="Node2D" unique_id=1065677274]
+position = Vector2(139, 43)
 script = ExtResource("1_g2dvp")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=649997609]
@@ -47,6 +48,7 @@ script = ExtResource("3_carca")
 metadata/_edit_use_anchors_ = true
 
 [node name="output" type="Button" parent="." unique_id=1964358665]
+unique_name_in_owner = true
 offset_left = 19.0
 offset_top = -6.0
 offset_right = 31.0
