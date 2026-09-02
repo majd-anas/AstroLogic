@@ -5,6 +5,8 @@ extends Control
 @onready var inventory: Control = $"../Inventory"
 @onready var terminal_puzzle: Control = $"."
 
+signal hideTerminalHint
+
 var andgate_completed=false
 var orgate_completed=false
 # Called when the node enters the scene tree for the first time.
@@ -31,6 +33,7 @@ func _process(delta: float) -> void:
 	if puzzleCompleted() and QuestManager.is_quest_active("4"):
 		finish_prompt.show()
 		QuestManager.complete_quest("4")
+		emit_signal("hideTerminalHint")
 	
 	
 	

@@ -3,8 +3,23 @@ extends CharacterBody2D
 @export var note_dialogue: DialogueDataChar
 @export var inventory_dialogue: DialogueDataChar
 @export var terminal_dialogue: DialogueDataChar
-const SPEED = 50.0
-const SIDE_LENGTH = 64.0   # Size of the walk
+@export var binary_dialogue: DialogueDataChar
+@export var keypad_dialogue: DialogueDataChar
+
+signal showMovementHint
+signal showTalkingHint
+signal hideTalkingHint
+signal showNoteHint
+signal showInventoryHint
+signal showcaseTerminal
+signal showTerminalHint
+signal hideTerminalHint
+signal completeBinaryQuest
+signal showKeypadHint
+signal showCaseKeypad
+
+const SPEED = 80.0
+const SIDE_LENGTH = 150.0   # Size of the walk
 var current_side = 0
 var distance_moved = 0.0
 var can_chat=true
@@ -31,6 +46,22 @@ func _ready():
 func _dialogue_finished():
 	is_chatting = false
 	is_roaming = true
+	print("finished dilaouge sent!")
+	if !QuestManager.is_quest_completed("0"):
+		emit_signal("showMovementHint")
+	
+	if QuestManager.is_quest_active("3") || QuestManager.is_quest_active("5"):
+		emit_signal("showInventoryHint")
+	
+	if QuestManager.is_quest_active("4"):
+		emit_signal("showTerminalHint")
+		emit_signal("showcaseTerminal")
+
+	
+	if QuestManager.is_quest_active("6"):
+		emit_signal("showKeypadHint")
+		emit_signal("showCaseKeypad")
+	
 	#can_chat=false
 
 
@@ -38,6 +69,7 @@ func _process(delta):
 	if QuestManager.is_quest_active("1"):
 		introductionScene()
 		QuestManager.complete_quest("1")	
+		emit_signal("showTalkingHint")
 		
 	if is_roaming:
 		match current_state:
@@ -59,25 +91,39 @@ func _process(delta):
 			velocity=Vector2.ZERO
 			$AnimatedSprite2D.play("idle")
 			DialougeManagerChar.start(get_current_dialogue())
+			emit_signal("hideTalkingHint")
 
 
 func get_current_dialogue() -> DialogueDataChar:
 
+	if QuestManager.is_quest_completed("5"):
+		QuestManager.start_quest("6")
+		return keypad_dialogue
+		
+	if QuestManager.is_quest_completed("4"):
+		QuestManager.start_quest("5")
+		return binary_dialogue
+		
 	if QuestManager.is_quest_completed("3"):
 		QuestManager.start_quest("4")
 		return terminal_dialogue
 
 	if QuestManager.is_quest_completed("2"):
 		QuestManager.start_quest("3")
+		emit_signal("hideTalkingHint")
 		return inventory_dialogue
 		
 	if QuestManager.is_quest_completed("1"):
 		QuestManager.start_quest("2")
+		emit_signal("hideTalkingHint")
+		emit_signal("showNoteHint")
 		return note_dialogue
 
 		
 	return initial_dialogue
 	
+	
+
 	
 func choose(array):
 	array.shuffle()

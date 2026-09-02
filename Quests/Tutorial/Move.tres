@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://6davts56idev"]
+
+[ext_resource type="Script" uid="uid://d2ucw6ycfrfji" path="res://Scripts/Quests/QuestData.gd" id="1_o1oud"]
+
+[resource]
+script = ExtResource("1_o1oud")
+quest_id = "0"
+quest_name = "move"
+description = "move using arrow keys"
+metadata/_custom_type_script = "uid://d2ucw6ycfrfji"

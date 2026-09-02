@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="HintData" format=3 uid="uid://1n3ya6hq1kqa"]
+
+[ext_resource type="Script" uid="uid://4v4kp43p7wcr" path="res://Scripts/Hint/HintData.gd" id="1_drx1w"]
+
+[resource]
+script = ExtResource("1_drx1w")
+hint_name = "Inventory"
+hint_text = "press 'i' to open your inventory"
+metadata/_custom_type_script = "uid://4v4kp43p7wcr"

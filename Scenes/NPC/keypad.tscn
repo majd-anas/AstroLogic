@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b4r28aq4vwlse"]
+
+[ext_resource type="Texture2D" uid="uid://bu14jddlv4lul" path="res://Assets/Demo/Loot(523).png" id="1_d8cer"]
+
+[node name="Keypad" type="StaticBody2D" unique_id=1575756186]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1578691703]
+texture = ExtResource("1_d8cer")

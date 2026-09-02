@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bmryif2xonwa8"]
 
 [ext_resource type="Texture2D" uid="uid://cvile3ej5mr54" path="res://Assets/Calculator-ASSETS/Screens/screen_01.png" id="1_jquw2"]
-[ext_resource type="Script" path="res://Scenes/binacry_calc.gd" id="1_sllnl"]
+[ext_resource type="Script" uid="uid://bjflhqykwa48v" path="res://Scenes/binacry_calc.gd" id="1_sllnl"]
+[ext_resource type="FontFile" uid="uid://bkyeqws3nam20" path="res://Assets/Unutterable_Font/Web Open Font Format (.woff)/Unutterable-Regular.woff" id="2_c3m3q"]
 [ext_resource type="Texture2D" uid="uid://dc311hscfrklt" path="res://Assets/download.jpg" id="2_jquw2"]
 [ext_resource type="Texture2D" uid="uid://0e08i2wqqbuw" path="res://Assets/Calculator-ASSETS/Screens/screen_03.png" id="2_sllnl"]
 [ext_resource type="Texture2D" uid="uid://ghw7v5ypv7rk" path="res://Assets/Calculator-ASSETS/SmallButtons/buttons_19.png" id="4_lr0wk"]
@@ -63,6 +64,30 @@ offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sllnl")
+
+[node name="Expression" type="Label" parent="." unique_id=756065040]
+z_index = 1
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.9850001
+offset_left = -298.0
+offset_top = -199.00002
+offset_right = -365.466
+offset_bottom = -220.73419
+rotation = 0.13788101
+pivot_offset = Vector2(-50.86499, 51.418)
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(1, 0.421282, 0.37503704, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9882353)
+theme_override_colors/font_outline_color = Color(0.24705882, 0.25882354, 0.29803923, 1)
+theme_override_fonts/font = ExtResource("2_c3m3q")
+theme_override_font_sizes/font_size = 50
+text = "PASSCODE"
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Panel" type="Panel" parent="." unique_id=1184718118]
 layout_mode = 1
@@ -363,6 +388,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_y7tg4")
 text = "X"
 script = ExtResource("20_c3m3q")
 
+[node name="Timer" type="Timer" parent="." unique_id=1208069384]
+one_shot = true
+
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer/btnA" to="." method="on_char_pressed" binds= ["1"]]
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer/btnA2" to="." method="on_char_pressed" binds= ["2"]]
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer/btnA3" to="." method="on_char_pressed" binds= ["3"]]
@@ -374,5 +402,6 @@ script = ExtResource("20_c3m3q")
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnA9" to="." method="on_char_pressed" binds= ["9"]]
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnA10" to="." method="on_char_pressed" binds= ["0"]]
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnA11" to="." method="_on_equals_pressed"]
-[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnA12" to="." method="on_char_pressed" binds= ["0"]]
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnA12" to="." method="_on_delete_btn_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_close_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

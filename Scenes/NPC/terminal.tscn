@@ -74,6 +74,7 @@ autoplay = "working"
 frame_progress = 0.7515271
 
 [node name="OpenTerminalArea" type="Area2D" parent="." unique_id=1098186941]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OpenTerminalArea" unique_id=198894361]
 position = Vector2(7, 5)
