@@ -7,6 +7,7 @@ var button_center
 
 var is_extending = false
 var destination = null
+var relative_position
 
 func _ready() -> void:
 	width = 3
@@ -30,7 +31,9 @@ func _process(delta: float) -> void:
 
 	if destination != null:
 		set_point_position(1, to_local(destination.global_position) + (destination.size / 2))
-		
+	
+	if get_parent() is Line2D:
+		set_point_position(0,get_parent().points[0].lerp(get_parent().points[1],relative_position))
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
@@ -72,11 +75,13 @@ func start_connection(coordinates : Vector2) -> void:
 	CircuitsManager.value = source.text
 	CircuitsManager.source = source
 	CircuitsManager.line = self
+	if get_parent() is Line2D:
+		relative_position = points[0].distance_to(get_parent().points[0])/get_parent().points[0].distance_to(get_parent().points[1])
 
 func terminate_connection() -> void:
 	if destination != null:
 		destination.source = null
-	#CircuitsManager.extending = false
+	CircuitsManager.extending = false
 	if get_child_count() > 0:
 		get_child(0).set_point_position(0,points[0])
 		get_child(0).reparent(get_parent())
