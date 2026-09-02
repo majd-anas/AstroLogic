@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dvmmmjvicq54s" path="res://Assets/LogicGates/Inverter.png" id="1_dwqg7"]
 [ext_resource type="Script" uid="uid://bm8v27tgr5mb0" path="res://Scripts/GatesScripts/gate_drag.gd" id="2_bjk4p"]
 [ext_resource type="Script" uid="uid://de1yl7cp8fahv" path="res://Scripts/GatesScripts/gate_input.gd" id="3_i31xi"]
+[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="3_luf6u"]
 [ext_resource type="Script" uid="uid://b2mkkmlmtsp1w" path="res://Scripts/GatesScripts/inverter_output.gd" id="4_dwqg7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blc2l"]
@@ -28,18 +29,21 @@ offset_left = -31.0
 offset_top = -10.0
 offset_right = -23.0
 offset_bottom = -2.0
-theme_override_font_sizes/font_size = 8
+theme_override_fonts/font = ExtResource("3_luf6u")
+theme_override_font_sizes/font_size = 16
 script = ExtResource("3_i31xi")
 metadata/_edit_use_anchors_ = true
 
-[node name="output" type="Label" parent="." unique_id=591476687]
+[node name="output" type="Button" parent="." unique_id=1875198968]
 offset_left = 23.0
 offset_top = -7.0
 offset_right = 35.0
 offset_bottom = 7.0
-theme_override_font_sizes/font_size = 10
+theme_override_fonts/font = ExtResource("3_luf6u")
+theme_override_font_sizes/font_size = 16
 script = ExtResource("4_dwqg7")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="input_event" from="Area2D" to="Area2D/CollisionShape2D" method="_on_area_2d_input_event"]
 [connection signal="pressed" from="Input1" to="Input1" method="_on_pressed"]
+[connection signal="pressed" from="output" to="output" method="_on_pressed"]

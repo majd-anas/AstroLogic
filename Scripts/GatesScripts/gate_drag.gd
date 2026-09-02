@@ -16,7 +16,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 				
 				if input_1.source != null:
 					input_1.incoming_line.terminate_connection()
-				if input_2.source != null:
+				if input_2 != null and input_2.source != null:
 					input_2.incoming_line.terminate_connection()
 					
 				node.queue_free()
