@@ -1,0 +1,253 @@
+[gd_scene format=3 uid="uid://c0ceq708xj4dl"]
+
+[ext_resource type="Script" uid="uid://d3wgouhsr2kx1" path="res://Scripts/Puzzles/LevelOne/boolean_t_obinary.gd" id="1_j68r8"]
+[ext_resource type="Texture2D" uid="uid://b48r5r3v8thp3" path="res://Assets/HackerInventoryPack/hacker_inventory_panel.png" id="1_wifr6"]
+[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="2_j68r8"]
+[ext_resource type="Texture2D" uid="uid://bvxnjppf3yv0q" path="res://Assets/HackerInventoryPack/hacker_slot_selected.png" id="3_y72wv"]
+[ext_resource type="Texture2D" uid="uid://chwkaytuw4x4d" path="res://Assets/HackerInventoryPack/hacker_slot_legendary.png" id="4_hw4fi"]
+[ext_resource type="Texture2D" uid="uid://qg21jkec8orl" path="res://Assets/buttons/Green_Buttons_Pixel.png" id="5_rvjln"]
+[ext_resource type="Texture2D" uid="uid://btfxsqikvgbp6" path="res://Assets/HackerInventoryPack/hacker_slot_normal.png" id="6_r0eqi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v6kfi"]
+texture = ExtResource("1_wifr6")
+modulate_color = Color(0.40069774, 0.40069774, 0.40069768, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwb0r"]
+bg_color = Color(0.023529412, 0.07450981, 0.03529412, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xcek6"]
+texture = ExtResource("3_y72wv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8whn5"]
+texture = ExtResource("4_hw4fi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_etrhl"]
+texture = ExtResource("4_hw4fi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cq0m5"]
+texture = ExtResource("5_rvjln")
+region_rect = Rect2(272, 112, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7h2yq"]
+texture = ExtResource("5_rvjln")
+region_rect = Rect2(272, 96, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y72wv"]
+
+[node name="Control" type="Control" unique_id=1119311344]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j68r8")
+
+[node name="Panel" type="Panel" parent="." unique_id=235891387]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_v6kfi")
+
+[node name="Label" type="Label" parent="Panel" unique_id=559500692]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.035
+anchor_right = 0.035
+anchor_bottom = 0.19900002
+offset_left = 368.0
+offset_top = 75.32
+offset_right = 392.68
+offset_bottom = 98.31999
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_j68r8")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_gwb0r")
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel" unique_id=1540019101]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.035
+anchor_right = 0.035
+anchor_bottom = 0.19900002
+offset_left = 501.0
+offset_top = 74.32
+offset_right = 525.68
+offset_bottom = 97.31999
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_j68r8")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_gwb0r")
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel" unique_id=2118408502]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.035
+anchor_right = 0.035
+anchor_bottom = 0.19900002
+offset_left = 639.0
+offset_top = 74.32
+offset_right = 663.68
+offset_bottom = 97.31999
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_j68r8")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_gwb0r")
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Panel" unique_id=1914205981]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8350694
+anchor_top = 0.11265432
+anchor_right = 0.93654865
+anchor_bottom = 0.2977037
+offset_right = 0.095947266
+offset_bottom = 0.08799744
+theme_override_fonts/font = ExtResource("2_j68r8")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_xcek6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8whn5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_etrhl")
+text = "x"
+autowrap_mode = 2
+autowrap_trim_flags = 0
+clip_text = true
+text_direction = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="VBoxContainer" parent="Panel" unique_id=676599946]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 232.0
+offset_right = 732.0
+offset_bottom = 648.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Control" unique_id=1413683348]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_constants/separation = 63
+alignment = 1
+
+[node name="Button" type="Button" parent="Panel/Control/HBoxContainer" unique_id=150820557]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_cq0m5")
+
+[node name="Button2" type="Button" parent="Panel/Control/HBoxContainer" unique_id=2069264420]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_cq0m5")
+
+[node name="Button3" type="Button" parent="Panel/Control/HBoxContainer" unique_id=1525793177]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_cq0m5")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/Control" unique_id=1636101462]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Control/HBoxContainer3" unique_id=1850916422]
+layout_mode = 2
+texture = ExtResource("6_r0eqi")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Panel/Control/HBoxContainer3/TextureRect" unique_id=1969016926]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_j68r8")
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/Control/HBoxContainer3" unique_id=271001979]
+layout_mode = 2
+texture = ExtResource("6_r0eqi")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Panel/Control/HBoxContainer3/TextureRect2" unique_id=1064296915]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_j68r8")
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Panel/Control/HBoxContainer3" unique_id=671955748]
+layout_mode = 2
+texture = ExtResource("6_r0eqi")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Panel/Control/HBoxContainer3/TextureRect3" unique_id=10913964]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_j68r8")
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/Control" unique_id=74558567]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="Button4" type="Button" parent="Panel/Control/HBoxContainer2" unique_id=553427218]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_7h2yq")
+
+[node name="Button5" type="Button" parent="Panel/Control/HBoxContainer2" unique_id=1323356282]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_7h2yq")
+
+[node name="Button6" type="Button" parent="Panel/Control/HBoxContainer2" unique_id=2125783492]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_7h2yq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_y72wv")

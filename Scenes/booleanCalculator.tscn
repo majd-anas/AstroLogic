@@ -247,7 +247,7 @@ stretch_mode = 0
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnX" to="." method="on_char_pressed" binds= ["X"]]
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnY" to="." method="on_char_pressed" binds= ["Y"]]
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnZ" to="." method="on_char_pressed" binds= ["Z"]]
-[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnNot" to="." method="on_char_pressed" binds= ["~"]]
+[connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer3/btnNot" to="." method="on_char_pressed" binds= ["'"]]
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer4/btnRes" to="." method="_on_equals_pressed"]
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer4/btnOpen" to="." method="on_char_pressed" binds= [")"]]
 [connection signal="pressed" from="panelContainer/VBoxContainer/HBoxContainer4/btnClose" to="." method="on_char_pressed" binds= ["("]]

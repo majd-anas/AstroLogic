@@ -25,75 +25,127 @@ def find_top_level(s: str, chars: str) -> int:
             return i
     return -1
 
-
 def resolve_postfix_not(s: str) -> str:
-    """Turn postfix ' (NOT) into prefix ~, applying only to the
-    single preceding variable OR the matching parenthesized group.
-    e.g. "B'"        -> "~B"
-         "(A+B)'"    -> "~(A+B)"
-         "AB'C"      -> "A~BC"   (implicit-AND regex handles the rest)
+    """Convert postfix Boolean NOT (') into SymPy's prefix ~.
+
+    Examples:
+        B'       -> ~B
+        AB'C     -> A~BC
+        (A+B)'   -> ~(A+B)
+        A'B'C'   -> ~A~B~C
     """
     out = []
     i = 0
+
     while i < len(s):
         ch = s[i]
-        if i + 1 < len(s) and s[i + 1] == "'":
-            if ch == ")":
-                # walk backward to find the matching '('
+
+        if ch == "'":
+            # The ' applies to the immediately preceding variable
+            # or parenthesized expression.
+
+            if not out:
+                raise ValueError("Postfix ' has nothing before it.")
+
+            # If the previous token is ')', find its matching '('.
+            if out[-1] == ")":
                 depth = 0
-                j = i
+                j = len(out) - 1
+
                 while j >= 0:
-                    if s[j] == ")":
+                    if out[j] == ")":
                         depth += 1
-                    elif s[j] == "(":
+                    elif out[j] == "(":
                         depth -= 1
+
                         if depth == 0:
                             break
+
                     j -= 1
-                group = s[j:i + 1]
-                # remove the group we already emitted into `out`
-                already_emitted = "".join(out)
-                prefix_len = len(already_emitted) - (len(group) - 1)
-                out = list(already_emitted[:prefix_len])
+
+                if j < 0:
+                    raise ValueError("Unmatched ')'.")
+
+                group = "".join(out[j:])
+                out = out[:j]
                 out.append("~" + group)
+
             else:
-                out.append("~" + ch)
-            i += 2  # skip the char and the following '
-        else:
-            out.append(ch)
+                # Previous item is a variable.
+                previous = out.pop()
+                out.append("~" + previous)
+
             i += 1
+            continue
+
+        # Ignore ~ entered by the user.
+        if ch == "~":
+            i += 1
+            continue
+
+        out.append(ch)
+        i += 1
+
     return "".join(out)
 
-
 def convert(expr: str) -> str:
-    """Turn calculator syntax into a sympy-parseable string.
+    """Convert player Boolean notation into SymPy notation.
 
-    Precedence (low -> high): < (implication), + (OR),
-    . or juxtaposition (AND), ' postfix / ~ prefix (NOT).
+    Supported input:
 
-    Note: '=' is the submit/check button in the UI, not an expression
-    character, so it is never parsed here.
+        +       OR
+        .       AND
+        adjacency = AND
+        '       NOT
+
+    Examples:
+
+        AB'C+AD       -> a&~b&c|a&d
+        A'B           -> ~a&b
+        (A+B)'        -> ~(a|b)
+        A(B+C')       -> a&(b|~c)
+
+    The player does NOT need to enter ~.
     """
+
     expr = expr.replace(" ", "").lower()
 
+    # Ignore any ~ supplied by the user.
+    expr = expr.replace("~", "")
+
+    # Handle implication first.
     idx = find_top_level(expr, "<")
+
     if idx != -1:
         left = convert(expr[:idx])
         right = convert(expr[idx + 1:])
         return f"Implies({left},{right})"
 
-    expr = resolve_postfix_not(expr)   # handle X' / (X+Y)' -> ~X / ~(X+Y)
-    expr = expr.replace("+", "|")      # OR
-    expr = expr.replace(".", "&")      # explicit AND
+    # Convert postfix ' into prefix ~.
+    expr = resolve_postfix_not(expr)
 
-    # implicit AND between adjacent var/paren/not tokens, e.g. "ab", "a(b+c)", "a~b"
-    # Zero-width lookaround (not a consuming match) so runs like "abc" get
-    # a & inserted at every boundary, not just every other one.
+    # OR
+    expr = expr.replace("+", "|")
+
+    # Explicit AND
+    expr = expr.replace(".", "&")
+
+    # Implicit AND:
+    #
+    # AB   -> A&B
+    # A(B) -> A&(B)
+    # A~B  -> A&~B
+    # )A   -> )&A
+    #
     import re
-    expr = re.sub(r"(?<=[a-z0-9)])(?=[a-z(~])", "&", expr)
+
+    expr = re.sub(
+        r"(?<=[a-z0-9)])(?=[a-z(~])",
+        "&",
+        expr
+    )
 
     return expr
-
 
 def used_variables(expr) -> list:
     free = {str(s) for s in expr.free_symbols}

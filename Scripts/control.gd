@@ -4,7 +4,7 @@ extends Control
 @onready var expression: Label = $Panel/Expression
 
 # The problem expression shown to the player, e.g. "AB'+C"
-var problem_expression: String = "AB'C+AB'C'+A'BC"
+var problem_expression: String = "AB'C+AB"
 
 const PYTHON_EXE := "python3"  # use full path if python3 isn't on PATH
 const SCRIPT_REL := "res://python/calc.py"
