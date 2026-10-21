@@ -1,0 +1,246 @@
+[gd_scene format=3 uid="uid://cxmmtj1bxu4rd"]
+
+[ext_resource type="Texture2D" uid="uid://cw00ev1mytkig" path="res://Assets/monitor-2.png" id="1_ibvpy"]
+[ext_resource type="Texture2D" uid="uid://jj5y10638k4v" path="res://Assets/UI Pack/Palette1/PNG/arrow_double_up_normal.png" id="2_rjdfj"]
+[ext_resource type="Texture2D" uid="uid://cqkfcajgevxdy" path="res://Assets/UI Pack/Palette1/PNG/arrow_double_up_pressed.png" id="3_4m5un"]
+[ext_resource type="Texture2D" uid="uid://70t0h4bxw42n" path="res://Assets/UI Pack/Palette1/PNG/empty_normal.png" id="3_lxc25"]
+[ext_resource type="Texture2D" uid="uid://ctvcftvlq00vs" path="res://Assets/UI Pack/Palette1/PNG/arrow_double_down_pressed.png" id="4_4m5un"]
+[ext_resource type="Texture2D" uid="uid://qj8xrarqpoc5" path="res://Assets/UI Pack/Palette1/PNG/empty_pressed.png" id="5_xmskq"]
+[ext_resource type="Texture2D" uid="uid://dxqmykkbjusa2" path="res://Assets/UI Pack/Palette1/PNG/arrow_double_down_normal.png" id="6_5q0b1"]
+[ext_resource type="FontFile" uid="uid://2l0rr7xi388x" path="res://Assets/Linerama_Font_1_14/TrueType (.ttf)/Linerama-Bold.ttf" id="6_xmskq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xmskq"]
+texture = ExtResource("1_ibvpy")
+
+[node name="Control" type="Control" unique_id=501428747]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel2" type="Panel" parent="." unique_id=6436162]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_xmskq")
+
+[node name="GridContainer" type="GridContainer" parent="Panel2" unique_id=667679569]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.0
+offset_top = -162.99998
+offset_right = 89.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+columns = 4
+
+[node name="Up1" type="TextureButton" parent="Panel2/GridContainer" unique_id=1291377126]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_rjdfj")
+texture_pressed = ExtResource("3_4m5un")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Up2" type="TextureButton" parent="Panel2/GridContainer" unique_id=1163775009]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_rjdfj")
+texture_pressed = ExtResource("3_4m5un")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Up3" type="TextureButton" parent="Panel2/GridContainer" unique_id=32570581]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_rjdfj")
+texture_pressed = ExtResource("3_4m5un")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Up4" type="TextureButton" parent="Panel2/GridContainer" unique_id=2084600577]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_rjdfj")
+texture_pressed = ExtResource("3_4m5un")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Number1" type="TextureButton" parent="Panel2/GridContainer" unique_id=2102207167]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_lxc25")
+texture_pressed = ExtResource("5_xmskq")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Panel2/GridContainer/Number1" unique_id=2006657045]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.5
+offset_top = -27.214285
+offset_right = 22.5
+offset_bottom = 15.785713
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.972549, 0.75686276, 0.9647059, 1)
+theme_override_fonts/font = ExtResource("6_xmskq")
+theme_override_font_sizes/font_size = 37
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Number2" type="TextureButton" parent="Panel2/GridContainer" unique_id=1636660381]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_lxc25")
+texture_pressed = ExtResource("5_xmskq")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Panel2/GridContainer/Number2" unique_id=536154971]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.5
+offset_top = -27.214285
+offset_right = 22.5
+offset_bottom = 15.785713
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.972549, 0.75686276, 0.9647059, 1)
+theme_override_fonts/font = ExtResource("6_xmskq")
+theme_override_font_sizes/font_size = 37
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Number3" type="TextureButton" parent="Panel2/GridContainer" unique_id=1675175057]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_lxc25")
+texture_pressed = ExtResource("5_xmskq")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Panel2/GridContainer/Number3" unique_id=825996554]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.5
+offset_top = -27.214285
+offset_right = 22.5
+offset_bottom = 15.785713
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.972549, 0.75686276, 0.9647059, 1)
+theme_override_fonts/font = ExtResource("6_xmskq")
+theme_override_font_sizes/font_size = 37
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Number4" type="TextureButton" parent="Panel2/GridContainer" unique_id=1513679274]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_lxc25")
+texture_pressed = ExtResource("5_xmskq")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Panel2/GridContainer/Number4" unique_id=1324095636]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.5
+offset_top = -27.214285
+offset_right = 22.5
+offset_bottom = 15.785713
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.972549, 0.75686276, 0.9647059, 1)
+theme_override_fonts/font = ExtResource("6_xmskq")
+theme_override_font_sizes/font_size = 37
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Down1" type="TextureButton" parent="Panel2/GridContainer" unique_id=1492862007]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("6_5q0b1")
+texture_pressed = ExtResource("4_4m5un")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Down2" type="TextureButton" parent="Panel2/GridContainer" unique_id=1743185036]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("6_5q0b1")
+texture_pressed = ExtResource("4_4m5un")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Down3" type="TextureButton" parent="Panel2/GridContainer" unique_id=547565211]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("6_5q0b1")
+texture_pressed = ExtResource("4_4m5un")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Down4" type="TextureButton" parent="Panel2/GridContainer" unique_id=1433047830]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("6_5q0b1")
+texture_pressed = ExtResource("4_4m5un")
+ignore_texture_size = true
+stretch_mode = 4
