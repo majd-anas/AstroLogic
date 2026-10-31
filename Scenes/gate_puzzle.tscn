@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b6406nfu1vy84" path="res://Scenes/LogicGates/GatesInventory.tscn" id="1_8oqsr"]
 [ext_resource type="Script" uid="uid://c061g2lcauj7k" path="res://Scripts/GatesScripts/gate_drop.gd" id="1_y1884"]
 [ext_resource type="Script" uid="uid://c30vosjdrlh1w" path="res://Scripts/button.gd" id="3_jj6hs"]
+[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="3_qse37"]
 [ext_resource type="Script" uid="uid://bydmolivnkbyy" path="res://Scripts/button_4.gd" id="4_a7ljn"]
 
 [node name="Node2D" type="Node2D" unique_id=83937737]
@@ -22,32 +23,40 @@ scale = Vector2(1.0000001, 1.0000001)
 [node name="Button" type="Button" parent="." unique_id=864784960]
 offset_left = 53.0
 offset_top = 57.0
-offset_right = 70.0
-offset_bottom = 88.0
+offset_right = 95.0
+offset_bottom = 107.0
+theme_override_fonts/font = ExtResource("3_qse37")
+theme_override_font_sizes/font_size = 35
 text = "x"
 script = ExtResource("3_jj6hs")
 
 [node name="Button2" type="Button" parent="." unique_id=1887608544]
-offset_left = 53.0
-offset_top = 126.0
-offset_right = 70.0
-offset_bottom = 157.0
+offset_left = 52.0
+offset_top = 141.0
+offset_right = 96.0
+offset_bottom = 187.0
+theme_override_fonts/font = ExtResource("3_qse37")
+theme_override_font_sizes/font_size = 35
 text = "y"
 script = ExtResource("3_jj6hs")
 
 [node name="Button3" type="Button" parent="." unique_id=1847017302]
 offset_left = 53.0
-offset_top = 197.0
-offset_right = 70.0
-offset_bottom = 228.0
+offset_top = 223.0
+offset_right = 99.0
+offset_bottom = 268.0
+theme_override_fonts/font = ExtResource("3_qse37")
+theme_override_font_sizes/font_size = 35
 text = "z"
 script = ExtResource("3_jj6hs")
 
 [node name="Button4" type="Button" parent="." unique_id=1991959651]
 offset_left = 436.0
 offset_top = 130.0
-offset_right = 450.0
-offset_bottom = 161.0
+offset_right = 482.0
+offset_bottom = 177.0
+theme_override_fonts/font = ExtResource("3_qse37")
+theme_override_font_sizes/font_size = 35
 text = "f"
 script = ExtResource("4_a7ljn")
 

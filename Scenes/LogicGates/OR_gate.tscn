@@ -8,55 +8,55 @@
 [ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="4_utrqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blc2l"]
-size = Vector2(23, 28)
+size = Vector2(44, 60)
 
 [node name="Node2D" type="Node2D" unique_id=1065677274]
 position = Vector2(0, 3.8146973e-06)
-scale = Vector2(2, 2)
 script = ExtResource("1_i0m1f")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=649997609]
-position = Vector2(0, 0.07999611)
+position = Vector2(-1, 0.0799942)
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1891101431]
-position = Vector2(1, 0.9200039)
-scale = Vector2(2.5, 2.5)
+position = Vector2(1.7499981, 3.170003)
+scale = Vector2(5, 5.36)
 texture = ExtResource("1_yd8d2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1446317359]
-position = Vector2(0.5, -0.07999611)
+position = Vector2(1, 0.42000294)
 shape = SubResource("RectangleShape2D_blc2l")
 script = ExtResource("2_qr8fs")
 
 [node name="Input1" type="Button" parent="." unique_id=166666468]
-offset_left = -32.0
-offset_top = -20.0
-offset_right = -24.0
-offset_bottom = -12.0
+offset_left = -61.500004
+offset_top = -33.000004
+offset_right = -36.500004
+offset_bottom = -6.000004
 scale = Vector2(1, 1.0800601)
 theme_override_fonts/font = ExtResource("4_utrqw")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 35
 script = ExtResource("3_xq658")
 metadata/_edit_use_anchors_ = true
 
 [node name="Input2" type="Button" parent="." unique_id=83359266]
-offset_left = -32.0
-offset_right = -24.0
-offset_bottom = 8.0
+offset_left = -61.000004
+offset_top = 3.999998
+offset_right = -36.000004
+offset_bottom = 30.999998
 scale = Vector2(1, 1.0800601)
 theme_override_fonts/font = ExtResource("4_utrqw")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 35
 script = ExtResource("3_xq658")
 metadata/_edit_use_anchors_ = true
 
 [node name="output" type="Button" parent="." unique_id=1294550137]
-offset_left = 20.023796
-offset_top = -7.8354
-offset_right = 32.023796
-offset_bottom = 6.1646
+offset_left = 39.5
+offset_top = -15.0
+offset_right = 64.5
+offset_bottom = 12.0
 scale = Vector2(1, 1.08006)
 theme_override_fonts/font = ExtResource("4_utrqw")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 35
 script = ExtResource("4_o680v")
 metadata/_edit_use_anchors_ = true
 

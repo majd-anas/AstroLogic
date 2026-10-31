@@ -10,7 +10,7 @@ var relative_position
 var expression
 
 func _ready() -> void:
-	width = 3
+	width = 6
 	default_color = Color.BLACK
 	if get_parent() is Button:
 		if CircuitsManager.extending :
