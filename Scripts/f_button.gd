@@ -10,7 +10,7 @@ func _process(delta: float) -> void:
 		expression = incoming_line.expression
 	else:
 		expression = text
-	print(expression)
+	#print(expression)
 
 func _on_pressed() -> void:
 	if CircuitsManager.extending and source == null:

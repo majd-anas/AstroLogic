@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 	else:
 		text = "0"
 		
-	expression = "(" + input_1.expression + ") and (" + input_2.expression + ")"
+	expression = "(" + input_1.expression + ") && (" + input_2.expression + ")"
 
 func _on_pressed() -> void:
 	var wire = WIRE.instantiate()

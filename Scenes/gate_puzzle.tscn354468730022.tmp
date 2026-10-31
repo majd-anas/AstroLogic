@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://guu26vsmwwv1"]
+
+[ext_resource type="PackedScene" uid="uid://b6406nfu1vy84" path="res://Scenes/LogicGates/GatesInventory.tscn" id="1_8oqsr"]
+[ext_resource type="Script" uid="uid://bw2vsqeuic82j" path="res://gate_puzzle.gd" id="1_va101"]
+[ext_resource type="Script" uid="uid://c061g2lcauj7k" path="res://Scripts/GatesScripts/gate_drop.gd" id="1_y1884"]
+[ext_resource type="Script" uid="uid://c30vosjdrlh1w" path="res://Scripts/button.gd" id="3_jj6hs"]
+[ext_resource type="FontFile" uid="uid://cjo3bcnsm52f6" path="res://Assets/MGS1_Fonts/MGS1 HUD.ttf" id="3_qse37"]
+[ext_resource type="Script" uid="uid://bydmolivnkbyy" path="res://Scripts/button_4.gd" id="4_a7ljn"]
+
+[node name="Node2D" type="Node2D" unique_id=83937737]
+script = ExtResource("1_va101")
+
+[node name="GatesInvControl" type="Control" parent="." unique_id=947720607]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1233.0
+offset_bottom = 612.0
+mouse_filter = 1
+script = ExtResource("1_y1884")
+metadata/_edit_use_anchors_ = true
+
+[node name="gates_inventory" parent="." unique_id=171667292 instance=ExtResource("1_8oqsr")]
+position = Vector2(1, 40)
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Button" type="Button" parent="." unique_id=864784960]
+offset_left = 54.0
+offset_top = 97.0
+offset_right = 96.0
+offset_bottom = 147.0
+theme_override_fonts/font = ExtResource("3_qse37")
+theme_override_font_sizes/font_size = 35
+text = "x"
+script = ExtResource("3_jj6hs")
+
+[node name="Button2" type="Button" parent="." unique_id=1887608544]
+offset_left = 53.0
+offset_top = 181.0
+offset_right = 97.0
+offset_bottom = 227.0
+theme_override_fonts/font = ExtResource("3_qse37")
+theme_override_font_sizes/font_size = 35
+text = "y"
+script = ExtResource("3_jj6hs")
+
+[node name="Button3" type="Button" parent="." unique_id=1847017302]
+offset_left = 54.0
+offset_top = 263.0
+offset_right = 100.0
+offset_bottom = 308.0
+theme_override_fonts/font = ExtResource("3_qse37")
+theme_override_font_sizes/font_size = 35
+text = "z"
+script = ExtResource("3_jj6hs")
+
+[node name="f" type="Button" parent="." unique_id=1991959651]
+offset_left = 437.0
+offset_top = 170.0
+offset_right = 483.0
+offset_bottom = 217.0
+theme_override_fonts/font = ExtResource("3_qse37")
+theme_override_font_sizes/font_size = 35
+text = "f"
+script = ExtResource("4_a7ljn")
+
+[node name="Label" type="Label" parent="." unique_id=1408279598]
+offset_left = 101.0
+offset_top = 23.0
+offset_right = 145.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("3_qse37")
+theme_override_font_sizes/font_size = 35
+text = "f = "
+
+[node name="Label2" type="Label" parent="." unique_id=797697038]
+offset_left = 145.0
+offset_top = 23.0
+offset_right = 277.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("3_qse37")
+theme_override_font_sizes/font_size = 35
+text = "( x + y )' . z'"
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="pressed" from="f" to="f" method="_on_pressed"]

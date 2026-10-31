@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	else:
 		text = "1"
 	
-	expression = "not (" + input_1.expression + ")"
+	expression = "!(" + input_1.expression + ")"
 	
 func _on_pressed() -> void:
 	var wire = WIRE.instantiate()
