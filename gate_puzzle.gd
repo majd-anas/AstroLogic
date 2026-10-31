@@ -43,8 +43,14 @@ func _ready() -> void:
 			variable += original_expression[i]
 		
 		i+=1
+	
+	original_expression_translated += variable
+	if variable != "" and variable not in variables:
+		variables.append(variable)
 		
-	print(original_expression_translated)
+		
+	print(original_expression_translated)	
+	print(variables)
 
 func _process(delta: float) -> void:
 	expression2 = f.expression
