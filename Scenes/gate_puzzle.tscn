@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b6406nfu1vy84" path="res://Scenes/LogicGates/GatesInventory.tscn" id="1_8oqsr"]
 [ext_resource type="Script" uid="uid://c061g2lcauj7k" path="res://Scripts/GatesScripts/gate_drop.gd" id="1_y1884"]
 [ext_resource type="Script" uid="uid://c30vosjdrlh1w" path="res://Scripts/button.gd" id="3_jj6hs"]
+[ext_resource type="Script" uid="uid://bydmolivnkbyy" path="res://Scripts/button_4.gd" id="4_a7ljn"]
 
 [node name="Node2D" type="Node2D" unique_id=83937737]
 
@@ -42,6 +43,15 @@ offset_bottom = 228.0
 text = "z"
 script = ExtResource("3_jj6hs")
 
+[node name="Button4" type="Button" parent="." unique_id=1991959651]
+offset_left = 436.0
+offset_top = 130.0
+offset_right = 450.0
+offset_bottom = 161.0
+text = "f"
+script = ExtResource("4_a7ljn")
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
 [connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]

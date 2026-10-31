@@ -22,7 +22,7 @@ func _on_pressed() -> void:
 			text = "1"
 		else:
 			text = "0"
-	elif CircuitsManager.source != output:
+	elif CircuitsManager.source != output and source == null:
 		text = CircuitsManager.value
 		CircuitsManager.extending = false
 		var button_center = global_position + (size / 2)

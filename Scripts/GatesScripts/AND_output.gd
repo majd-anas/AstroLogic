@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 		text = "0"
 		
 	expression = "(" + input_1.expression + ") and (" + input_2.expression + ")"
-	print(expression)
+
 func _on_pressed() -> void:
 	var wire = WIRE.instantiate()
 	add_child(wire)
