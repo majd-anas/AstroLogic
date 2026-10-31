@@ -11,7 +11,8 @@
 size = Vector2(23, 28)
 
 [node name="Node2D" type="Node2D" unique_id=1065677274]
-position = Vector2(172, 63.000004)
+position = Vector2(0, 3.8146973e-06)
+scale = Vector2(2, 2)
 script = ExtResource("1_i0m1f")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=649997609]

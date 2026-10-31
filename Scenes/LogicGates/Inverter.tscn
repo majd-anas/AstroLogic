@@ -10,6 +10,7 @@
 size = Vector2(24.5, 23)
 
 [node name="Node2D" type="Node2D" unique_id=1065677274]
+scale = Vector2(2, 2)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=649997609]
 position = Vector2(0, 0.07999611)

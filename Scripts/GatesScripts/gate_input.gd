@@ -3,6 +3,7 @@ extends Button
 @onready var output: Button = $"../output"
 var source = null
 var incoming_line = null
+var expression
 
 func _ready() -> void:
 	text = "0"
@@ -10,6 +11,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if source != null:
 		text = source.text
+		expression = incoming_line.expression
+	else:
+		expression = text
 
 
 func _on_pressed() -> void:

@@ -7,6 +7,7 @@ var button_center
 var is_extending = false
 var destination = null
 var relative_position
+var expression
 
 func _ready() -> void:
 	width = 3
@@ -35,7 +36,7 @@ func _process(delta: float) -> void:
 	
 	if get_parent() is Line2D:
 		set_point_position(0,get_parent().points[0].lerp(get_parent().points[1],relative_position))
-
+	expression = source.expression
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
