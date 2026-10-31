@@ -13,6 +13,8 @@ func _process(delta: float) -> void:
 		text = source.text
 		expression = incoming_line.expression
 	else:
+		if text != "0" and text != "1":
+			text = "0"
 		expression = text
 
 
