@@ -54,10 +54,10 @@ text = "z"
 script = ExtResource("3_jj6hs")
 
 [node name="f" type="Button" parent="." unique_id=1991959651]
-offset_left = 437.0
-offset_top = 170.0
-offset_right = 483.0
-offset_bottom = 217.0
+offset_left = 612.0
+offset_top = 176.0
+offset_right = 658.0
+offset_bottom = 223.0
 theme_override_fonts/font = ExtResource("3_qse37")
 theme_override_font_sizes/font_size = 35
 text = "f"
