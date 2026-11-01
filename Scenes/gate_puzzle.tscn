@@ -79,7 +79,7 @@ offset_right = 277.0
 offset_bottom = 46.0
 theme_override_fonts/font = ExtResource("3_qse37")
 theme_override_font_sizes/font_size = 35
-text = "( x + y )' . z'"
+text = "(x+y)'.z'"
 
 [connection signal="pressed" from="var1" to="var1" method="_on_pressed"]
 [connection signal="pressed" from="var2" to="var2" method="_on_pressed"]

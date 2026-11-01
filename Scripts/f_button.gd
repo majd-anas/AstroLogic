@@ -2,7 +2,7 @@ extends Button
 
 var source = null
 var incoming_line = null
-var expression
+var expression : String
 
 
 func _process(delta: float) -> void:
