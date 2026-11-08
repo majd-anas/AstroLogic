@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://e2676hhj73i0"]
+
+[ext_resource type="Texture2D" uid="uid://bqohe0ru6h0mg" path="res://Assets/Hand_Paint_Texture_10.jpg" id="1_ghol5"]
+[ext_resource type="Texture2D" uid="uid://dk004jaauviwy" path="res://Assets/Stone2.jpg" id="2_bc8wk"]
+[ext_resource type="Script" uid="uid://i5pjlwt1u0mv" path="res://Scripts/DragPuzzle.gd" id="2_u5suv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u6wcb"]
+texture = ExtResource("1_ghol5")
+modulate_color = Color(1.0954857, 1.0954857, 1.0954857, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ckhf"]
+bg_color = Color(0.05, 0.048800003, 0.042000003, 0.6039216)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.13, 0.13, 0.092300005, 0.5137255)
+border_blend = true
+corner_detail = 20
+shadow_color = Color(0, 0, 0, 0.27450982)
+shadow_size = 6
+shadow_offset = Vector2(6, 6)
+
+[node name="Control" type="Control" unique_id=501428747]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel2" type="Panel" parent="." unique_id=6436162]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_u6wcb")
+
+[node name="GridContainer" type="GridContainer" parent="Panel2" unique_id=667679569]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -212.99998
+offset_right = 145.0
+offset_bottom = -92.999985
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+theme_override_constants/h_separation = 20
+columns = 4
+script = ExtResource("2_u5suv")
+
+[node name="Button" type="Button" parent="Panel2/GridContainer" unique_id=1762898692]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ckhf")
+icon = ExtResource("2_bc8wk")
+
+[node name="Button2" type="Button" parent="Panel2/GridContainer" unique_id=1885355566]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ckhf")
+icon = ExtResource("2_bc8wk")
+
+[node name="Button3" type="Button" parent="Panel2/GridContainer" unique_id=242613548]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ckhf")
+icon = ExtResource("2_bc8wk")
+
+[node name="Button4" type="Button" parent="Panel2/GridContainer" unique_id=1841272567]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ckhf")
+icon = ExtResource("2_bc8wk")
